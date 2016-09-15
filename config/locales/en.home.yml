@@ -1,0 +1,11 @@
+en:
+  homes:
+    index:
+      home: "Home"
+      overview: "Hotel overview"
+      accommodation: "Accommodation"
+      service: "Service"
+      meeting: "Meeting & Events"
+      offers: "Offers"
+      excursions: "Excursions"
+      contact: "Contact"

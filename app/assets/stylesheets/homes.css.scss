@@ -1,0 +1,76 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat:400,700';
+#vi-main-content {
+  #main-slider {
+    .carousel .slide-margin {
+      margin-top: 40px;
+    }
+    .logo {
+      width: 100px;
+    }
+    .vi-logo {
+      margin: auto;
+      width: 100px;
+    }
+    .menu-center {
+      float: none;
+      margin: auto;
+      width: 910px;
+      a {
+        text-transform: uppercase;
+        color: white;
+        font-size: 14px;
+        font-weight: 400;font-family: Montserrat;
+      }
+      a:hover {
+        background: none;
+        color: #fe5e22;
+      }
+    }
+    .vi-photo {
+      height: 500px;
+      background: url('home_fullscreen_content.svg') 50% 100% no-repeat;
+      -moz-box-sizing: border-box;
+    }
+  }
+  #main-content {
+    .service {
+      background: #f7f7f7;
+      .service-content {
+        background-color: white;
+        margin-top: 70px;
+        margin-bottom: 70px;
+      }
+      .content-box {
+        padding-right: 5px;
+        .short-content {
+          color: #444444;
+          font-size: 19px;
+          line-height: 25px;
+          font-weight: normal;
+          font-style: italic;
+        }
+        .vi-title a{
+          color: #333333;
+          font-size: 24px;
+          line-height: 28px;
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+        a:hover {
+          background-color: transparent;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #vi-main-content {
+    #main-slider {
+      .menu-center {
+        width: 100%;
+      }
+    }
+  }
+}

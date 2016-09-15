@@ -1,0 +1,1 @@
+json.partial! "hotel_overviews/hotel_overview", hotel_overview: @hotel_overview
