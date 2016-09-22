@@ -48,7 +48,7 @@
       width: 120px;
     }
   }
-  background: transparent url('bg.jpg') 50% 50% no-repeat;
+  background: transparent image-url('bg.jpg') 50% 50% no-repeat;
   background-size: cover;
   border-top: 1px solid white;
   border-bottom: 1px solid $main-color !important;
@@ -91,7 +91,7 @@
   }
 }
 #footer {
-  background: transparent url('bg.jpg') 50% 86% no-repeat;
+  background: transparent image-url('bg.jpg') 50% 86% no-repeat;
   background-size: cover;
   padding: 20px 0;
   .text-block {
