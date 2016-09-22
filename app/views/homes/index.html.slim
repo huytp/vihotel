@@ -1,12 +1,12 @@
 section#main-slider.no-margin
   .carousel.slide
     .carousel-inner
-      .item.active style=("background-image: url(assets/slider/3.jpg)")
+      .item.active style=("background-image: url(assets/slider/background_1.jpg)")
         .container
           .row.slide-margin
             .col-sm-12
               .vi-logo
-                = image_tag 'logo.png', class: "logo"
+                = image_tag 'logo-white.png', class: "logo"
             .col-sm-12
               nav.navbar
                 .navbar-header
@@ -44,23 +44,46 @@ section#main-slider.no-margin
 
 
 
-      .item style=("background-image: url(assets/slider/2.jpg)")
+      .item style=("background-image: url(assets/slider/background_1.jpg)")
         .container
           .row.slide-margin
-            .col-sm-6
-              .carousel-content
-                h1.animation.animated-item-1 Lorem ipsum dolor sit amet consectetur adipisicing elit
-                h2.animation.animated-item-2 Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...
-                a.btn-slide.animation.animated-item-3 href="#"  Read More
-
-      .item style=("background-image: url(assets/slider/3.jpg)")
-        .container
-          .row.slide-margin
-            .col-sm-6
-              .carousel-content
-                h1.animation.animated-item-1 Lorem ipsum dolor sit amet consectetur adipisicing elit
-                h2.animation.animated-item-2 Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...
-                a.btn-slide.animation.animated-item-3 href="#"  Read More
+            .col-sm-12
+              .vi-logo
+                = image_tag 'logo-white.png', class: "logo"
+            .col-sm-12
+              nav.navbar
+                .navbar-header
+                  button.navbar-toggle.collapsed aria-expanded="false" data-target="#vi-navbar-collapse-2" data-toggle="collapse" type="button"
+                    span.sr-only Toggle navigation
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                #vi-navbar-collapse-2.collapse.navbar-collapse
+                  ul.nav.navbar-nav.menu-center
+                    li.active
+                      a href="#"
+                        = t(".overview")
+                        span.sr-only (current)
+                    li
+                      a href="#"
+                        = t(".accommodation")
+                    li
+                      a href="#"
+                        = t(".service")
+                    li
+                      a href="#"
+                        = t(".meeting")
+                    li
+                      a href="#"
+                        = t(".offers")
+                    li
+                      a href="#"
+                        = t(".excursions")
+                    li
+                      a href="#"
+                        = t(".contact")
+            .col-sm-12
+              .vi-photo-1
 
   a.prev.hidden-xs data-slide="prev" href="#main-slider"
     i.fa.fa-chevron-left
@@ -73,10 +96,85 @@ section#main-slider.no-margin
       .service-content
         .row
           .col-sm-6
+            .vi-slide-overview-content
+              - @photo_overviews.each do |photo_overview|
+                = image_tag photo_overview.image.url(:large), class: "vi-slides vi-slides-overview"
           .col-sm-6
             .content-box
               h3.vi-title
                 a href="#" = @hotel_overview.title
               h4.short-content = truncate(@hotel_overview.content, length: 321)
+              a.vi-button.vi-button-large href="#" = t (".continue")
+        .row
+          .col-sm-6
+            .content-box
+              h3.vi-title
+                a href="#" = @restaurant.title
+              h4.short-content = truncate(@restaurant.content, length: 321)
+              a.vi-button.vi-button-large href="#" = t (".continue")
+          .col-sm-6.slide-right
+            .vi-slide-overview-content
+              - @photo_restaurants.each do |photo_restaurant|
+                = image_tag photo_restaurant.image.url(:large), class: "vi-slides vi-slides-restaurant"
+        .row
+          .col-sm-6
+            .vi-slide-overview-content
+              - @photo_coffees.each do |photo_coffee|
+                = image_tag photo_coffee.image.url(:large), class: "vi-slides vi-slides-coffee"
+          .col-sm-6
+            .content-box
+              h3.vi-title
+                a href="#" = @coffee.title
+              h4.short-content = truncate(@coffee.content, length: 321)
+              a.vi-button.vi-button-large href="#" = t (".continue")
+        .row
+          .col-sm-6
+            .content-box
+              h3.vi-title
+                a href="#" = @spa.title
+              h4.short-content = truncate(@spa.content, length: 321)
+              a.vi-button.vi-button-large href="#" = t (".continue")
+          .col-sm-6.slide-right
+            .vi-slide-overview-content
+              - @photo_spas.each do |photo_spa|
+                = image_tag photo_spa.image.url(:large), class: "vi-slides vi-slides-spa"
+  .accommodation
+    .container
+      .accommodation-content
+        h3.tm-panel-title-large.text-center
+          = t(".accommodation")
+        p.vi-article-lead.vi-margin-large-bottom.text-center
+          = t(".accommodation-intro")
+        .premier-collection
+          ul.premier-collection-block
+            - @premier_collections.each do |premier_collection|
+              li.each-premier-collection.wrapper
+                a.text href=""
+                  h2.collection-name = premier_collection.parent_room_type.name
+                  h3 = premier_collection.room_type_name
+                  h4 = premier_collection.description
+                  h3.text-right.price 20$/day
+                = image_tag photos_of_collection(premier_collection), class: "premier-collection-image"
+        .smart-collection
+          ul.smart-collection-block
+            - @smart_collections.each do |smart_collection|
+              li.each-smart-collection.wrapper-small
+                a.text-small href=""
+                  h2.collection-name-small = smart_collection.parent_room_type.name
+                  h3.room-type-name-small = smart_collection.room_type_name
+                  h4.description-small = smart_collection.description
+                  h3.text-right.room-type-name-small.price-small 20$/day
+                = image_tag photos_of_collection(smart_collection), class: "smart-collection-image"
+        .deluxe-collection
+          ul.deluxe-collection-block
+            - @deluxe_collections.each do |deluxe_collection|
+              li.each-deluxe-collection.wrapper
+                a.text href=""
+                  h2.collection-name = deluxe_collection.parent_room_type.name
+                  h3 = deluxe_collection.room_type_name
+                  h4 = deluxe_collection.description
+                  h3.text-right.price 20$/day
+                = image_tag photos_of_collection(deluxe_collection), class: "deluxe-collection-image"
 
 
+= render 'book'

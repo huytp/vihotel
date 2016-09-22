@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @photo_of_room.image.url(:small) %>
+</p>
+
+<%= link_to 'Edit', edit_room_type_photo_of_room_path(@room_type, @photo_of_room) %> |
+<%= link_to 'Back', room_type_photo_of_rooms_path(@room_type) %>

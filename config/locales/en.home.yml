@@ -9,3 +9,12 @@ en:
       offers: "Offers"
       excursions: "Excursions"
       contact: "Contact"
+      continue: "Continue Reading"
+      accommodation-intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut convallis tortor elit, a semper enim efficitur sit amet"
+    book:
+      check_in: "Check in:"
+      check_out: "Check out:"
+      alduts: "Alduts:"
+      kids: "Kids:"
+      rooms: "Rooms:"
+      book: "Book now"

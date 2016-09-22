@@ -1,0 +1,15 @@
+= form_for room_type_photo_of_rooms_new_path(@room_type) do |f|
+  - if @photo_of_room.errors.any?
+    #error_explanation
+      h2
+        = pluralize(@photo_of_room.errors.count, "error")
+        | prohibited this photo_of_room from being saved:
+      ul
+        - @photo_of_room.errors.full_messages.each do |message|
+          li= message
+  .field
+    = f.label :image
+    br/
+    = f.file_field :image
+  .actions
+    = f.submit

@@ -1,0 +1,16 @@
+= form_for(@parent_room_type) do |f|
+  - if @parent_room_type.errors.any?
+    #error_explanation
+      h2
+        = pluralize(@parent_room_type.errors.count, "error")
+        | prohibited this parent_room_type from being saved:
+      ul
+        - @parent_room_type.errors.full_messages.each do |message|
+          li= message
+  .field
+    |name
+    br/
+    = f.text_field :name
+
+  .actions
+    = f.submit

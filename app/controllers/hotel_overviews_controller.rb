@@ -25,7 +25,7 @@ class HotelOverviewsController < ApplicationController
   # POST /hotel_overviews.json
   def create
     @hotel_overview = HotelOverview.new(hotel_overview_params)
-
+    @hotel_overview.post_type = params[:type]
     respond_to do |format|
       if @hotel_overview.save
         format.html { redirect_to @hotel_overview, notice: 'Hotel overview was successfully created.' }
@@ -42,6 +42,8 @@ class HotelOverviewsController < ApplicationController
   def update
     respond_to do |format|
       if @hotel_overview.update(hotel_overview_params)
+        @hotel_overview.post_type = params[:type]
+        @hotel_overview.save
         format.html { redirect_to @hotel_overview, notice: 'Hotel overview was successfully updated.' }
         format.json { render :show, status: :ok, location: @hotel_overview }
       else

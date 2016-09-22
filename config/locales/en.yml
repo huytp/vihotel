@@ -1,23 +1,22 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  home: "Home"
+  overview: "Hotel overview"
+  accommodation: "Accommodation"
+  service: "Service"
+  meeting: "Meeting & Events"
+  offers: "Offers"
+  excursions: "Excursions"
+  contact: "Contact"
+  find_us: "Find us"
+  hotel: "Hotel"
+  address: "Address: "
+  phone: "Phone: "
+  email: "Email: "
+  web: "Web: "
+  address_text: "Dong Hoi- Quang Binh"
+  mobile: "0989-808-345"
+  email_text: "vinhhoang.ltd@gmail.com"
+  vi_web: "vihotel.vn"
+  rights: " All Rights Reserved."
+  vi_title: "Vinh Hoang Hotel"
+  vihotel: "Vihotel"

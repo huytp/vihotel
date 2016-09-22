@@ -1,0 +1,1 @@
+json.array! @parent_room_types, partial: 'parent_room_types/parent_room_type', as: :parent_room_type

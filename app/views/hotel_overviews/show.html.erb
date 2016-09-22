@@ -9,6 +9,8 @@
   <strong>Content:</strong>
   <%= @hotel_overview.content %>
 </p>
-
+<p>
+  <%= link_to 'Show Photos', hotel_overview_photo_overviews_path(@hotel_overview) %>
+</p>
 <%= link_to 'Edit', edit_hotel_overview_path(@hotel_overview) %> |
 <%= link_to 'Back', hotel_overviews_path %>

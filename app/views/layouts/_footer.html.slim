@@ -1,0 +1,73 @@
+section#bottom
+  .footer-wrapper.section-margin
+    .container
+      .row
+        .wow.zoomIn.col-xs-12.col-sm-6.col-md-3
+          a href="javascript:void(0)"
+            = image_tag asset_path("logo-white.png"), class: "logo-img"
+
+        .wow.zoomIn.col-xs-12.col-sm-6.col-md-3
+          p.footer-heading = I18n.t("find_us")
+          ul.footercontact
+            li
+              i.flaticon-mainpage
+              span = I18n.t("address")
+              = I18n.t("address_text")
+            li
+              i.flaticon-phone16
+              span = I18n.t("phone")
+              a href=("tel: 0989 808 345") = I18n.t("mobile")
+            li
+              i.flaticon-email21
+              span  = I18n.t("email")
+              a href="mailto:#{EMAIL_ADDRESS}" = I18n.t("email_text")
+            li
+              i.flaticon-world91
+              span = I18n.t("web")
+              a href="#{VI_WEB_ADDRESS}" = I18n.t("vi_web")
+          i.flaticon-home78
+        .wow.zoomIn.col-xs-12.col-sm-3.col-md-3
+          p.footer-heading = I18n.t("hotel")
+          ul.footermenu
+            li
+              a href="javascript:void(0)" = I18n.t("home")
+            li
+              a href="javascript:void(0)" = I18n.t("overview")
+            li
+              a href="javascript:void(0)" = I18n.t("accommodation")
+            li
+              a href="javascript:void(0)" = I18n.t("service")
+            li
+              a href="javascript:void(0)" = I18n.t("meeting")
+            li
+              a href="javascript:void(0)" = I18n.t("offers")
+            li
+              a href="javascript:void(0)" = I18n.t("excursions")
+            li
+              a href="javascript:void(0)" = I18n.t("contact")
+
+        .wow.zoomIn.col-xs-12.col-sm-6.col-md-3
+          p.footer-heading = I18n.t("accommodation")
+          ul.footermenu
+            - RoomType.all.each do |room_type|
+              li
+                a href="javascript:void(0)" = room_type.room_type_name
+
+
+
+
+
+footer#footer.midnight-blue
+  .container
+    .row
+      .col-sm-6.copy-right.col-xs-10
+        .backtop.pull-left
+            i.fa.fa-angle-up.back-to-top
+        .text-block
+          |&copy;
+          = Time.now.year
+          |&nbsp;
+          a target="_blank" href="#{VI_WEB_ADDRESS}" title="#{I18n.t('vi_title')}" = I18n.t("vihotel")
+          = I18n.t("rights")
+      .col-sm-6.col-xs-2
+

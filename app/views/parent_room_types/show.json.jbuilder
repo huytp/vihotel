@@ -1,0 +1,1 @@
+json.partial! "parent_room_types/parent_room_type", parent_room_type: @parent_room_type
