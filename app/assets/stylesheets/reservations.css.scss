@@ -1,0 +1,86 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat:400,700';
+@import 'constant';
+#vi-main-content {
+  .reservation-main {
+    .form-control {
+      border-radius: 0px;
+      box-shadow: none;
+    }
+    input.form-control:focus {
+      outline: none;
+    }
+    .bootstrap-select {
+      width: 100%;
+      a:focus {
+        outline: none !important;
+      }
+      ul {
+        margin-top: -5px;
+        margin-bottom: -5px;
+      }
+    }
+
+    .dropdown-menu {
+      border-radius: 0px;
+    }
+    .btn-default {
+      border-color: #ccc;
+    }
+    .btn-default:focus {
+      outline: none !important;
+      border-color: #66afe9;
+    }
+    h3.vi-title {
+      color: #333333;
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .vi-button {
+      float: right;
+      height: 41px;
+      width: 100%;
+      -webkit-appearance: none;
+      margin: 0;
+      border: none;
+      overflow: visible;
+      font: inherit;
+      color: white;
+      text-transform: none;
+      display: inline-block;
+      box-sizing: border-box;
+      background: $main-color;
+      vertical-align: middle;
+      text-decoration: none;
+      text-align: center;
+      border: 1px solid white;
+      font-family: 'Montserrat';
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      -webkit-transition: border-color 0.1s, background 0.1s, color 0.1s ease-in-out;
+      transition: border-color 0.1s, background 0.1s, color 0.1s ease-in-out;
+    }
+    .vi-button:hover, .vi-button:focus {
+      background-color: #F7D200;
+      outline: none;
+      text-decoration: none;
+    }
+    .requirement-block {
+      height: 101px;
+    }
+    .contact-form {
+      border: 1px solid #ccc;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 10px;
+      .contact-infor {
+        font-size: 15px;
+      }
+      .contact-logo {
+        width: 100%;
+      }
+    }
+  }
+}

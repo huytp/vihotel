@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Full name:</strong>
+  <%= @reversation.full_name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @reversation.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @reversation.email %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @reversation.company %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @reversation.address %>
+</p>
+
+<p>
+  <strong>Check in:</strong>
+  <%= @reversation.check_in %>
+</p>
+
+<p>
+  <strong>Check out:</strong>
+  <%= @reversation.check_out %>
+</p>
+
+<p>
+  <strong>Room type:</strong>
+  <%= @reversation.room_type %>
+</p>
+
+<p>
+  <strong>Number of room:</strong>
+  <%= @reversation.number_of_room %>
+</p>
+
+<p>
+  <strong>Number adult:</strong>
+  <%= @reversation.number_adult %>
+</p>
+
+<p>
+  <strong>Number children:</strong>
+  <%= @reversation.number_children %>
+</p>
+
+<p>
+  <strong>Requirement:</strong>
+  <%= @reversation.requirement %>
+</p>
+
+<%= link_to 'Edit', edit_reversation_path(@reversation) %> |
+<%= link_to 'Back', reversations_path %>

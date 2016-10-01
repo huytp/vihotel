@@ -27,7 +27,8 @@ class RoomTypesController < ApplicationController
   # POST /room_types.json
   def create
     @room_type = @parent_room_type.room_types.new(room_type_params)
-
+    @room_type.friendly = @room_type.room_type_name.parameterize
+    @room_type.room_features = params.require(:room_type).require(:room_features)
     respond_to do |format|
       if @room_type.save
         format.html { redirect_to parent_room_type_room_type_path(@parent_room_type, @room_type), notice: 'Room type was successfully created.' }
@@ -44,6 +45,10 @@ class RoomTypesController < ApplicationController
   def update
     respond_to do |format|
       if @room_type.update(room_type_params)
+        @room_type.room_features = params.require(:room_type).require(:room_features)
+
+        @room_type.friendly = @room_type.room_type_name.parameterize
+        @room_type.save
         format.html { redirect_to parent_room_type_room_type_path(@parent_room_type, @room_type), notice: 'Room type was successfully updated.' }
         format.json { render :show, status: :ok, location: @room_type }
       else
@@ -71,7 +76,7 @@ class RoomTypesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def room_type_params
-      params.require(:room_type).permit(:room_type_name, :description, :room_size, :room_bed, :room_view, :room_features)
+      params.require(:room_type).permit(:room_type_name, :description, :room_size, :room_bed, :room_view, :cost)
     end
 
     def set_parent_room_type
@@ -83,6 +88,6 @@ class RoomTypesController < ApplicationController
     end
 
     def set_parent_room_type_edit_update
-      @parent_room_type = ParentRoomType.find(params[:id])
+      @parent_room_type = @room_type.parent_room_type
     end
 end

@@ -1,0 +1,13 @@
+.container
+  = render 'service_header', photo_overviews: @photo_overviews
+.service
+  .container
+    .service-content-block
+      h3.tm-panel-title-large.text-center = t(".our_service")
+      .service-image
+        ul.service-image-block
+          - @vi_services.each do |vi_service|
+            li.each-service-image.wrapper-small
+              = image_tag photos_of_service(vi_service), class: "service-image-image"
+              a.service-title href="#{show_service_service_index_path(vi_service.post_type)}"
+                h3 = vi_service.title

@@ -3,5 +3,5 @@
 //= require twitter/bootstrap
 //= require bootstrap.min
 //= require bootstrap-select
-//= require turbolinks
+//= require bootstrap-datepicker
 //= require_tree .

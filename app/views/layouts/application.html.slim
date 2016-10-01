@@ -6,10 +6,20 @@ html
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
+    meta content="width=device-width, initial-scale=1" name="viewport" /
   body
     #vi-header
       = render 'layouts/header'
-    #vi-main-content
-      = yield
+
+    - if params[:controller] == 'homes'
+      #vi-main-content.home-page
+        = yield
+    - elsif (params[:controller] == 'about' || params[:controller] == 'service' || params[:controller] == 'offer' || params[:controller] == 'events' || params[:controller] == 'excursions' || params[:controller] == 'contacts')
+      #vi-main-content.about
+        = yield
+    - else
+      #vi-main-content
+        .container
+          = yield
     #vi-footer
       = render 'layouts/footer'

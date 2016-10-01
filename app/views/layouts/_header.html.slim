@@ -2,29 +2,29 @@
   #vi-navbar.collapse.navbar-collapse
     ul.nav.navbar-nav.menu-center
       li
-        a href="#"
+        = link_to root_path
           = I18n.t("home")
       li
-        a href="#"
+        = link_to about_index_path
           = I18n.t("overview")
       li
-        a href="#"
-          = I18n.t("accommodation")
+        = link_to accommodation_index_path
+          = I18n.t("accommodation_text")
       li
-        a href="#"
+        = link_to service_index_path
           = I18n.t("service")
       li
-        a href="#"
+        = link_to root_path
           = image_tag 'logo.png', class: "logo"
       li
-        a href="#"
+        = link_to events_path
           = I18n.t("meeting")
       li
-        a href="#"
+        = link_to offer_index_path
           = I18n.t("offers")
       li
-        a href="#"
-          = I18n.t("excursions")
+        = link_to excursions_path
+          = I18n.t("excursions_text")
       li
-        a href="#"
-          = I18n.t("contact")
+        = link_to contact_index_path
+          = I18n.t("contact_text")

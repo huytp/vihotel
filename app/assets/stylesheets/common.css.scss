@@ -6,6 +6,7 @@
     margin-top: -10px;
   }
   .parent-navbar {
+    top: 0;
     position: fixed;
     z-index: 10000;
     background-color: white;
@@ -13,6 +14,7 @@
     height: 90px;
     border-radius: 0px;
     display: none;
+    border-bottom: 1px solid $main-color;
   }
   #vi-navbar {
     height: 90px !important;
@@ -32,11 +34,24 @@
       font-size: 14px;
       font-weight: 400;font-family: Montserrat;
     }
-    a:hover {
+    a:hover, a:focus {
       background: none;
       color: $main-color;
     }
   }
+}
+#vi-main-content {
+  margin-top: 110px;
+  margin-bottom: 50px;
+}
+#vi-main-content.home-page {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+#vi-main-content.about {
+  background-color: #f7f7f7;
+  margin-top: 90px;
+  margin-bottom: 0px;
 }
 #bottom {
   .section-margin {
@@ -138,6 +153,9 @@
   .backtop:hover {
     background-color: #2e2e2e;
   }
+}
+a {
+  color: black;
 }
 
 @media screen and (max-width: 767px) {

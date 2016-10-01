@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  full_name: MyString
+  phone: MyString
+  email: MyString
+  company: MyString
+  address: MyString
+  check_in: 2016-09-24 14:46:16
+  check_out: 2016-09-24 14:46:16
+  room_type: MyString
+  number_of_room: 1
+  number_adult: 1
+  number_children: 1
+  requirement: MyText
+
+two:
+  full_name: MyString
+  phone: MyString
+  email: MyString
+  company: MyString
+  address: MyString
+  check_in: 2016-09-24 14:46:16
+  check_out: 2016-09-24 14:46:16
+  room_type: MyString
+  number_of_room: 1
+  number_adult: 1
+  number_children: 1
+  requirement: MyText

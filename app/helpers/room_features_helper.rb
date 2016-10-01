@@ -1,0 +1,2 @@
+module RoomFeaturesHelper
+end

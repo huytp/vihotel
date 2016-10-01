@@ -34,7 +34,7 @@ section#bottom
             li
               a href="javascript:void(0)" = I18n.t("overview")
             li
-              a href="javascript:void(0)" = I18n.t("accommodation")
+              a href="javascript:void(0)" = I18n.t("accommodation_text")
             li
               a href="javascript:void(0)" = I18n.t("service")
             li
@@ -42,12 +42,12 @@ section#bottom
             li
               a href="javascript:void(0)" = I18n.t("offers")
             li
-              a href="javascript:void(0)" = I18n.t("excursions")
+              a href="javascript:void(0)" = I18n.t("excursions_text")
             li
-              a href="javascript:void(0)" = I18n.t("contact")
+              a href="javascript:void(0)" = I18n.t("contact_text")
 
         .wow.zoomIn.col-xs-12.col-sm-6.col-md-3
-          p.footer-heading = I18n.t("accommodation")
+          p.footer-heading = I18n.t("accommodation_text")
           ul.footermenu
             - RoomType.all.each do |room_type|
               li

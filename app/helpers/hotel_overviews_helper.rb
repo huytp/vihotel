@@ -1,7 +1,7 @@
 module HotelOverviewsHelper
   def get_types
     [
-      ['Hotel overview','hotel_overview'], ['Restaurant bar', 'restaurant'], ['Coffee', 'coffee'], ['Spa & Massage', 'spa&massage'], ['Other services', 'other']
+      ['Hotel overview','hotel-overview'], ['Restaurant', 'restaurant'], ['Bar & Coffee', 'bar-and-coffee'], ['Spa & Massage', 'spa-and-massage'], ['Pool', 'pool'], ['Other services', 'other']
     ]
   end
 end

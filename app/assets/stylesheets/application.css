@@ -1,6 +1,7 @@
 /*
  *= require main
  *= require bootstrap-select
+ *= require bootstrap-datepicker
  *= require_tree .
  *= require_self
  */

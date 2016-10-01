@@ -1,0 +1,117 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat:400,700';
+@import 'constant';
+.single-post {
+  margin-top: 65px;
+  margin-bottom: 55px;
+  background-color: white;
+  .single-post-image {
+    width: 100%;
+  }
+  .single-post-content {
+    padding: 30px;
+    .vi-article-title {
+      font-size: 24px;
+      line-height: 28px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-family: 'Montserrat';
+    }
+    .custom-font-size {
+      font-size: 16px;
+    }
+    .vi-article-meta {
+      font-size: 15px;
+      line-height: 24px;
+      color: #444444;
+    }
+    time {
+      margin-left: 5px;
+    }
+  }
+}
+.post-index {
+  margin-top: 65px;
+  ul.post-block {
+    padding-left: 0px;
+    li.each-post-block {
+      list-style: none;
+      width: 408px;
+      float: left;
+      padding-bottom: 30px;
+    }
+    li.each-post-block:nth-child(2n+1) {
+      margin-left: 0px;
+    }
+    li.each-post-block:nth-child(2n+2) {
+      margin-left: 30px;
+    }
+    .post-image {
+      width: 408px;
+      height: 270px;
+    }
+    .post-text {
+      background-color: white;
+    }
+    .post-text-block {
+      padding: 20px 30px 30px 30px;
+    }
+    .vi-article-title {
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 100;
+      text-transform: uppercase;
+      font-family: 'Montserrat';
+      color: #333333;
+    }
+    a:hover, a:focus {
+      background-color: transparent;
+      color: $main-color;
+      text-decoration: none;
+    }
+    .continue-reading-text {
+      text-decoration: underline;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .vi-article-meta {
+      font-size: 15px;
+      line-height: 24px;
+      color: #444444;
+    }
+    time {
+      padding-left: 5px;
+    }
+    .custom-font-size {
+      font-size: 14px;
+      color: #8C8181;
+    }
+  }
+
+}
+.last-post-index {
+  ul {
+    padding-left: 0px;
+    li {
+      list-style: none;
+      border-top: solid 2px #eee;
+      padding-bottom: 8px;
+      padding-top: 8px;
+    }
+    li:nth-child(1) {
+      border-top: 0px
+    }
+  }
+  a.custom-font-size {
+    font-size: 16px;
+  }
+  a.custom-font-size:visited {
+    color: #000;
+  }
+  a.custom-font-size:hover, a.custom-font-size:focus {
+    color: $main-color;
+    text-decoration: none;
+    background-color: transparent;
+  }
+
+}

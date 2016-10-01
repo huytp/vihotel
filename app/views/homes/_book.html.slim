@@ -1,20 +1,21 @@
 #book-block
   .container
     .row.book-content
-      .col-sm-2
-        label.label-book = t(".check_in")
-        = text_field_tag 'checkin', '', class: "book-input"
-      .col-sm-2
-        label.label-book = t(".check_out")
-        = text_field_tag 'checkout', '', class: "book-input"
-      .col-sm-2
-        label.label-book = t(".alduts")
-        = number_field_tag 'alduts', '', class: "book-input"
-      .col-sm-2
-        label.label-book = t(".kids")
-        = number_field_tag 'kids',  '', class: "book-input"
-      .col-sm-2
-        label.label-book = t(".rooms")
-        = number_field_tag 'rooms',  '', class: "book-input"
-      .col-sm-2.book-button-block
-        = submit_tag t(".book"), class: "vi-button"
+      = form_tag reservations_path, method: :GET, enforce_utf8: false
+        .col-sm-2
+          label.label-book = t(".check_in")
+          = text_field_tag 'reservation[check_in]', '', class: "book-input"
+        .col-sm-2
+          label.label-book = t(".check_out")
+          = text_field_tag 'reservation[check_out]', '', class: "book-input"
+        .col-sm-2
+          label.label-book = t(".adults")
+          = number_field_tag 'reservation[adults]', '', class: "book-input", min: 1
+        .col-sm-2
+          label.label-book = t(".kids")
+          = number_field_tag 'reservation[kids]',  '', class: "book-input", min: 0
+        .col-sm-2
+          label.label-book = t(".rooms")
+          = number_field_tag 'reservation[rooms]',  '', class: "book-input", min: 1
+        .col-sm-2.book-button-block
+          = submit_tag t(".book"), class: "vi-button"

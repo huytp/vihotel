@@ -1,0 +1,44 @@
+.row
+  .col-sm-6
+    .content-box
+      h3.vi-title
+        = link_to @restaurant.title, show_service_service_index_path(@restaurant.title.downcase)
+      h4.short-content = truncate(@restaurant.content, length: 321)
+      = link_to t(".continue"), show_service_service_index_path(@restaurant.post_type), class: "vi-button vi-button-large"
+  .col-sm-6.slide-right
+    .vi-slide-overview-content
+      - @photo_restaurants.each do |photo_restaurant|
+        = image_tag photo_restaurant.image.url(:large), class: "vi-slides vi-slides-restaurant"
+.row
+  .col-sm-6
+    .vi-slide-overview-content
+      - @photo_coffees.each do |photo_coffee|
+        = image_tag photo_coffee.image.url(:large), class: "vi-slides vi-slides-coffee"
+  .col-sm-6
+    .content-box
+      h3.vi-title
+        = link_to @coffee.title, show_service_service_index_path(@coffee.post_type)
+      h4.short-content = truncate(@coffee.content, length: 321)
+      = link_to t(".continue"), show_service_service_index_path(@coffee.post_type), class: "vi-button vi-button-large"
+.row
+  .col-sm-6
+    .content-box
+      h3.vi-title
+        = link_to @spa.title, show_service_service_index_path(@spa.post_type)
+      h4.short-content = truncate(@spa.content, length: 321)
+      = link_to t(".continue"), show_service_service_index_path(@spa.post_type), class: "vi-button vi-button-large"
+  .col-sm-6.slide-right
+    .vi-slide-overview-content
+      - @photo_spas.each do |photo_spa|
+        = image_tag photo_spa.image.url(:large), class: "vi-slides vi-slides-spa"
+.row
+  .col-sm-6
+    .vi-slide-overview-content
+      - @photo_pools.each do |photo_pool|
+        = image_tag photo_pool.image.url(:large), class: "vi-slides vi-slides-pool"
+  .col-sm-6
+    .content-box
+      h3.vi-title
+        = link_to @pool.title, show_service_service_index_path(@pool.post_type)
+      h4.short-content = truncate(@pool.content, length: 321)
+      = link_to t(".continue"), show_service_service_index_path(@pool.post_type), class: "vi-button vi-button-large"

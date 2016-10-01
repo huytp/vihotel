@@ -1,0 +1,50 @@
+.container
+  .vi-contact
+    .row
+      .col-sm-6
+        = form_for @contact, html: {class: "contact-form"} do |f|
+          .form-group
+            label = t(".full_name")
+            = f.text_field :full_name, class: "form-control"
+          .form-group
+            label= t(".email")
+            = f.email_field :email, class: "form-control"
+          .form-group
+            label = t(".phone")
+            = f.text_field :phone, class: "form-control"
+          .form-group
+            label = t(".title")
+            = f.text_field :title, class: "form-control"
+          .form-group
+            label = t(".content")
+            = f.text_area :content, class: "form-control"
+          button.btn.btn-default.vi-button type="submit"  Submit
+
+
+      .col-sm-6
+        .contact-box
+          .map-block
+            iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121800.26279737777!2d106.5202007846478!3d17.447351114133244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314756cdc1b13511%3A0x9807c821237ab10e!2zdHAuIMSQ4buTbmcgSOG7m2ksIFF14bqjbmcgQsOsbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1474965137560" width="400" height="220" frameborder="0" style="border:0"
+          .contact-block
+            ul
+              li
+                span
+                  i.fa.fa-map-marker
+                span.vi-contact-text = t(".address")
+              li
+                span
+                  i.fa.fa-mobile
+                span.vi-contact-text = t(".mobile_phone")
+
+              li
+                span
+                  i.fa.fa-phone
+                span.vi-contact-text-1 = t(".phone_text")
+              li
+                span
+                  i.fa.fa-envelope-o
+                span.vi-contact-text-1 = t(".email_text")
+              li
+                span
+                  i.fa.fa-facebook
+                span.vi-contact-text-1 = t(".facebook")

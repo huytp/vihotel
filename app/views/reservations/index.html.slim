@@ -1,0 +1,81 @@
+.reservation-main
+  h3.vi-title
+    = t(".reservation_infor")
+  = form_for(@reservation) do |f|
+    - reservation_data = params["reservation"] ? params.require(:reservation) : ""
+    - if @reservation.errors.any?
+      #error_explanation
+        h6
+          = pluralize(@reservation.errors.count, "error")
+          | prohibited this reservation from being saved:
+        ul
+          - @reservation.errors.full_messages.each do |message|
+            li= message
+    .row
+      .col-sm-4
+        h4
+          strong = t(".person_info")
+        .field.form-group
+          label = t(".full_name")
+          = f.text_field :full_name, class: "form-control"
+        .field.form-group
+          label = t(".phone")
+          = f.text_field :phone, class: "form-control"
+        .field.form-group
+          label = t(".email")
+          = f.text_field :email, class: "form-control"
+        .field.form-group
+          label = t(".company")
+          = f.text_field :company, class: "form-control"
+        .field.form-group
+          label = t(".address")
+          = f.text_field :address, class: "form-control"
+      .col-sm-4
+        h4
+          strong = t(".reservation_infor")
+        .row
+          .col-sm-6
+            .field.form-group
+              label = t(".check_in")
+              = f.text_field :check_in, class: "form-control", value: reservation_data["check_in"]
+          .col-sm-6
+            .field.form-group
+              label = t(".check_out")
+              = f.text_field :check_out, class: "form-control", value: reservation_data["check_out"]
+        .row
+          .col-sm-6
+            .field.form-group
+              label = t(".room_type")
+              = select_tag "reservation[room_type]", options_for_select(get_room_type, reservation_data["room_type"]), class: "selectpicker"
+          .col-sm-6
+            .field.form-group
+              label = t(".number_of_room")
+              = f.number_field :number_of_room, class: "form-control", value: reservation_data["rooms"]
+        .row
+          .col-sm-6
+            .field.form-group
+              label = t(".number_adult")
+              = f.number_field :number_adult, class: "form-control", value: reservation_data["adults"]
+          .col-sm-6
+            .field.form-group
+              label = t(".number_children")
+              = f.number_field :number_children, class: "form-control", value: reservation_data["kids"]
+        .field.form-group
+          label = t(".requirement")
+          = f.text_area :requirement, class: "form-control requirement-block"
+        .row
+          .col-sm-6
+          .col-sm-6.booking-button
+            .actions.form-group
+              = f.submit t(".quick_book"), class: "vi-button"
+      .col-sm-4
+        .contact-form
+          h3 = t(".contact")
+          p.contact-infor = t(".contact_infor")
+          label = t(".hotline")
+          strong
+            h4 = t(".phone_num")
+          label = t(".email")
+          strong
+            h4 = EMAIL_ADDRESS
+          = image_tag 'logo-horizontal.png', class: "contact-logo"

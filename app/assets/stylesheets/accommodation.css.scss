@@ -1,0 +1,270 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat:400,700';
+@import 'constant';
+.accommodation {
+  background-color: white;
+  .accommodation-content {
+    padding-top: 50px;
+
+    .price {
+      margin-right: 15px;
+      margin-top: 75px;
+    }
+    .price-small {
+      margin-right: 15px;
+      margin-top: 35px;
+    }
+    .collection-name {
+      font-family: 'Montserrat';
+      font-weight: 700;
+      font-size: 26px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .collection-name-small {
+      font-family: 'Montserrat';
+      font-weight: 700;
+      font-size: 16px;
+      text-transform: uppercase;
+      height: 12px;
+    }
+    .room-type-name-small {
+      font-size: 20px;
+      line-height: 14px;
+    }
+    .description-small {
+      font-size: 14px;
+    }
+    .wrapper {
+      position: relative;
+      height: 234px;
+      display:block;
+    }
+    .text {
+      position: absolute;
+      color: white;
+      text-decoration: none;
+      background-color: $main-color;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      z-index: 10;
+      opacity: 0;
+      margin-top: 0px;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+    }
+    .text:hover {
+      opacity:1;
+    }
+
+    .wrapper-small {
+      position: relative;
+      height: 155px;
+      display:block;
+    }
+    .text-small {
+      position: absolute;
+      color: white;
+      text-decoration: none;
+      background-color: $main-color;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      z-index: 10;
+      opacity: 0;
+      margin-top: 0px;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+    }
+    .text-small:hover {
+      opacity:1;
+    }
+
+    .tm-panel-title-large {
+      font-size: 24px;
+      line-height: 30px;
+      margin: 0 0 15px 0;
+      font-family: 'Montserrat';
+      font-weight: 700;
+      color: #333333;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    .vi-margin-large-bottom {
+      margin-bottom: 50px !important;
+    }
+    .vi-article-lead {
+      color: #444444;
+      font-size: 19px;
+      line-height: 25px;
+      font-weight: normal;
+      font-style: italic;
+    }
+
+    .premier-collection {
+      margin-bottom: 40px;
+      .premier-collection-image {
+        width: 350px;
+        height: 234px
+      }
+      ul.premier-collection-block {
+        padding-left: 0px;
+        padding-right: 0px;
+        height: 234px;
+      }
+      li.each-premier-collection {
+        list-style: none;
+        float: left;
+      }
+      li.each-premier-collection:nth-child(2) {
+        margin-left: 45px;
+      }
+      li.each-premier-collection:nth-child(3) {
+        margin-left: 45px;
+      }
+    }
+
+    .smart-collection {
+      margin-bottom: 40px;
+      .smart-collection-image {
+        width: 270px;
+        height: 155px;
+      }
+      ul.smart-collection-block {
+        padding-left: 0px;
+        padding-right: 0px;
+        height: 155px;
+      }
+      li.each-smart-collection {
+        list-style: none;
+        float: left;
+      }
+      li.each-smart-collection:nth-child(2) {
+        margin-left: 20px;
+      }
+      li.each-smart-collection:nth-child(3) {
+        margin-left: 20px;
+      }
+
+      li.each-smart-collection:nth-child(4) {
+        margin-left: 20px;
+      }
+    }
+
+    .deluxe-collection {
+      margin-bottom: 50px;
+      .deluxe-collection-image {
+        width: 350px;
+        height: 234px
+      }
+      ul.deluxe-collection-block {
+        padding-left: 0px;
+        padding-right: 0px;
+        height: 234px;
+      }
+      li.each-deluxe-collection {
+        list-style: none;
+        float: left;
+      }
+      li.each-deluxe-collection:nth-child(2) {
+        margin-left: 45px;
+      }
+      li.each-deluxe-collection:nth-child(3) {
+        margin-left: 45px;
+      }
+    }
+
+  }
+}
+.accommodation-detail {
+  margin-top: 20px;
+  .accomodation-feature-form {
+    input {
+      margin-left: 10px;
+      margin-right: 2px;
+    }
+  }
+  .vi-slide-overview-content {
+    width: 570px;
+    .overview-photo {
+      width: 570px;
+      height: 412px;
+    }
+    .chevron-btn {
+      margin-top: 195px;
+    }
+    a:hover {
+      background-color: transparent;
+    }
+    a:focus {
+      color: #666;
+    }
+  }
+  .room-infor {
+    padding-left: 20px;
+    padding-bottom: 0px;
+  }
+  .contact-box {
+    padding-left: 30px;
+    padding-right: 0px;
+  }
+  .book-btn {
+    background-color: $main-color;
+    color: white;
+  }
+  .book-btn:hover {
+    background-color: #F7D200;
+    outline: none;
+  }
+  .reservation-content {
+    padding: 20px;
+
+    .form-control {
+      border-radius: 0px;
+      box-shadow: none;
+    }
+    input.form-control:focus {
+      outline: none;
+    }
+    .bootstrap-select {
+      width: 100%;
+      a:focus {
+        outline: none !important;
+      }
+      ul {
+        margin-top: -5px;
+        margin-bottom: -5px;
+      }
+    }
+
+    .dropdown-menu {
+      border-radius: 0px;
+    }
+    .btn-default {
+      border-color: #ccc;
+    }
+    .btn-default:focus {
+      outline: none !important;
+      border-color: #66afe9;
+    }
+    label {
+      font-size: 14px;
+    }
+  }
+  .lined-heading-book {
+    width: 100%;
+    height: 2px;
+    background-color: $main-color;
+    span.reservation {
+      position: relative;
+      top: -17px;
+      background: white;
+      left: 170px;
+    }
+  }
+}

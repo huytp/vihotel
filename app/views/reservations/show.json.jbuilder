@@ -1,0 +1,1 @@
+json.partial! "reversations/reversation", reversation: @reversation

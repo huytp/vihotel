@@ -1,0 +1,18 @@
+en:
+  accommodation:
+    accommodation:
+      intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut convallis tortor elit, a semper enim efficitur sit amet"
+      accommodation_text: "Accommodation"
+    show:
+      space: " - "
+      room_size: "Room Size: "
+      view: "View: "
+      check_in: "Check In Date: "
+      check_out: "Check Out Date"
+      room_type: "Room Type: "
+      number_of_room: "Number Of Rooms: "
+      number_adult: "Adults per room: "
+      number_children: "Children:"
+      feature: "Features: "
+      quick_book: "Quick Book"
+      reservation: "Reservation"

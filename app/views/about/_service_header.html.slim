@@ -1,0 +1,60 @@
+.hotel-overview
+  .row
+    .col-sm-6
+      .vi-slide-overview-content
+        #myCarousel.carousel.slide data-ride="carousel"
+          ol.carousel-indicators
+            - index = 0
+            - photo_overviews.each do |photo_overview|
+              - if index == 0
+                li.active data-slide-to="#{index}" data-target="#myCarousel"
+              - else
+                li data-slide-to="#{index}" data-target="#myCarousel"
+              - index += 1
+          .carousel-inner role="listbox"
+            - index = 0
+            - photo_overviews.each do |photo_overview|
+              - if index == 0
+                .item.active
+                  = image_tag photo_overview.image.url(:large), class: "overview-photo"
+              - else
+                .item
+                  = image_tag photo_overview.image.url(:large), class: "overview-photo"
+              - index += 1
+
+          a.left.carousel-control data-slide="prev" href="#myCarousel" role="button"
+            span.fa.fa-chevron-left.chevron-btn aria-hidden="true"
+            span.sr-only
+          a.right.carousel-control data-slide="next" href="#myCarousel" role="button"
+            span.fa.fa-chevron-right.chevron-btn aria-hidden="true"
+            span.sr-only
+
+    .col-sm-6
+      .contact-box
+        .map-block
+          iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121800.26279737777!2d106.5202007846478!3d17.447351114133244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314756cdc1b13511%3A0x9807c821237ab10e!2zdHAuIMSQ4buTbmcgSOG7m2ksIFF14bqjbmcgQsOsbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1474965137560" width="400" height="220" frameborder="0" style="border:0" allowfullscreen
+        .contact-block
+          ul
+            li
+              span
+                i.fa.fa-map-marker
+              span.vi-contact-text = t(".address")
+            li
+              span
+                i.fa.fa-mobile
+              span.vi-contact-text = t(".mobile_phone")
+
+            li
+              span
+                i.fa.fa-phone
+              span.vi-contact-text-1 = t(".phone")
+            li
+              span
+                i.fa.fa-envelope-o
+              span.vi-contact-text-1 = t(".email")
+.hotel-overview-bottom
+    .row
+      .col-sm-12
+        .overview-content
+          h1.uk-article-title = @service.title
+          p = @service.content

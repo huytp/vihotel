@@ -1,0 +1,60 @@
+h1
+  |Thông tin đặt phòng
+strong
+  |Họ và tên:&nbsp;
+= @reservation.full_name
+br/
+br/
+strong
+  |Email:&nbsp;
+= @reservation.email
+br/
+br/
+strong
+  |Số điện thoại:&nbsp;
+= @reservation.phone
+br/
+br/
+strong
+  |Công ty:&nbsp;
+= @reservation.company
+br/
+br/
+strong
+  |Địa chỉ:&nbsp;
+= @reservation.address
+br/
+br/
+strong
+  |Ngày vào:&nbsp;
+= @reservation.check_in
+br/
+br/
+strong
+  |Ngày ra&nbsp;
+= @reservation.check_out
+br/
+br/
+strong
+  |Loại phòng:&nbsp;
+= @reservation.room_type
+br/
+br/
+strong
+  |Số lượng phòng&nbsp;
+= @reservation.number_of_room
+br/
+br/
+strong
+  |Số lượng người lớn&nbsp;
+= @reservation.number_adult
+br/
+br/
+strong
+  |Trẻ em:&nbsp;
+= @reservation.number_children
+br/
+br/
+strong
+  |Yêu cầu khác:&nbsp;
+= @reservation.requirement

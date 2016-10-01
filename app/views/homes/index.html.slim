@@ -91,7 +91,7 @@ section#main-slider.no-margin
     i.fa.fa-chevron-right
 
 #main-content
-  .service
+  .service-archive
     .container
       .service-content
         .row
@@ -102,79 +102,11 @@ section#main-slider.no-margin
           .col-sm-6
             .content-box
               h3.vi-title
-                a href="#" = @hotel_overview.title
+                = link_to @hotel_overview.title, about_index_path
               h4.short-content = truncate(@hotel_overview.content, length: 321)
-              a.vi-button.vi-button-large href="#" = t (".continue")
-        .row
-          .col-sm-6
-            .content-box
-              h3.vi-title
-                a href="#" = @restaurant.title
-              h4.short-content = truncate(@restaurant.content, length: 321)
-              a.vi-button.vi-button-large href="#" = t (".continue")
-          .col-sm-6.slide-right
-            .vi-slide-overview-content
-              - @photo_restaurants.each do |photo_restaurant|
-                = image_tag photo_restaurant.image.url(:large), class: "vi-slides vi-slides-restaurant"
-        .row
-          .col-sm-6
-            .vi-slide-overview-content
-              - @photo_coffees.each do |photo_coffee|
-                = image_tag photo_coffee.image.url(:large), class: "vi-slides vi-slides-coffee"
-          .col-sm-6
-            .content-box
-              h3.vi-title
-                a href="#" = @coffee.title
-              h4.short-content = truncate(@coffee.content, length: 321)
-              a.vi-button.vi-button-large href="#" = t (".continue")
-        .row
-          .col-sm-6
-            .content-box
-              h3.vi-title
-                a href="#" = @spa.title
-              h4.short-content = truncate(@spa.content, length: 321)
-              a.vi-button.vi-button-large href="#" = t (".continue")
-          .col-sm-6.slide-right
-            .vi-slide-overview-content
-              - @photo_spas.each do |photo_spa|
-                = image_tag photo_spa.image.url(:large), class: "vi-slides vi-slides-spa"
-  .accommodation
-    .container
-      .accommodation-content
-        h3.tm-panel-title-large.text-center
-          = t(".accommodation")
-        p.vi-article-lead.vi-margin-large-bottom.text-center
-          = t(".accommodation-intro")
-        .premier-collection
-          ul.premier-collection-block
-            - @premier_collections.each do |premier_collection|
-              li.each-premier-collection.wrapper
-                a.text href=""
-                  h2.collection-name = premier_collection.parent_room_type.name
-                  h3 = premier_collection.room_type_name
-                  h4 = premier_collection.description
-                  h3.text-right.price 20$/day
-                = image_tag photos_of_collection(premier_collection), class: "premier-collection-image"
-        .smart-collection
-          ul.smart-collection-block
-            - @smart_collections.each do |smart_collection|
-              li.each-smart-collection.wrapper-small
-                a.text-small href=""
-                  h2.collection-name-small = smart_collection.parent_room_type.name
-                  h3.room-type-name-small = smart_collection.room_type_name
-                  h4.description-small = smart_collection.description
-                  h3.text-right.room-type-name-small.price-small 20$/day
-                = image_tag photos_of_collection(smart_collection), class: "smart-collection-image"
-        .deluxe-collection
-          ul.deluxe-collection-block
-            - @deluxe_collections.each do |deluxe_collection|
-              li.each-deluxe-collection.wrapper
-                a.text href=""
-                  h2.collection-name = deluxe_collection.parent_room_type.name
-                  h3 = deluxe_collection.room_type_name
-                  h4 = deluxe_collection.description
-                  h3.text-right.price 20$/day
-                = image_tag photos_of_collection(deluxe_collection), class: "deluxe-collection-image"
+              = link_to t(".continue"), about_index_path, class: "vi-button vi-button-large"
+        = render 'service/service'
+  = render 'accommodation/accommodation'
 
 
 = render 'book'

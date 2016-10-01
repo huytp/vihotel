@@ -1,0 +1,13 @@
+en:
+  contact:
+    index:
+      full_name: "Full Name: "
+      email: "Email: "
+      phone: "Phone: "
+      title: "Title: "
+      content: "Content"
+      address: "Dong Hoi, Quang Binh, Việt Nam."
+      mobile_phone: "0989 808 345"
+      phone_text: "050012345678"
+      email_text: "info@vihotel.vn"
+      facebook: "facebook.com/Vihotelquangbinh"

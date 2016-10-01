@@ -33,8 +33,12 @@
     <%= f.text_field :room_view %>
   </div>
   <div class="field">
+    <%= f.label "cost ($)" %><br>
+    <%= f.text_field :cost %>
+  </div>
+  <div class="field">
     <%= f.label :room_features %><br>
-    <%= f.text_field :room_features %>
+    <%= f.collection_check_boxes(:room_features, RoomFeature.all, :id, :name,  checked: eval(@room_type.room_features)) %>
   </div>
   <div class="actions">
     <%= f.submit %>
