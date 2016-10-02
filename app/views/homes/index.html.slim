@@ -6,8 +6,9 @@ section#main-slider.no-margin
           .row.slide-margin
             .col-sm-12
               .vi-logo
-                = image_tag 'logo-white.png', class: "logo"
-            .col-sm-12
+                = link_to root_path
+                  = image_tag 'logo-white.png', class: "logo"
+            .col-sm-12.menu-z-index
               nav.navbar
                 .navbar-header
                   button.navbar-toggle.collapsed aria-expanded="false" data-target="#vi-navbar-collapse-2" data-toggle="collapse" type="button"
@@ -18,39 +19,38 @@ section#main-slider.no-margin
                 #vi-navbar-collapse-2.collapse.navbar-collapse
                   ul.nav.navbar-nav.menu-center
                     li.active
-                      a href="#"
+                      = link_to about_index_path
                         = t(".overview")
                         span.sr-only (current)
                     li
-                      a href="#"
+                      = link_to accommodation_index_path
                         = t(".accommodation")
                     li
-                      a href="#"
+                      = link_to service_index_path
                         = t(".service")
                     li
-                      a href="#"
+                      = link_to events_path
                         = t(".meeting")
                     li
-                      a href="#"
+                      = link_to offer_index_path
                         = t(".offers")
                     li
-                      a href="#"
+                      = link_to excursions_path
                         = t(".excursions")
                     li
-                      a href="#"
+                      = link_to contact_index_path
                         = t(".contact")
             .col-sm-12
               .vi-photo
-
-
 
       .item.item-slide-2
         .container
           .row.slide-margin
             .col-sm-12
               .vi-logo
-                = image_tag 'logo-white.png', class: "logo"
-            .col-sm-12
+                = link_to root_path
+                  = image_tag 'logo-white.png', class: "logo"
+            .col-sm-12.menu-z-index
               nav.navbar
                 .navbar-header
                   button.navbar-toggle.collapsed aria-expanded="false" data-target="#vi-navbar-collapse-2" data-toggle="collapse" type="button"
@@ -61,26 +61,26 @@ section#main-slider.no-margin
                 #vi-navbar-collapse-2.collapse.navbar-collapse
                   ul.nav.navbar-nav.menu-center
                     li.active
-                      a href="#"
+                      = link_to about_index_path
                         = t(".overview")
                         span.sr-only (current)
                     li
-                      a href="#"
+                      = link_to accommodation_index_path
                         = t(".accommodation")
                     li
-                      a href="#"
+                      = link_to service_index_path
                         = t(".service")
                     li
-                      a href="#"
+                      = link_to events_path
                         = t(".meeting")
                     li
-                      a href="#"
+                      = link_to offer_index_path
                         = t(".offers")
                     li
-                      a href="#"
+                      = link_to excursions_path
                         = t(".excursions")
                     li
-                      a href="#"
+                      = link_to contact_index_path
                         = t(".contact")
             .col-sm-12
               .vi-photo-1
@@ -94,17 +94,22 @@ section#main-slider.no-margin
   .service-archive
     .container
       .service-content
-        .row
-          .col-sm-6
-            .vi-slide-overview-content
-              - @photo_overviews.each do |photo_overview|
-                = image_tag photo_overview.image.url(:large), class: "vi-slides vi-slides-overview"
-          .col-sm-6
-            .content-box
-              h3.vi-title
-                = link_to @hotel_overview.title, about_index_path
-              h4.short-content = truncate(@hotel_overview.content, length: 321)
-              = link_to t(".continue"), about_index_path, class: "vi-button vi-button-large"
+        - if @hotel_overview.present?
+          .row
+            .col-sm-6
+              .vi-slide-overview-content
+                - if @photo_overviews.present?
+                  - @photo_overviews.each do |photo_overview|
+                    = image_tag photo_overview.image.url(:large), class: "vi-slides vi-slides-overview"
+                - else
+                  = image_tag DEFAULT_PHOTO, class: "vi-slides vi-slides-overview"
+            .col-sm-6
+              .content-box
+                h3.vi-title
+                  = link_to @hotel_overview.title, about_index_path
+                .short-content-block
+                  h4.short-content = raw @hotel_overview.content.truncate(385)
+                = link_to t(".continue"), about_index_path, class: "vi-button vi-button-large"
         = render 'service/service'
   = render 'accommodation/accommodation'
 

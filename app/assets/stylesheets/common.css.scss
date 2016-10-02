@@ -62,6 +62,9 @@
     .logo-img {
       width: 120px;
     }
+    a:hover {
+      background-color: transparent;
+    }
   }
   background: transparent image-url('bg.jpg') 50% 50% no-repeat;
   background-size: cover;

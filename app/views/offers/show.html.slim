@@ -1,0 +1,12 @@
+p
+  strong Title:
+  = @offer.title
+p
+  strong Summary:
+  = @offer.summary
+p
+  strong Content:
+  = raw @offer.content
+= link_to 'Edit', edit_offer_path(@offer)
+|&nbsp;|&nbsp;
+= link_to 'Back', offers_path

@@ -1,4 +1,5 @@
 class ContactsController < ApplicationController
+  before_action :authenticate_user!, only: [:show, :admin_index]
   before_action :check_authorization, only: [:show, :admin_index]
   def index
     @contact = Contact.new

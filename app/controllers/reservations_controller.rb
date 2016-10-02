@@ -1,5 +1,6 @@
 class ReservationsController < ApplicationController
   before_action :set_reservation, only: :show
+  before_action :authenticate_user!, only: [:show, :admin_index]
   before_action :check_authorization, only: [:show, :admin_index]
   def index
     @reservation = Reservation.new

@@ -55,3 +55,5 @@ gem 'kaminari'
 gem 'bootstrap-datepicker-rails', '~> 1.6', '>= 1.6.1.1'
 gem 'delayed_job_active_record', '~> 4.1', '>= 4.1.1'
 gem "cancancan"
+gem 'ckeditor', '~> 4.2'
+gem 'aws-sdk', '< 2.0'

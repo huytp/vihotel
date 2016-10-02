@@ -3,7 +3,7 @@ p
   = @post.title
 p
   strong Content:
-  = @post.content
+  = raw @post.content
 p
   = image_tag @post.image.url(:small)
 = link_to 'Edit', edit_post_path(@post)

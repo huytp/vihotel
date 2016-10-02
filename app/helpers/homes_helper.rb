@@ -1,5 +1,9 @@
 module HomesHelper
   def photos_of_collection collection
-    collection.photo_of_rooms.last.image.url(:large)
+    if collection.photo_of_rooms.present?
+      collection.photo_of_rooms.last.image.url(:large)
+    else
+      DEFAULT_PHOTO
+    end
   end
 end

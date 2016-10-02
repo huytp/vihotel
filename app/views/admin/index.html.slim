@@ -20,9 +20,10 @@
         .col-sm-12
           button.btn.btn-info.admin-btn
             = link_to "Change my password", edit_user_registration_path
-        .col-sm-12
-          button.btn.btn-success.admin-btn
-            = link_to "User manager", users_path
+        - if current_user.admin?
+          .col-sm-12
+            button.btn.btn-success.admin-btn
+              = link_to "User manager", users_path
     .col-sm-8
       .row
         .col-sm-12

@@ -18,8 +18,15 @@
     .vi-logo {
       margin: auto;
       width: 100px;
+      a:hover {
+        background-color: transparent;
+      }
+    }
+    .menu-z-index {
+      z-index: 1000;
     }
     .menu-center {
+      z-index: 100;
       float: none;
       margin: auto;
       width: 910px;
@@ -36,11 +43,13 @@
       }
     }
     .vi-photo {
+      margin-top: -50px;
       height: 500px;
       background: image-url('home_slide_01.svg') 50% 100% no-repeat;
       -moz-box-sizing: border-box;
     }
     .vi-photo-1 {
+      margin-top: -100px;
       height: 500px;
       background: image-url('home_slide_02.svg') 50% 50% no-repeat;
       -moz-box-sizing: border-box;
@@ -70,13 +79,16 @@
         padding-right: 70px;
         padding-left: 70px;
         padding-top: 55px;
-        .short-content {
-          color: #444444;
-          font-size: 19px;
-          line-height: 25px;
-          font-weight: normal;
-          font-style: italic;
+        .short-content-block {
+          .short-content, p, span{
+            color: #444444;
+            font-size: 19px !important;
+            line-height: 25px;
+            font-weight: normal;
+            font-style: italic;
+          }
         }
+
         .vi-title a{
           color: #333333;
           font-size: 24px;

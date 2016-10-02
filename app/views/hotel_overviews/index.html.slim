@@ -3,7 +3,6 @@ table.table.table-striped
   thead
     tr
       th Title
-      th Content
       th Type
       th
       th
@@ -12,7 +11,6 @@ table.table.table-striped
     - @hotel_overviews.each do |hotel_overview|
       tr
         td= hotel_overview.title
-        td= hotel_overview.content
         td= hotel_overview.post_type
         td= link_to 'Show', hotel_overview
         td= link_to 'Edit', edit_hotel_overview_path(hotel_overview)

@@ -2,7 +2,7 @@
   = image_tag post.image.url(:large), class: "single-post-image"
   .single-post-content
     h1.vi-article-title = post.title
-    p.custom-font-size = post.content
+    p.custom-font-size = raw post.content
     p.vi-article-meta
       span.fa.fa-clock-o
       time = post.created_at.to_s(:long)

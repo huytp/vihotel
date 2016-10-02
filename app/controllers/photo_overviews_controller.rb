@@ -71,11 +71,11 @@ class PhotoOverviewsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def photo_overview_params_new
-      params.require("/hotel_overviews/#{params[:hotel_overview_id]}/photo_overviews/new").permit(:image)
+      params.require("/admin/hotel_overviews/#{params[:hotel_overview_id]}/photo_overviews/new").permit(:image)
     end
 
     def photo_overview_params_edit
-      params.require("/hotel_overviews/#{params[:hotel_overview_id]}/photo_overviews/#{params[:id]}").permit(:image)
+      params.require("/admin/hotel_overviews/#{params[:hotel_overview_id]}/photo_overviews/#{params[:id]}").permit(:image)
     end
 
     def set_hotel_overview
