@@ -3,6 +3,7 @@ en:
     accommodation:
       intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut convallis tortor elit, a semper enim efficitur sit amet"
       accommodation_text: "Accommodation"
+      cost: "%{cost}$/day"
     show:
       space: " - "
       room_size: "Room Size: "
