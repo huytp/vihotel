@@ -6,10 +6,10 @@ en:
       phone: "Phone: "
       title: "Title: "
       content: "Content"
-      address: "Dong Hoi, Quang Binh, Việt Nam."
+      address: "125 Truong Phap, Dong Hoi, Quang Binh"
       mobile_phone: "0989 808 345"
       phone_text: "050012345678"
-      email_text: "info@vihotel.vn"
+      email_text: "vihotelquangbinh@gmail.com"
       facebook: "facebook.com/Vihotelquangbinh"
     admin_index:
       contact: "Contact Information"
