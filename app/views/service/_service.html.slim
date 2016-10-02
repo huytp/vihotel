@@ -20,7 +20,7 @@
       .vi-slide-overview-content
         - if @photo_coffees.present?
           - @photo_coffees.each do |photo_coffee|
-            = image_tag photos_of_service_home(photo_coffee), class: "vi-slides vi-slides-coffee"
+            = image_tag photo_coffee.image.url(:large), class: "vi-slides vi-slides-coffee"
         - else
           = image_tag DEFAULT_PHOTO, class: "vi-slides vi-slides-coffee"
     .col-sm-6
