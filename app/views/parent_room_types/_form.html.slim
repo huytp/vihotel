@@ -1,4 +1,4 @@
-= form_for(@parent_room_type) do |f|
+= form_for(@parent_room_type, html: {class: "form-horizontal"}) do |f|
   - if @parent_room_type.errors.any?
     #error_explanation
       h2
@@ -7,10 +7,11 @@
       ul
         - @parent_room_type.errors.full_messages.each do |message|
           li= message
-  .field
-    |name
-    br/
-    = f.text_field :name
+  .field.form-group
+    = f.label :name, class: "col-sm-1 control-label"
+    .col-sm-4
+      = f.text_field :name, class: "form-control"
 
-  .actions
-    = f.submit
+  .actions.form-group
+    .col-sm-1.col-sm-offset-1
+      = f.submit "Submit", class: "btn btn-success"

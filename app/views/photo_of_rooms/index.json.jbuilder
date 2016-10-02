@@ -1,1 +1,0 @@
-json.array! @photo_of_rooms, partial: 'photo_of_rooms/photo_of_room', as: :photo_of_room
