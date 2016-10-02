@@ -85,7 +85,7 @@ Rails.application.configure do
   }
 
   config.action_mailer.default_options = { from: ENV["default_form_mailer"] }
-  config.action_mailer.default_url_options = { host: ENV["default_url_option"], port: 3000}
+  config.action_mailer.default_url_options = { host: ENV["default_url_option"]}
   config.action_mailer.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
     address:              "smtp.gmail.com",
