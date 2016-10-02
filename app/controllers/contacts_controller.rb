@@ -12,6 +12,14 @@ class ContactsController < ApplicationController
     end
   end
 
+  def admin_index
+    @contacts = Contact.order(created_at: :DESC)
+  end
+
+  def show
+    @contact = Contact.find(params[:id])
+  end
+
   private
     def get_params
       params.require(:contact).permit(:full_name, :email, :phone, :title, :content)

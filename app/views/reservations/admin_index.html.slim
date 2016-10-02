@@ -1,0 +1,35 @@
+h2 = t(".reservation")
+table.table.table-striped
+  thead
+    tr
+      th = t(".full_name")
+      th = t(".phone")
+      th = t(".email")
+      th = t(".company")
+      th = t(".address")
+      th = t(".check_in")
+      th = t(".check_out")
+      th = t(".room_type")
+      th = t(".number_of_room")
+      th = t(".number_adult")
+      th = t(".number_children")
+      th = t(".requirement")
+      th = t(".show")
+  tbody
+    - @reservations.each do |reservation|
+      tr
+        td = reservation.full_name
+        td = reservation.phone
+        td = reservation.email
+        td = reservation.company
+        td = reservation.address
+        td = reservation.check_in
+        td = reservation.check_out
+        td = reservation.room_type
+        td = reservation.number_of_room
+        td = reservation.number_adult
+        td = reservation.number_children
+        td = reservation.requirement
+        td = link_to t(".show"), reservation_path(reservation)
+h4
+  = link_to t("back"), admin_index_path

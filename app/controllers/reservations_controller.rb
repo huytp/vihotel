@@ -4,6 +4,10 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.new
   end
 
+  def admin_index
+    @reservations = Reservation.all
+  end
+
   def create
     @reservation = Reservation.new(reservation_params)
 
@@ -18,6 +22,9 @@ class ReservationsController < ApplicationController
         format.json { render json: @reservation.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def show
   end
 
   private

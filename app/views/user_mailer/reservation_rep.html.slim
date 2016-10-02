@@ -1,15 +1,12 @@
-strong
+p
   |Dear&nbsp;
   = @reservation.full_name
-br/
 p
   |Cảm ơn quý khách đã quan tâm ủng hộ ViHotel.
 p
   |Nhân viên của chúng tôi sẽ liên lạc với quý khách trong thời gian sớm nhất.
 p
   |Bên dưới là thông tin đặt phòng của quý khách.
-br/
-
 
 h3
   |Thông tin đặt phòng
@@ -40,12 +37,12 @@ br/
 br/
 strong
   |Ngày vào:&nbsp;
-= @reservation.check_in
+= @reservation.check_in.strftime("%d-%m-%Y")
 br/
 br/
 strong
   |Ngày ra&nbsp;
-= @reservation.check_out
+= @reservation.check_out.strftime("%d-%m-%Y")
 br/
 br/
 strong

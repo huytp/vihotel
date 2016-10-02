@@ -1,0 +1,65 @@
+.admin-page
+  .row
+    .col-sm-4
+      .row
+        .col-sm-12
+          button.btn.btn-default.admin-btn
+            = link_to "Edit hotel overview & services", hotel_overviews_path
+        .col-sm-12
+          button.btn.btn-success.admin-btn
+            = link_to "Edit offers", offers_path
+        .col-sm-12
+          button.btn.btn-info.admin-btn
+            = link_to "Edit meeting & events and excursions", posts_path
+        .col-sm-12
+          button.btn.btn-warning.admin-btn
+            = link_to "Edit room features", room_features_path
+        .col-sm-12
+          button.btn.btn-danger.admin-btn
+            = link_to "Edit room type", parent_room_types_path
+        .col-sm-12
+          button.btn.btn-info.admin-btn
+            = link_to "Change my password", edit_user_registration_path
+        .col-sm-12
+          button.btn.btn-success.admin-btn
+            = link_to "User manager", users_path
+    .col-sm-8
+      .row
+        .col-sm-12
+          h3 = t(".reservation")
+          table.table.table-striped
+            thead
+              tr
+                th = t(".full_name")
+                th = t(".phone")
+                th = t(".created_at")
+                th = t(".show_detail")
+            tbody
+              - @reservations.each do |reservation|
+                tr
+                  td = reservation.full_name
+                  td = reservation.phone
+                  td = reservation.created_at.strftime("%m/%d/%Y")
+                  td = link_to t(".show"), reservation_path(reservation)
+          h4 = link_to t(".more"), reservations_admin_index_path
+
+      .row
+        .col-sm-12
+          h3 = t(".contact")
+          table.table.table-striped
+            thead
+              tr
+                th = t(".full_name")
+                th = t(".email")
+                th = t(".title")
+                th = t(".contact_at")
+                th = t(".show_detail")
+            tbody
+              - @contacts.each do |contact|
+                tr
+                  td = contact.full_name
+                  td = contact.email
+                  td = contact.title
+                  td = contact.created_at.strftime("%m/%d/%Y")
+                  td = link_to t(".show"), contact_path(contact)
+          h4 = link_to t(".more"), admin_index_contacts_path

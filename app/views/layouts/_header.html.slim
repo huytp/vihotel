@@ -13,9 +13,19 @@
       li
         = link_to service_index_path
           = I18n.t("service")
-      li
-        = link_to root_path
+      li.dropdown
+        a.dropdown-toggle data-toggle="dropdown" href="#"
           = image_tag 'logo.png', class: "logo"
+        ul.dropdown-menu
+          - if user_signed_in?
+            li
+              = link_to I18n.t("admin_text"), admin_index_path
+            li
+              = link_to I18n.t("signout"), destroy_user_session_path, method: :delete
+          - else
+            li
+              = link_to I18n.t("signin"), new_user_session_path
+
       li
         = link_to events_path
           = I18n.t("meeting")

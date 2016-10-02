@@ -1,0 +1,20 @@
+.admin-page {
+  a:hover {
+    background-color: transparent;
+    color: #333;
+  }
+  .admin-btn {
+    border-radius: 0px;
+    width: 100%;
+    margin-top: 20px;
+    a {
+      color: white;
+    }
+
+  }
+  .btn-default {
+    a {
+      color: #333;
+    }
+  }
+}

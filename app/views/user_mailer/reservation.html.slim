@@ -27,12 +27,12 @@ br/
 br/
 strong
   |Ngày vào:&nbsp;
-= @reservation.check_in
+= @reservation.check_in.strftime("%d-%m-%Y")
 br/
 br/
 strong
   |Ngày ra&nbsp;
-= @reservation.check_out
+= @reservation.check_out.strftime("%d-%m-%Y")
 br/
 br/
 strong

@@ -1,1 +1,0 @@
-json.array! @hotel_overviews, partial: 'hotel_overviews/hotel_overview', as: :hotel_overview
