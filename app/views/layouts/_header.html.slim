@@ -1,3 +1,4 @@
+
 .parent-navbar
   #vi-navbar.collapse.navbar-collapse
     ul.nav.navbar-nav.menu-center
@@ -38,3 +39,14 @@
       li
         = link_to contact_index_path
           = I18n.t("contact_text")
+    .vi-language
+      .btn-group
+          button.btn.dropdown-toggle.vi-button aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button"
+            = image_tag "en.png"
+          ul.dropdown-menu
+            li
+              a href=""
+                = image_tag "en.png"
+            li
+              a href=""
+                = image_tag "vn.png"

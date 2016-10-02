@@ -8,6 +8,7 @@
     sliderBook();
     if ($("#main-slider").length) {
       overviewSliderOverview();
+      dropDown();
     }
     if ($(".service-archive").length) {
       overviewSliderRestaurant();
@@ -17,6 +18,10 @@
     }
     DatePicker();
   };
+
+  var dropDown = function() {
+    $('.dropdown-toggle').dropdown();
+  }
   var slider = function() {
     if ($("#main-slider").length) {
       $(window).scroll(function(){

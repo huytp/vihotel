@@ -1,6 +1,28 @@
 @import 'https://fonts.googleapis.com/css?family=Montserrat:400,700';
 @import 'constant';
 #vi-header {
+  .vi-language {
+    top: 27px;
+    z-index: 100000;
+    position: fixed;
+    left: 0px;
+    border-radius: 0px;
+    .vi-button {
+      border-radius: 0px;
+      width: 50px;
+      background-color: transparent;
+    }
+    .btn-group.open .dropdown-toggle {
+      box-shadow: none;
+    }
+    .dropdown-menu>li>a {
+      padding-left: 13px;
+      padding-right: 11px;
+    }
+    ul {
+      min-width: 50px;
+    }
+  }
   .logo {
     height: 80px;
     margin-top: -10px;
@@ -25,6 +47,7 @@
     margin: auto;
     width: 1005px;
     height: 90px;
+
     a {
       padding-left: 10px;
       padding-right: 10px;
