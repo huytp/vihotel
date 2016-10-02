@@ -1,6 +1,9 @@
 class PhotoOverviewsController < ApplicationController
   before_action :set_photo_overview, only: [:show, :edit, :update, :destroy]
   before_action :set_hotel_overview, only: [:new, :create, :index, :show, :edit, :update, :destroy]
+  before_action :authenticate_user!
+  load_resource
+  authorize_resource
   # GET /photo_overviews
   # GET /photo_overviews.json
   def index

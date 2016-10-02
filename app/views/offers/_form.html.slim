@@ -1,0 +1,28 @@
+= form_for(@offer, html: {class: "form-horizontal"}) do |f|
+  - if @offer.errors.any?
+    #error_explanation
+      h2
+        = pluralize(@offer.errors.count, "error")
+        | prohibited this offer from being saved:
+      ul
+        - @offer.errors.full_messages.each do |message|
+          li= message
+  .field.form-group
+    = f.label :image, class: "control-label col-sm-2"
+    .col-sm-10
+      = f.file_field :image, class: "form-control"
+  .field.form-group
+    = f.label :title, class: "control-label col-sm-2"
+    .col-sm-10
+      = f.text_field :title, class: "form-control"
+  .field.form-group
+    = f.label :summary, class: "control-label col-sm-2"
+    .col-sm-10
+      = f.text_field :summary, class: "form-control"
+  .field.form-group
+    = f.label :content, class: "control-label col-sm-2"
+    .col-sm-10
+      = f.text_area :content, class: "form-control"
+  .actions.form-group
+    .col-sm-offset-11.col-sm-1
+      = f.submit "Submit", class: "btn btn-success"

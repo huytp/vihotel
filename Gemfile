@@ -54,3 +54,4 @@ gem 'paperclip', '~> 4.3', '>= 4.3.6'
 gem 'kaminari'
 gem 'bootstrap-datepicker-rails', '~> 1.6', '>= 1.6.1.1'
 gem 'delayed_job_active_record', '~> 4.1', '>= 4.1.1'
+gem "cancancan"

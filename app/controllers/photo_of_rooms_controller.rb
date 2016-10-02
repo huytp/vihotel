@@ -1,6 +1,9 @@
 class PhotoOfRoomsController < ApplicationController
   before_action :set_photo_of_room, only: [:show, :edit, :update, :destroy]
   before_action :set_room_type, only: [:new, :create, :index, :show, :edit, :update, :destroy]
+  before_action :authenticate_user!
+  load_resource
+  authorize_resource
   # GET /photo_of_rooms
   # GET /photo_of_rooms.json
   def index

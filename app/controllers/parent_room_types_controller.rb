@@ -1,6 +1,8 @@
 class ParentRoomTypesController < ApplicationController
   before_action :set_parent_room_type, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
+  load_resource
+  authorize_resource
   # GET /parent_room_types
   # GET /parent_room_types.json
   def index

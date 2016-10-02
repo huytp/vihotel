@@ -45,6 +45,7 @@ GEM
     bootstrap-select-rails (1.6.3)
     builder (3.2.2)
     byebug (9.0.5)
+    cancancan (1.14.0)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.8)
@@ -208,6 +209,7 @@ DEPENDENCIES
   bootstrap-datepicker-rails (~> 1.6, >= 1.6.1.1)
   bootstrap-select-rails (~> 1.6.3)
   byebug
+  cancancan
   coffee-rails (~> 4.1.0)
   delayed_job_active_record (~> 4.1, >= 4.1.1)
   devise

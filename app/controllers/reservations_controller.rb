@@ -1,5 +1,6 @@
 class ReservationsController < ApplicationController
   before_action :set_reservation, only: :show
+  before_action :check_authorization, only: [:show, :admin_index]
   def index
     @reservation = Reservation.new
   end
@@ -28,6 +29,11 @@ class ReservationsController < ApplicationController
   end
 
   private
+    def check_authorization
+      unless current_user.staff? || current_user.admin?
+        redirect_to error_errors_path
+      end
+    end
     def set_reservation
       @reservation = Reservation.find(params[:id])
     end

@@ -44,6 +44,11 @@ Rails.application.routes.draw do
   end
 
   scope '/admin' do
+    resources :errors, only: [] do
+      collection do
+        get "", to: "errors#error", as: "error"
+      end
+    end
     resources :users
     resources :posts
     resources :parent_room_types do

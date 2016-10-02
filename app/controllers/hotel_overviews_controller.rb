@@ -1,6 +1,8 @@
 class HotelOverviewsController < ApplicationController
   before_action :set_hotel_overview, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
+  load_resource
+  authorize_resource
   # GET /hotel_overviews
   # GET /hotel_overviews.json
   def index

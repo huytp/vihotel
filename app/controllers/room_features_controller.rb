@@ -1,6 +1,8 @@
 class RoomFeaturesController < ApplicationController
   before_action :set_room_feature, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
+  load_resource
+  authorize_resource
   # GET /room_features
   # GET /room_features.json
   def index
