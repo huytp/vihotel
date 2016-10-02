@@ -1,5 +1,5 @@
-VI_WEB_ADDRESS = "http://vihotel.vn"
-EMAIL_ADDRESS = "vinhhoang.ltd@gmail.com"
+VI_WEB_ADDRESS = "http://vihotelquangbinh.com"
+EMAIL_ADDRESS = "vihotelquangbinh@gmail.com"
 HOTEL_OVERVIEW = "hotel-overview"
 FANPAGE = "Vihotelquangbinh"
 DEFAULT_PHOTO = "default-thumbnail.jpg"
