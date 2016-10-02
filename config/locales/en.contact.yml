@@ -1,5 +1,5 @@
 en:
-  contact:
+  contacts:
     index:
       full_name: "Full Name: "
       email: "Email: "
@@ -11,7 +11,6 @@ en:
       phone_text: "050012345678"
       email_text: "info@vihotel.vn"
       facebook: "facebook.com/Vihotelquangbinh"
-  contacts:
     admin_index:
       contact: "Contact Information"
       full_name: "Full Name: "

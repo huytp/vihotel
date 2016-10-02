@@ -3,10 +3,10 @@
 #vi-main-content {
   #main-slider {
     .item-slide-1 {
-      background:  url('https://yootheme.com/demo/themes/joomla/2015/venice/templates/yoo_venice/images/hash.svg') 0 0 repeat, image-url('slider/1.jpg') no-repeat;
+      background:  image-url('hash.svg') 0 0 repeat, image-url('slider/1.jpg') no-repeat;
     }
     .item-slide-2 {
-      background:  url('https://yootheme.com/demo/themes/joomla/2015/venice/templates/yoo_venice/images/hash.svg') 0 0 repeat, image-url('slider/1.jpg') no-repeat;
+      background:  image-url('hash.svg') 0 0 repeat, image-url('slider/1.jpg') no-repeat;
     }
     .carousel .slide-margin {
       margin-top: 40px;
