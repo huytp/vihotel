@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  mount Ckeditor::Engine => '/ckeditor'
   devise_for :users
   get "contact", to: "contacts#index", as: "contact_index"
   post "contact", to: "contacts#create", as: "contacts"
