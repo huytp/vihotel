@@ -24,7 +24,7 @@ class ContactsController < ApplicationController
 
   private
     def check_authorization
-      unless current_user.author? || current_user.admin?
+      unless current_user.staff? || current_user.admin?
         redirect_to error_errors_path
       end
     end
