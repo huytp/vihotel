@@ -42,11 +42,14 @@
     .vi-language
       .btn-group
           button.btn.dropdown-toggle.vi-button aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button"
-            = image_tag "en.png"
+            - if cookies[:locale] == "en"
+              = image_tag "en.png"
+            - else
+              = image_tag "vn.png"
           ul.dropdown-menu
             li
-              a href=""
+              a href="?locale=en"
                 = image_tag "en.png"
             li
-              a href=""
+              a href="?locale=vi"
                 = image_tag "vn.png"

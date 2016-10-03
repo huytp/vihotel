@@ -16,15 +16,15 @@ section#bottom
             li
               i.flaticon-phone16
               span = I18n.t("phone")
-              a href=("tel: 0989 808 345") = I18n.t("mobile")
+              a href=("tel: #{TABLE_PHONE}") = TABLE_PHONE
             li
               i.flaticon-email21
               span  = I18n.t("email")
-              a href="mailto:#{EMAIL_ADDRESS}" = I18n.t("email_text")
+              a href="mailto:#{EMAIL_ADDRESS}" = EMAIL_ADDRESS
             li
               i.flaticon-world91
               span = I18n.t("web")
-              a href="#{VI_WEB_ADDRESS}" = I18n.t("vi_web")
+              a href="#{VI_WEB_ADDRESS}" = VI_WEB_ADDRESS
           i.flaticon-home78
         .wow.zoomIn.col-xs-12.col-sm-3.col-md-3
           p.footer-heading = I18n.t("hotel")

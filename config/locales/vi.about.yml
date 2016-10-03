@@ -1,0 +1,10 @@
+vi:
+  about:
+    index:
+      map: "Bản đồ:"
+      our_service: "Dịch vụ của chúng tôi"
+    service_header:
+      address: "125 Trương Pháp, Đồng Hới, Quảng Bình"
+      mobile_phone: "0989 808 345"
+      phone: "050012345678"
+      email: "vihotelquangbinh@gmail.com"

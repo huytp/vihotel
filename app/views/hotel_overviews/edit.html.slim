@@ -1,6 +1,6 @@
-h1.text-center Editing Hotel Overview
+h1.text-center = t(".text_header")
 = render 'form'
-.col-sm-1.col-sm-offset-10
-  = link_to 'Show', @hotel_overview
+.col-sm-2.col-sm-offset-10.pull-right
+  = link_to t(".show"), @hotel_overview
   | &nbsp;|&nbsp;
-  = link_to 'Back', hotel_overviews_path
+  = link_to t(".back"), hotel_overviews_path

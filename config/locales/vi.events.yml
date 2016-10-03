@@ -1,0 +1,7 @@
+vi:
+  events:
+    index:
+      last: "Sự kiện gần đây"
+      hotel_name: "VIHOTEL - Khách sạn Vĩnh Hoàng"
+    show:
+      last: "Sự kiện gần đây"

@@ -1,11 +1,12 @@
 p
-  strong Title:
+  strong = t(".title")
+  |&nbsp;
   = @hotel_overview.title
 p
-  strong Content:
+  strong = t(".content")
   = raw @hotel_overview.content
 p
-  = link_to 'Show Photos', hotel_overview_photo_overviews_path(@hotel_overview)
-= link_to 'Edit', edit_hotel_overview_path(@hotel_overview)
+  = link_to t(".show_photo"), hotel_overview_photo_overviews_path(@hotel_overview)
+= link_to t("edit"), edit_hotel_overview_path(@hotel_overview)
 |&nbsp;|&nbsp;
-= link_to 'Back', hotel_overviews_path
+= link_to t(".back"), hotel_overviews_path

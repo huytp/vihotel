@@ -4,26 +4,26 @@
       .row
         .col-sm-12
           button.btn.btn-default.admin-btn
-            = link_to "Edit hotel overview & services", hotel_overviews_path
+            = link_to t(".edit_overview_services"), hotel_overviews_path
         .col-sm-12
           button.btn.btn-success.admin-btn
-            = link_to "Edit offers", offers_path
+            = link_to t(".edit_offer"), offers_path
         .col-sm-12
           button.btn.btn-info.admin-btn
-            = link_to "Edit meeting & events and excursions", posts_path
+            = link_to t(".edit_meeting_excursions"), posts_path
         .col-sm-12
           button.btn.btn-warning.admin-btn
-            = link_to "Edit room features", room_features_path
+            = link_to t(".edit_room_features"), room_features_path
         .col-sm-12
           button.btn.btn-danger.admin-btn
-            = link_to "Edit room type", parent_room_types_path
+            = link_to t(".edit_room_type"), parent_room_types_path
         .col-sm-12
           button.btn.btn-info.admin-btn
-            = link_to "Change my password", edit_user_registration_path
+            = link_to t(".change_passwd"), edit_user_registration_path
         - if current_user.admin?
           .col-sm-12
             button.btn.btn-success.admin-btn
-              = link_to "User manager", users_path
+              = link_to t(".user_manager"), users_path
     .col-sm-8
       .row
         .col-sm-12

@@ -8,17 +8,17 @@
         - @hotel_overview.errors.full_messages.each do |message|
           li= message
   .field.form-group
-    = f.label :title, class: "control-label col-sm-2"
+    = f.label :title, t(".title"), class: "control-label col-sm-2"
     .col-sm-9
       = f.text_field :title, class: "form-control"
   .field.form-group
-    = f.label :content, class: "control-label col-sm-2"
+    = f.label_tag :content, t(".content"), class: "control-label col-sm-2"
     .col-sm-9
       = f.cktext_area :content, class: "form-control"
   .field.form-group
-    = f.label :type, class: "control-label col-sm-2"
+    = f.label_tag :type, t(".type"), class: "control-label col-sm-2"
     .col-sm-9
       = select_tag 'type', options_for_select(get_types, selected: @hotel_overview.post_type),  class: "selectpicker author-field form-control"
   .actions.form-group
     .col-sm-offset-10.col-sm-1
-      = f.submit "Submit", class: "btn btn-success"
+      = f.submit t(".save"), class: "btn btn-success"

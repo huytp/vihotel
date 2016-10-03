@@ -12,3 +12,43 @@ en:
       contact: "Contact"
       email: "Email"
       title: "Title"
+      edit_overview_services: "Edit hotel overview & services"
+      edit_offer: "Edit offers"
+      edit_meeting_excursions: "Edit meeting & events and excursions"
+      edit_room_features: "Edit room features"
+      edit_room_type: "Edit room type"
+      change_passwd: "Change my password"
+      user_manager: "User manager"
+  hotel_overviews:
+    index:
+      title: "Title"
+      type: "Type"
+      text_header: "Listing hotel overview and services"
+      show: "Show"
+      edit: "Edit"
+      back: "Back"
+    edit:
+      text_header: "Editing"
+      show: "Show"
+      back: "Back"
+    form:
+      title: "Title"
+      content: "Content"
+      type: "Type"
+      save: "Save"
+    show:
+      title: "Title"
+      content: "Content"
+      show_photo: "Show photos"
+      edit: "Edit"
+      back: "Back"
+  photo_overviews:
+    index:
+      text_header: "Listing photos of"
+      photo: "Photo"
+      show: "Show"
+      edit: "edit"
+      destroy: "Delete"
+      sure: "Are you sure?"
+      new_photo: "New photo"
+      back: "Back"

@@ -60,5 +60,5 @@
         h3.vi-title
           = link_to @pool.title, show_service_service_index_path(@pool.post_type)
           .short-content-block
-           h4.short-content =raw @pool.content.truncate(385)
+           h4.short-content = raw @pool.content.truncate(385)
         = link_to t(".continue"), show_service_service_index_path(@pool.post_type), class: "vi-button vi-button-large"

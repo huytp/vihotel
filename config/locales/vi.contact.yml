@@ -1,0 +1,27 @@
+vi:
+  contacts:
+    index:
+      full_name: "Họ & tên: "
+      email: "Email: "
+      phone: "Số điện thoại: "
+      title: "Tiêu đề: "
+      content: "Nội dung"
+      address: "125 Trương Pháp, Đồng Hới, Quảng Bình"
+    admin_index:
+      contact: "Thông tin liên hệ"
+      full_name: "Họ & tên: "
+      email: "Email: "
+      phone: "Số điện thoại: "
+      title: "Tiêu đề: "
+      content: "Nội dung: "
+      created_at: "Liên lạc lúc: "
+      back: "Quay lại"
+    show:
+      contact: "Thông tin liên hệ"
+      full_name: "Họ & tên: "
+      email: "Email: "
+      phone: "Số điện thoại: "
+      title: "Tiêu đề: "
+      content: "Nội dung: "
+      created_at: "Liên lạc lúc: "
+      back: "Quay lại"

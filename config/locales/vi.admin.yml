@@ -1,0 +1,54 @@
+vi:
+  admin:
+    index:
+      reservation: "Thông tin đặt phòng"
+      full_name: "Họ và tên"
+      phone: "Số điện thoại"
+      created_at: "Đặt phòng lúc"
+      contact_at: "Liên lạc lúc"
+      show_detail: "Xem chi tiết"
+      show: "Xem"
+      more: "Xem thêm..."
+      contact: "Liên hệ"
+      email: "Email"
+      title: "Tiêu đề"
+      edit_overview_services: "Trang giới thiệu và các trang dịch vụ"
+      edit_offer: "Ưu đãi"
+      edit_meeting_excursions: "Sự kiện và lữ hành"
+      edit_room_features: "Các tiện nghi cho phòng"
+      edit_room_type: "Các loại phòng"
+      change_passwd: "Đổi mật khẩu"
+      user_manager: "Quản lý nhân viên"
+  hotel_overviews:
+    index:
+      title: "Tiêu đề"
+      type: "Loại"
+      text_header: "Liệt kê trang giới thiệu và các trang dịch vụ"
+      show: "Xem"
+      edit: "Chỉnh sửa"
+      back: "Quay lại"
+    edit:
+      text_header: "Chỉnh sửa"
+      show: "Xem"
+      back: "Quay lại"
+    form:
+      title: "Tiêu đề"
+      content: "Nội dung"
+      type: "Loại"
+      save: "Lưu lại"
+    show:
+      title: "Tiêu đề"
+      content: "Nội dung"
+      show_photo: "Xem ảnh"
+      edit: "Chỉnh sửa"
+      back: "Quay lại"
+  photo_overviews:
+    index:
+      text_header: "Danh sách ảnh của"
+      photo: "ẢNh"
+      show: "Xem"
+      edit: "Chỉnh sửa"
+      destroy: "Xóa"
+      sure: "Bạn chắc chưa?"
+      new_photo: "Thêm ảnh mới"
+      back: "Quay lại"
