@@ -21,5 +21,6 @@ class HomesController < ApplicationController
     @premier_collections = ParentRoomType.where(name: "Premier Collection").last.room_types
     @smart_collections = ParentRoomType.where(name: "Smart Superior Collection").last.room_types
     @deluxe_collections = ParentRoomType.where(name: "Deluxe Collection").last.room_types
+    @currency = Currency.last.currency
   end
 end
