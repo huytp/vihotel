@@ -19,6 +19,7 @@ vi:
       edit_room_type: "Các loại phòng"
       change_passwd: "Đổi mật khẩu"
       user_manager: "Quản lý nhân viên"
+      change_currency: "Thay đổi tỉ giá"
   hotel_overviews:
     index:
       title: "Tiêu đề"
@@ -52,3 +53,164 @@ vi:
       sure: "Bạn chắc chưa?"
       new_photo: "Thêm ảnh mới"
       back: "Quay lại"
+  currency:
+    index:
+      change_currency: "Thay đổi tỉ giá"
+      currency: "Tỉ giá hiện tại"
+      back: "Quay lại"
+  offers:
+    index:
+      photo: "Ảnh"
+      text_header: "Danh sách ưu đãi"
+      title: "Tiêu đề"
+      summary: "Tóm tắt"
+      show: "Xem"
+      edit: "Chỉnh sửa"
+      destroy: "Xóa"
+      new_offer: "Thêm ưu đãi"
+      back: "Quay lại"
+    new:
+      text_header: "Thêm ưu đãi mới"
+      back: "Quay lại"
+    show:
+      title: "Tiêu đề"
+      summary: "Tóm tắt"
+      content: "Nội dung"
+      back: "Quay lại"
+      edit: "Chỉnh sửa"
+    edit:
+      text_header: "Chỉnh sửa"
+      back:  "Quay lại"
+      show: "Xem"
+
+    form:
+      photo: "Ảnh"
+      title: "Tiêu đề"
+      summary: "Tóm tắt"
+      content: "Nội dung"
+  posts:
+    index:
+      text_header: "Danh sách sự kiện và lữ hành"
+      post_type: "Loại"
+      title: "Tiêu đề"
+      photo: "Ảnh"
+      show: "Xem"
+      edit: "Chỉnh sửa"
+      destroy: "Xóa"
+      new: "Thêm mới"
+      back: "Quay lại"
+    new:
+      text_header: "Thêm mới sự kiện hoặc lữ hành"
+      back: "Quay lại"
+    edit:
+      text_header: "Chỉnh sửa"
+      show: "Xem"
+      back: "Quay lại"
+    form:
+      post_type: "Loại"
+      title: "Tiêu đề"
+      content: "Nội dung"
+      image: "Ảnh"
+    show:
+      title: "Tiêu đề"
+      content: "Nội dung"
+      edit: "Chỉnh sửa"
+      back: "Quay lại"
+  room_features:
+    index:
+      text_header: "Danh sách các tiện nghi"
+      name: "Tên tiện nghi"
+      show: "xem"
+      edit: "Chỉnh sửa"
+      destroy: "Xóa"
+      new_feature: "Thêm"
+      back: "Quay lại"
+      sure: "Bạn chắc chưa?"
+    new:
+      text_header: "Thêm mới tiện nghi"
+      back: "Quay lại"
+    show:
+      name: "Tên"
+      edit: "Chỉnh sửa"
+      back: "Quay lại"
+    edit:
+      text_header: "Chỉnh sửa tiện nghi"
+      show: "Xem"
+      back: "Quay lại"
+    form:
+      name: "Tên"
+  parent_room_types:
+    index:
+      text_header: "Danh sách 3 gói"
+      name: "Tên"
+      show: "Xem"
+      edit: "Sửa"
+      back: "Quay lại"
+    show:
+      name: "Tên"
+      show: "Xem"
+      show_room_type: "Xem danh sách các loại phòng thuộc gói này"
+      edit: "Chỉnh sửa"
+      back: "Quay lại"
+    form:
+      name: "Tên"
+    edit:
+      text_header: "Chỉnh sửa"
+      show: "Xem"
+      back: "Quay lại"
+  room_types:
+    show:
+      room_type_name: "Tên loại phòng"
+      parent_room_type: "Thuộc gói"
+      description: "Mô tả sơ bộ"
+      room_size: "Kích thước phòng"
+      room_bed: "Kích thước giường"
+      room_view: "Hướng nhìn"
+      room_features: "Tiện nghi"
+      show_photo: "Danh sách ảnh của loại phòng này"
+      edit: "Chỉnh sửa"
+      back: "Quay lại"
+    index:
+      text_header: "Danh sách các loại phòng"
+      room_type_name: "Tên loại phòng"
+      parent_room_type: "Thuộc gói"
+      description: "Mô tả sơ bộ"
+      room_size: "Kích thước phòng"
+      room_bed: "Kích thước giường"
+      room_view: "Hướng nhìn"
+      room_features: "Tiện nghi"
+      show: "Xem"
+      edit: "Chỉnh sửa"
+      back: "Quay lại"
+    edit:
+      text_header: "Chỉnh sửa"
+      show: "Xem"
+      back: "Quay lại"
+    form:
+      room_type_name: "Tên loại phòng"
+      parent_room_type: "Thuộc gói"
+      description: "Mô tả sơ bộ"
+      room_size: "Kích thước phòng"
+      room_bed: "Kích thước giường"
+      room_view: "Hướng nhìn"
+      room_features: "Tiện nghi"
+  photo_of_rooms:
+    index:
+      text_header: "Danh sách ảnh của "
+      photo: "Ảnh"
+      show: "Xem"
+      edit: "Chỉnh sửa"
+      destroy: "Xóa"
+      new_photo: "Thêm ảnh"
+      back: "Quay lại"
+      sure: "Bạn chắc chưa?"
+    show:
+      photo: "Ảnh"
+      edit: "Chỉnh sửa"
+      back: "Quay lại"
+    edit:
+      text_header: "Chỉnh sửa"
+      show: "Xem"
+      back: "Quay lại"
+    form:
+      image: "Ảnh"

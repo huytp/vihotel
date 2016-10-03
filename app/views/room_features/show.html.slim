@@ -1,0 +1,7 @@
+p
+  strong = t(".name")
+  |&nbsp;
+  = @room_feature.name
+= link_to t(".edit"), edit_room_feature_path(@room_feature)
+|&nbsp;|&nbsp;
+= link_to t(".back"), room_features_path

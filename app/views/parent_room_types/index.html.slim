@@ -1,17 +1,14 @@
-h1 Listing Parent Room Types
+h1 = t(".text_header")
 table.table.table-striped
   thead
     tr
-      th Name
-      th colspan="3"
+      th = t(".name")
+      th colspan="2"
   tbody
     - @parent_room_types.each do |parent_room_type|
       tr
-        td= parent_room_type.name
-        td= link_to 'Show', parent_room_type
-        td= link_to 'Edit', edit_parent_room_type_path(parent_room_type)
-        td= link_to 'Destroy', parent_room_type, method: :delete, data: {confirm: 'Are you sure?'}
-br/
-= link_to 'New Parent room type', new_parent_room_type_path
-|&nbsp;|&nbsp;
-= link_to t("back"), admin_index_path
+        td = parent_room_type.name
+        td = link_to t(".show"), parent_room_type
+        td = link_to t(".edit"), edit_parent_room_type_path(parent_room_type)
+br
+= link_to t(".back"), admin_index_path

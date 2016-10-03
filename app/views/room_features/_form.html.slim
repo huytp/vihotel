@@ -1,0 +1,16 @@
+= form_for(@room_feature, html: {class: "form-horizontal"}) do |f|
+  - if @room_feature.errors.any?
+    #error_explanation
+      h3
+        = pluralize(@room_feature.errors.count, "error")
+        | prohibited this room_feature from being saved:
+      ul
+        - @room_feature.errors.full_messages.each do |message|
+          li= message
+  .field.form-group
+    = label_tag :name, t(".name"), class: "col-sm-1 label-control"
+    .col-sm-4
+      = f.text_field :name, class: "form-control"
+  .actions.form-group
+    .col-sm-1.col-sm-offset-1
+      = f.submit "Submit", class: "btn btn-success"

@@ -9,31 +9,31 @@
           li= message
   .field.form-group
     = hidden_field :room_type, :parent_room_type_id
-    = f.label :room_type_name, class: "col-sm-1 label-control"
+    = label_tag :room_type_name, t(".room_type_name"), class: "col-sm-1 label-control"
     .col-sm-4
       = f.text_field :room_type_name, class: "form-control"
   .field.form-group
-    = f.label :description, class: "col-sm-1 label-control"
+    = label_tag :description, t(".description"), class: "col-sm-1 label-control"
     .col-sm-4
       = f.text_area :description, class: "form-control"
   .field.form-group
-    = f.label :room_size, class: "col-sm-1 label-control"
+    = label_tag :room_size, t(".room_size"), class: "col-sm-1 label-control"
     .col-sm-4
       = f.text_field :room_size, class: "form-control"
   .field.form-group
-    = f.label :room_bed, class: "col-sm-1 label-control"
+    = label_tag :room_bed, t(".room_bed"), class: "col-sm-1 label-control"
     .col-sm-4
       = f.text_field :room_bed, class: "form-control"
   .field.form-group
-    = f.label :room_view, class: "col-sm-1 label-control"
+    = label_tag :room_view, t(".room_view"), class: "col-sm-1 label-control"
     .col-sm-4
       = f.text_field :room_view, class: "form-control"
   .field.form-group
-    = f.label "cost ($)", class: "col-sm-1 label-control"
+    = label_tag :cost, t(".cost"), class: "col-sm-1 label-control"
     .col-sm-4
       = f.text_field :cost, class: "form-control"
   .field.form-group
-    = f.label :room_features, class: "col-sm-1 label-control"
+    = label_tag :room_features, t(".room_features"), class: "col-sm-1 label-control"
     .col-sm-4
       = f.collection_check_boxes(:room_features, RoomFeature.all, :id, :name,  checked: eval(@room_type.room_features))
   .actions.form-group

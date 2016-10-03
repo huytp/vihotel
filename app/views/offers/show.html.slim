@@ -1,12 +1,15 @@
 p
-  strong Title:
+  strong = t(".title")
+  |&nbsp;
   = @offer.title
 p
-  strong Summary:
+  strong = t(".summary")
+  |&nbsp;
   = @offer.summary
 p
-  strong Content:
+  strong = t(".content")
+  |&nbsp;
   = raw @offer.content
-= link_to 'Edit', edit_offer_path(@offer)
+= link_to t(".edit"), edit_offer_path(@offer)
 |&nbsp;|&nbsp;
-= link_to 'Back', offers_path
+= link_to t(".back"), offers_path

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   mount Ckeditor::Engine => '/ckeditor'
   devise_for :users
   get "contact", to: "contacts#index", as: "contact_index"
@@ -44,6 +45,7 @@ Rails.application.routes.draw do
   end
 
   scope '/admin' do
+    resources :currency, only: [:index, :update]
     resources :errors, only: [] do
       collection do
         get "", to: "errors#error", as: "error"

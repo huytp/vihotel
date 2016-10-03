@@ -18,6 +18,9 @@
           button.btn.btn-danger.admin-btn
             = link_to t(".edit_room_type"), parent_room_types_path
         .col-sm-12
+          button.btn.btn-warning.admin-btn
+            = link_to t(".change_currency"), currency_index_path
+        .col-sm-12
           button.btn.btn-info.admin-btn
             = link_to t(".change_passwd"), edit_user_registration_path
         - if current_user.admin?

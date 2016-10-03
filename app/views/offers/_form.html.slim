@@ -8,19 +8,19 @@
         - @offer.errors.full_messages.each do |message|
           li= message
   .field.form-group
-    = f.label :image, class: "control-label col-sm-2"
+    = label_tag :image, t(".photo"), class: "control-label col-sm-2"
     .col-sm-9
       = f.file_field :image, class: "form-control"
   .field.form-group
-    = f.label :title, class: "control-label col-sm-2"
+    = label_tag :title, t(".title"), class: "control-label col-sm-2"
     .col-sm-9
       = f.text_field :title, class: "form-control"
   .field.form-group
-    = f.label :summary, class: "control-label col-sm-2"
+    = label_tag :summary, t(".summary"), class: "control-label col-sm-2"
     .col-sm-9
       = f.text_field :summary, class: "form-control"
   .field.form-group
-    = f.label :content, class: "control-label col-sm-2"
+    = label_tag :content, t(".content"), class: "control-label col-sm-2"
     .col-sm-9
       = f.cktext_area :content, class: "form-control"
   .actions.form-group

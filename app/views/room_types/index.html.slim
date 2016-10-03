@@ -1,16 +1,15 @@
-p#notice= notice
-h1 Listing Room Types
+h3 = t(".text_header")
 table.table.table-striped
   thead
     tr
-      th Parent room type
-      th Room type name
-      th Description
-      th Room size
-      th Room bed
-      th Room view
-      th Room features
-      th colspan="3"
+      th = t(".parent_room_type")
+      th = t(".room_type_name")
+      th = t(".description")
+      th = t(".room_size")
+      th = t(".room_bed")
+      th = t(".room_view")
+      th = t(".room_features")
+      th colspan="2"
   tbody
     - @room_types.each do |room_type|
       tr
@@ -21,10 +20,7 @@ table.table.table-striped
         td= room_type.room_bed
         td= room_type.room_view
         td= room_type.room_features
-        td= link_to 'Show', parent_room_type_room_type_path(@parent_room_type, room_type)
-        td= link_to 'Edit', edit_room_type_path(room_type)
-        td= link_to 'Destroy', room_type, method: :delete, data: {confirm: 'Are you sure?'}
-br/
-= link_to 'New room type', new_parent_room_type_room_type_path(@parent_room_type)
-|&nbsp;|&nbsp;
-= link_to 'Back', parent_room_type_path(@parent_room_type)
+        td= link_to t(".show"), parent_room_type_room_type_path(@parent_room_type, room_type)
+        td= link_to t(".edit"), edit_room_type_path(room_type)
+br
+= link_to t(".back"), parent_room_type_path(@parent_room_type)
