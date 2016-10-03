@@ -1,10 +1,9 @@
 class CurrencyController < ApplicationController
   def index
     if Currency.count == 0
-      Currency.create(currency: "22,306.49")
-    else
-      @currency = Currency.last
+      Currency.create(currency: "22306.49")
     end
+    @currency = Currency.last
   end
 
   def update
