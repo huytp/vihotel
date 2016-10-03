@@ -13,7 +13,10 @@
                 h2.collection-name = premier_collection.parent_room_type.name
                 h3 = premier_collection.room_type_name
                 h4 = premier_collection.description
-                h3.text-right.price = t(".cost", cost: premier_collection.cost)
+                - if (cookies[:locale] == "vi")
+                  h3.text-right.price = t(".cost", cost: number_with_delimiter(premier_collection.cost*@currency))
+                - else
+                  h3.text-right.price = t(".cost", cost: number_with_delimiter(premier_collection.cost))
               = image_tag photos_of_collection(premier_collection), class: "premier-collection-image"
       .smart-collection
         ul.smart-collection-block

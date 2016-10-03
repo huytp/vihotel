@@ -3,7 +3,7 @@ vi:
     accommodation:
       intro: "For your sleep, for your soul"
       accommodation_text: "Loại phòng"
-      cost: "%{cost}đồng/ngày"
+      cost: "%{cost} đồng/ngày"
     show:
       space: " - "
       room_size: "Kích thước phòng: "

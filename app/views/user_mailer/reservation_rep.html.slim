@@ -1,75 +1,88 @@
 p
-  |KÍnh gửi (ông/bà)&nbsp;
+  = t(".dear")
+  |&nbsp;
   = @reservation.full_name
 p
-  |Cảm ơn quý khách đã quan tâm ủng hộ ViHotel.
+  = t(".thanks")
 p
-  |Nhân viên của chúng tôi sẽ liên lạc với quý khách trong thời gian sớm nhất.
+  = t(".rep")
 p
-  |Bên dưới là thông tin đặt phòng của quý khách.
+  = t(".below")
 
 h3
-  |Thông tin đặt phòng
+  = t(".reservation_infor")
 strong
-  |Họ và tên:&nbsp;
+  = t(".full_name")
+  |&nbsp;
 = @reservation.full_name
-br/
-br/
+br
+br
 strong
-  |Email:&nbsp;
+  = t(".email")
+  |&nbsp;
 = @reservation.email
-br/
-br/
+br
+br
 strong
-  |Số điện thoại:&nbsp;
+  = t(".phone")
+  |&nbsp;
 = @reservation.phone
-br/
-br/
+br
+br
 strong
-  |Công ty:&nbsp;
+  = t(".company")
+  |&nbsp;
 = @reservation.company
-br/
-br/
+br
+br
 strong
-  |Địa chỉ:&nbsp;
+  = t(".address")
+  |:&nbsp;
 = @reservation.address
-br/
-br/
+br
+br
 strong
-  |Ngày vào:&nbsp;
+  = t(".check_in")
+  |&nbsp;
 = @reservation.check_in.strftime("%d-%m-%Y")
-br/
-br/
+br
+br
 strong
-  |Ngày ra&nbsp;
+  = t(".check_out")
+  |&nbsp;
 = @reservation.check_out.strftime("%d-%m-%Y")
-br/
-br/
+br
+br
 strong
-  |Loại phòng:&nbsp;
+  = t(".room_type")
+  |&nbsp;
 = @reservation.room_type
-br/
-br/
+br
+br
 strong
-  |Số lượng phòng&nbsp;
+  = t(".number_of_room")
+  |&nbsp;
 = @reservation.number_of_room
-br/
-br/
+br
+br
 strong
-  |Số lượng người lớn&nbsp;
+  = t(".number_adult")
+  |&nbsp;
 = @reservation.number_adult
-br/
-br/
+br
+br
 strong
-  |Trẻ em:&nbsp;
+  = t(".number_children")
+  |&nbsp;
 = @reservation.number_children
-br/
-br/
+br
+br
 strong
-  |Yêu cầu khác:&nbsp;
+  = t(".requirement")
+  |&nbsp;
 = @reservation.requirement
-br/
-br/
-|Trân trọng,
-br/
-|khách sạn Vĩnh Hoàng.
+br
+br
+= t(".regard")
+br
+= t(".vihotel")
