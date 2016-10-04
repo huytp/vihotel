@@ -2,11 +2,23 @@
 @import 'constant';
 #vi-main-content {
   #main-slider {
+    .slogan {
+      color: white;
+      font-size: 24px;
+      line-height: 5px;
+      font-style: italic;
+      font-weight: normal;
+      position: absolute;
+      top: 49%;
+      margin: auto;
+      right: 0;
+      left: 0;
+    }
     .item-slide-1 {
-      background:  image-url('hash.svg') 0 0 repeat, image-url('slider/horizontal-1.jpg') no-repeat;
+      background:  image-url('hash.svg') 0 0 repeat, image-url('slider/horizontal-1.jpg') no-repeat center center;
     }
     .item-slide-2 {
-      background:  image-url('hash.svg') 0 0 repeat, image-url('slider/horizontal-1.jpg') no-repeat;
+      background:  image-url('hash.svg') 0 0 repeat, image-url('slider/horizontal-1.jpg') no-repeat center center;
     }
     .carousel .slide-margin {
       margin-top: 40px;
@@ -209,6 +221,10 @@
 @media screen and (max-width: 767px) {
   #vi-main-content {
     #main-slider {
+      .slogan {
+        top: 48%;
+        line-height: 10px;
+      }
       .item-slide-1, .item-slide-2 {
         background: image-url('slider/vertical-1.jpg') no-repeat center center;
         background-size: 140%;
@@ -309,6 +325,20 @@
       .item-slide-1, .item-slide-2  {
         background-size: 100%;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #vi-main-content #main-slider {
+    .slogan {
+      font-size: 20px;
+    }
+    .next {
+      right: -5px;
+    }
+    .prev {
+      left: -3px;
     }
   }
 }
