@@ -2,9 +2,30 @@
 @import 'constant';
 #vi-main-content {
   #main-slider {
+    .vi-language {
+      position: absolute;
+      z-index: 100;
+      left: 0px;
+      border-radius: 0px;
+      .vi-button {
+        border-radius: 0px;
+        width: 50px;
+        background-color: transparent;
+      }
+      .btn-group.open .dropdown-toggle {
+        box-shadow: none;
+      }
+      .dropdown-menu>li>a {
+        padding-left: 13px;
+        padding-right: 11px;
+      }
+      ul {
+        min-width: 50px !important;
+      }
+    }
     .slogan {
       color: white;
-      font-size: 24px;
+      font-size: 23px;
       line-height: 5px;
       font-style: italic;
       font-weight: normal;
@@ -13,6 +34,7 @@
       margin: auto;
       right: 0;
       left: 0;
+      text-transform: uppercase;
     }
     .item-slide-1 {
       background:  image-url('hash.svg') 0 0 repeat, image-url('slider/horizontal-1.jpg') no-repeat center center;

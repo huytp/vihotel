@@ -1,4 +1,19 @@
 section#main-slider.no-margin
+  .vi-language
+    .btn-group
+        button.btn.dropdown-toggle.vi-button aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button"
+          - if cookies[:locale] == "en"
+            = image_tag "en.png"
+          - else
+            = image_tag "vn.png"
+        ul.dropdown-menu
+          li
+            a href="?locale=en"
+              = image_tag "en.png"
+          li
+            a href="?locale=vi"
+              = image_tag "vn.png"
+
   .carousel.slide
     .carousel-inner
       .item.active.item-slide-1
