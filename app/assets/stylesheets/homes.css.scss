@@ -303,7 +303,12 @@
     }
     #main-slider {
       .menu-center {
-        width: 100%;
+        width: 175px;
+        background-color: rgba(0, 0, 0, 0.64);
+        a {
+          color: $main-color;
+          text-shadow: none;
+        }
       }
     }
     #main-content {
