@@ -124,10 +124,8 @@
         }
       }
       .contact-box {
-        padding-right: 40px;
-        padding-left: 40px;
+        padding: 15px;
         padding-top: 30px;
-        padding-bottom: 20px;
       }
     }
     .service .service-content-block .service-image {
@@ -140,6 +138,9 @@
       li.each-service-image:nth-child(2), li.each-service-image:nth-child(3), li.each-service-image:nth-child(4) {
         margin-left: 0px;
       }
+    }
+    .hotel-overview-bottom .overview-content {
+      padding: 15px;
     }
   }
 }

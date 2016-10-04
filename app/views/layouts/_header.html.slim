@@ -1,6 +1,9 @@
 
 .parent-navbar
   nav.navbar
+    .logo-mobile
+      = link_to root_path
+        = image_tag 'logo.png', class: "logo"
     .navbar-header
       button.navbar-toggle.collapsed aria-expanded="false" data-target="#vi-navbar" data-toggle="collapse" type="button"
         span.sr-only Toggle navigation
