@@ -351,7 +351,14 @@
   }
 }
 
-@media screen and (max-width: 414px) {
+@media (min-width: 376px) and (max-width: 480px) {
+  #vi-main-content #main-slider {
+    .slogan {
+      font-size: 18px;
+    }
+  }
+}
+@media screen and (max-width: 375px) {
   #vi-main-content #main-slider {
     .slogan {
       font-size: 15px;

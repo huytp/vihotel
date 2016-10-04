@@ -5,6 +5,7 @@
 
   var init = function() {
     slider();
+    slideHome();
     if ($(window).width() > 767) {
       sliderBook();
     }
@@ -20,6 +21,14 @@
     }
     DatePicker();
   };
+
+  var slideHome = function() {
+    carousel();
+    function carousel() {
+      $(".next").click()
+      setTimeout(carousel, 5000);
+    }
+  }
 
   var dropDown = function() {
     $('.dropdown-toggle').dropdown();
