@@ -30,7 +30,7 @@
         .field.form-group
           label = t(".address")
           = f.text_field :address, class: "form-control"
-      .col-sm-4
+      .col-sm-4.reservation-infor-block
         h4
           strong = t(".reservation_infor")
         .row
@@ -68,7 +68,7 @@
           .col-sm-6.booking-button
             .actions.form-group
               = f.submit t(".quick_book"), class: "vi-button"
-      .col-sm-4
+      .col-sm-4.contact-block
         .contact-form
           h3 = t(".contact")
           p.contact-infor = t(".contact_infor")

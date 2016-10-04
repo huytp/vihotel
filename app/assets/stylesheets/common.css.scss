@@ -190,9 +190,40 @@ a {
 }
 
 @media screen and (max-width: 767px) {
+  #vi-main-content {
+    margin-top: 60px;
+    margin-bottom: 15px;
+  }
+  #vi-main-content.about {
+    margin-top: 15px;
+  }
+  .single-post {
+    margin-bottom: 40px;
+  }
+  #vi-header {
+    .parent-navbar {
+      height: 52px;
+      .navbar-toggle {
+        background-color: #ccc;
+        .icon-bar  {
+          background-color: white;
+        }
+      }
+      #vi-navbar {
+        background-color: white;
+        height: 273px !important;
+      }
+      .vi-language  {
+        top: 8px;
+      }
+    }
+  }
   #bottom {
     .footer-heading {
       margin-top: 30px;
+    }
+    .section-margin {
+      text-align: center;
     }
   }
 }

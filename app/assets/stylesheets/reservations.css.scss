@@ -84,3 +84,16 @@
     }
   }
 }
+
+@media screen and (max-width: 767px) {
+  #vi-main-content {
+    .reservation-main {
+      .reservation-infor-block {
+        margin-top: 30px;
+      }
+      .contact-block {
+        margin-top: 30px;
+      }
+    }
+  }
+}

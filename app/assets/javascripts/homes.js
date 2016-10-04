@@ -5,7 +5,9 @@
 
   var init = function() {
     slider();
-    sliderBook();
+    if ($(window).width() > 767) {
+      sliderBook();
+    }
     if ($("#main-slider").length) {
       overviewSliderOverview();
       dropDown();

@@ -112,6 +112,51 @@
       }
     }
   }
+}
 
+@media screen and (max-width: 767px) {
+  #vi-main-content {
+    .hotel-overview {
+      .vi-slide-overview-content {
+        width: 100%;
+        .overview-photo {
+          height: 250px;
+        }
+      }
+      .contact-box {
+        padding-right: 40px;
+        padding-left: 40px;
+        padding-top: 30px;
+        padding-bottom: 20px;
+      }
+    }
+    .service .service-content-block .service-image {
+      li.each-service-image {
+        width: 100%;
+      }
+      .service-image-image {
+        width: 100%;
+      }
+      li.each-service-image:nth-child(2), li.each-service-image:nth-child(3), li.each-service-image:nth-child(4) {
+        margin-left: 0px;
+      }
+    }
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  #vi-main-content .service .service-content-block .service-image {
+    li.each-service-image {
+      width: 47%;
+    }
+    li.each-service-image:nth-child(2), li.each-service-image:nth-child(4) {
+      float: right;
+    }
+    li.each-service-image:nth-child(3) {
+      margin-left: 0px;
+    }
 
+    .service-image-image {
+      width: 100%;
+    }
+  }
 }

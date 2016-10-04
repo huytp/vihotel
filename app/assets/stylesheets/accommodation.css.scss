@@ -223,7 +223,9 @@
   }
   .reservation-content {
     padding: 20px;
-
+    h3.reservation  {
+      padding-bottom: 10px;
+    }
     .form-control {
       border-radius: 0px;
       box-shadow: none;
@@ -258,13 +260,141 @@
   }
   .lined-heading-book {
     width: 100%;
-    height: 2px;
+    height: 1px;
     background-color: $main-color;
-    span.reservation {
-      position: relative;
-      top: -17px;
-      background: white;
-      left: 170px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .accommodation-detail {
+    .vi-slide-overview-content {
+      width: 100%;
+      .overview-photo {
+        width: 100%;
+        height: 200px;
+      }
+      .chevron-btn {
+        margin-top: 86px;
+      }
+    }
+    .overview-photo {
+      width: 100%;
+      height: 200px;
+    }
+    .contact-box {
+      padding-left: 0px;
+      margin-top: 20px;
+    }
+    .room-infor {
+      margin-left: 0px;
+    }
+  }
+  .accommodation {
+    .accommodation-content {
+      .price-small {
+        margin-right: 15px;
+        margin-top: -28px;
+        margin-bottom: 20px;
+      }
+      .room-type-name-small {
+        font-size: 24px;
+        line-height: 14px;
+        padding-top: 40px;
+      }
+      .wrapper-small {
+        height: 472px;
+      }
+      .collection-name-small {
+        font-size: 25px;
+        letter-spacing: 1px
+      }
+
+      .description-small {
+        font-size: 14px;
+      }
+      .price {
+        margin-top: 10px;
+      }
+      .wrapper {
+        height: 472px;
+      }
+      .text {
+        position: relative;
+        color: $main-color;
+      }
+      .premier-collection {
+        margin-top: -30px;
+        .premier-collection-image {
+          width: 100%;
+        }
+        li.each-premier-collection:nth-child(2),  li.each-premier-collection:nth-child(3) {
+          margin-left: 0px;
+        }
+        li.each-premier-collection {
+          border-bottom: 1px solid $main-color;
+          margin-top: 20px;
+        }
+      }
+      .smart-collection {
+        margin-top: 20px;
+        .smart-collection-image {
+          width: 100%;
+          height: 234px;
+        }
+        li.each-smart-collection:nth-child(2), li.each-smart-collection:nth-child(3), li.each-smart-collection:nth-child(4) {
+          margin-left: 0px;
+        }
+        li.each-smart-collection {
+          border-bottom: 1px solid $main-color;
+          margin-top: 20px;
+        }
+      }
+      .deluxe-collection {
+        .deluxe-collection-image {
+          width: 100%;
+        }
+        li.each-deluxe-collection:nth-child(2), li.each-deluxe-collection:nth-child(3) {
+          margin-left: 0px;
+        }
+        li.each-deluxe-collection {
+          border-bottom: 1px solid $main-color;
+          margin-top: 20px;
+        }
+      }
+
+    }
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .accommodation-detail {
+    .vi-slide-overview-content {
+      .overview-photo {
+        width: 100%;
+        height: 290px;
+      }
+      .chevron-btn {
+        margin-top: 140px;
+      }
+    }
+  }
+  .accommodation {
+    .accommodation-content {
+      .wrapper {
+        height: 510px;
+      }
+      .wrapper-small {
+        height: 510px;
+      }
+      .premier-collection .premier-collection-image {
+        height: 290px;
+      }
+      .smart-collection .smart-collection-image {
+        height: 290px;
+      }
+      .deluxe-collection .deluxe-collection-image {
+        height: 290px;
+      }
     }
   }
 }

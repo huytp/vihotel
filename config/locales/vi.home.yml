@@ -13,7 +13,7 @@ vi:
     book:
       check_in: "Ngày đến:"
       check_out: "Ngày đi:"
-      alduts: "Người lớn:"
+      adults: "Người lớn:"
       kids: "Trẻ em:"
       rooms: "Số phòng:"
       book: "Đặt ngay"

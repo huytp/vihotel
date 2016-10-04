@@ -1,12 +1,6 @@
 - if @restaurant.present?
   .row
-    .col-sm-6
-      .content-box
-        h3.vi-title
-          = link_to @restaurant.title, show_service_service_index_path(@restaurant.title.downcase)
-          .short-content-block
-            h4.short-content = raw @restaurant.content.truncate(385)
-        = link_to t(".continue"), show_service_service_index_path(@restaurant.post_type), class: "vi-button vi-button-large"
+
     .col-sm-6.slide-right
       .vi-slide-overview-content
         - if @photo_restaurants.present?
@@ -14,6 +8,13 @@
             = image_tag photo_restaurant.image.url(:large), class: "vi-slides vi-slides-restaurant"
         - else
           = image_tag DEFAULT_PHOTO, class: "vi-slides vi-slides-restaurant"
+    .col-sm-6.box-left
+      .content-box
+        h3.vi-title
+          = link_to @restaurant.title, show_service_service_index_path(@restaurant.title.downcase)
+          .short-content-block
+            h4.short-content = raw @restaurant.content.truncate(385)
+        = link_to t(".continue"), show_service_service_index_path(@restaurant.post_type), class: "vi-button vi-button-large"
 - if @coffee.present?
   .row
     .col-sm-6
@@ -32,13 +33,6 @@
         = link_to t(".continue"), show_service_service_index_path(@coffee.post_type), class: "vi-button vi-button-large"
 - if @spa.present?
   .row
-    .col-sm-6
-      .content-box
-        h3.vi-title
-          = link_to @spa.title, show_service_service_index_path(@spa.post_type)
-          .short-content-block
-            h4.short-content = raw @spa.content.truncate(385)
-        = link_to t(".continue"), show_service_service_index_path(@spa.post_type), class: "vi-button vi-button-large"
     .col-sm-6.slide-right
       .vi-slide-overview-content
         - if @photo_spas.present?
@@ -46,6 +40,14 @@
             = image_tag photo_spa.image.url(:large), class: "vi-slides vi-slides-spa"
         - else
           = image_tag DEFAULT_PHOTO, class: "vi-slides vi-slides-spa"
+    .col-sm-6.box-left
+      .content-box
+        h3.vi-title
+          = link_to @spa.title, show_service_service_index_path(@spa.post_type)
+          .short-content-block
+            h4.short-content = raw @spa.content.truncate(385)
+        = link_to t(".continue"), show_service_service_index_path(@spa.post_type), class: "vi-button vi-button-large"
+
 - if @pool.present?
   .row
     .col-sm-6

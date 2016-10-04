@@ -2,20 +2,32 @@
   .container
     .row.book-content
       = form_tag reservations_path, method: :GET, enforce_utf8: false
-        .col-sm-2
-          label.label-book = t(".check_in")
-          = text_field_tag 'reservation[check_in]', '', class: "book-input"
-        .col-sm-2
-          label.label-book = t(".check_out")
-          = text_field_tag 'reservation[check_out]', '', class: "book-input"
-        .col-sm-2
-          label.label-book = t(".adults")
-          = number_field_tag 'reservation[adults]', '', class: "book-input", min: 1
-        .col-sm-2
-          label.label-book = t(".kids")
-          = number_field_tag 'reservation[kids]',  '', class: "book-input", min: 0
-        .col-sm-2
-          label.label-book = t(".rooms")
-          = number_field_tag 'reservation[rooms]',  '', class: "book-input", min: 1
+        .col-sm-2.col-margin-top
+          .row
+            label.label-book.col-sm-12.col-xs-3 = t(".check_in")
+            .col-sm-12.col-xs-9.col-padding
+              = text_field_tag 'reservation[check_in]', '', class: "book-input "
+        .col-sm-2.col-margin-top
+          .row
+            label.label-book.col-sm-12.col-xs-3 = t(".check_out")
+            .col-sm-12.col-xs-9.col-padding
+              = text_field_tag 'reservation[check_out]', '', class: "book-input"
+        .col-sm-2.col-margin-top
+          .row
+            label.label-book.col-sm-12.col-xs-3 = t(".adults")
+            .col-sm-12.col-xs-9.col-padding
+              = number_field_tag 'reservation[adults]', '', class: "book-input", min: 1
+        .col-sm-2.col-margin-top
+          .row
+            label.label-book.col-sm-12.col-xs-3 = t(".kids")
+            .col-sm-12.col-xs-9.col-padding
+              = number_field_tag 'reservation[kids]',  '', class: "book-input", min: 0
+        .col-sm-2.col-margin-top
+          .row
+            label.label-book.col-sm-12.col-xs-3 = t(".rooms")
+            .col-sm-12.col-xs-9.col-padding
+              = number_field_tag 'reservation[rooms]',  '', class: "book-input", min: 1
         .col-sm-2.book-button-block
-          = submit_tag t(".book"), class: "vi-button"
+          .row
+            .col-sm-12.col-xs-12.col-padding
+              = submit_tag t(".book"), class: "vi-button"

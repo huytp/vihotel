@@ -38,7 +38,7 @@
             span.sr-only
 
     .col-sm-6
-      .contact-box
+      .contact-box.row
         .room-infor
           p
             strong
@@ -54,35 +54,35 @@
             = f.collection_check_boxes(:room_features, RoomFeature.all, :id, :name, checked: eval(@room.room_features), disable: true)
         .reservation-box
           .reservation-content
-            h2.lined-heading-book
-              span.reservation = t(".reservation")
-              form action="/reservations" accept-charset="UTF-8" method="get"
-                = hidden_field_tag "reservation[room_type]", @room.room_type_name
-                .row
-                  .col-sm-6
-                    .field.form-group
-                      label = t(".check_in")
-                      = text_field_tag "reservation[check_in]", "", class: "form-control"
-                  .col-sm-6
-                    .field.form-group
-                      label = t(".check_out")
-                      = text_field_tag "reservation[check_out]", "", class: "form-control"
-                .row
-                  .col-sm-6
-                    .field.form-group
-                      label = t(".number_of_room")
-                      = number_field_tag "reservation[rooms]", "", class: "form-control", min: 1
-                  .col-sm-6
-                    .field.form-group
-                      label = t(".number_adult")
-                      = number_field_tag "reservation[adults]", "", class: "form-control", min: 0
-                .row
-                  .col-sm-6
-                    .field.form-group
-                      label = t(".number_children")
-                      = number_field_tag "reservation[kids]", "", class: "form-control", min: 0
-                  .col-sm-6.booking-button
-                    .actions.form-group
-                      = label_tag
-                      button.form-control.book-btn type="submit"
-                        = t(".quick_book")
+            h3.lined-heading-book
+            h3.text-center.reservation = t(".reservation")
+            form action="/reservations" accept-charset="UTF-8" method="get"
+              = hidden_field_tag "reservation[room_type]", @room.room_type_name
+              .row
+                .col-sm-6
+                  .field.form-group
+                    label = t(".check_in")
+                    = text_field_tag "reservation[check_in]", "", class: "form-control"
+                .col-sm-6
+                  .field.form-group
+                    label = t(".check_out")
+                    = text_field_tag "reservation[check_out]", "", class: "form-control"
+              .row
+                .col-sm-6
+                  .field.form-group
+                    label = t(".number_of_room")
+                    = number_field_tag "reservation[rooms]", "", class: "form-control", min: 1
+                .col-sm-6
+                  .field.form-group
+                    label = t(".number_adult")
+                    = number_field_tag "reservation[adults]", "", class: "form-control", min: 0
+              .row
+                .col-sm-6
+                  .field.form-group
+                    label = t(".number_children")
+                    = number_field_tag "reservation[kids]", "", class: "form-control", min: 0
+                .col-sm-6.booking-button
+                  .actions.form-group
+                    = label_tag
+                    button.form-control.book-btn type="submit"
+                      = t(".quick_book")

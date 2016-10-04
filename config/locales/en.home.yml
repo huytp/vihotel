@@ -13,7 +13,7 @@ en:
     book:
       check_in: "Check in:"
       check_out: "Check out:"
-      alduts: "Adults:"
+      adults: "Adults:"
       kids: "Kids:"
       rooms: "Rooms:"
       book: "Book now"

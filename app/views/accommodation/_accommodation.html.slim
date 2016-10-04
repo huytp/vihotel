@@ -14,9 +14,9 @@
                 h3 = premier_collection.room_type_name
                 h4 = premier_collection.description
                 - if (cookies[:locale] == "vi")
-                  h3.text-right.price = t(".cost", cost: number_with_delimiter(premier_collection.cost*@currency))
+                  h3.text-right.price.text-center = t(".cost", cost: number_with_delimiter(premier_collection.cost*@currency))
                 - else
-                  h3.text-right.price = t(".cost", cost: number_with_delimiter(premier_collection.cost))
+                  h3.text-right.price.text-center = t(".cost", cost: number_with_delimiter(premier_collection.cost))
               = image_tag photos_of_collection(premier_collection), class: "premier-collection-image"
       .smart-collection
         ul.smart-collection-block
@@ -27,9 +27,9 @@
                 h3.room-type-name-small = smart_collection.room_type_name
                 h4.description-small = smart_collection.description
                 - if (cookies[:locale] == "vi")
-                  h3.text-right.room-type-name-small.price-small = t(".cost", cost: number_with_delimiter(smart_collection.cost*@currency))
+                  h3.text-right.room-type-name-small.price-small.text-center = t(".cost", cost: number_with_delimiter(smart_collection.cost*@currency))
                 - else
-                  h3.text-right.room-type-name-small.price-small = t(".cost", cost: number_with_delimiter(smart_collection.cost))
+                  h3.text-right.room-type-name-small.price-small.text-center = t(".cost", cost: number_with_delimiter(smart_collection.cost))
               = image_tag photos_of_collection(smart_collection), class: "smart-collection-image"
       .deluxe-collection
         ul.deluxe-collection-block
@@ -40,7 +40,7 @@
                 h3 = deluxe_collection.room_type_name
                 h4 = deluxe_collection.description
                 - if (cookies[:locale] == "vi")
-                  h3.text-right.price = t(".cost", cost: number_with_delimiter(deluxe_collection.cost*@currency))
+                  h3.text-right.price.text-center = t(".cost", cost: number_with_delimiter(deluxe_collection.cost*@currency))
                 - else
-                  h3.text-right.price = t(".cost", cost: number_with_delimiter(deluxe_collection.cost))
+                  h3.text-right.price.text-center = t(".cost", cost: number_with_delimiter(deluxe_collection.cost))
               = image_tag photos_of_collection(deluxe_collection), class: "deluxe-collection-image"

@@ -6,7 +6,7 @@
   background-color: white;
   padding-bottom: 30px;
   .contact-box {
-    padding: 35px 70px 0px 70px;
+    padding: 35px 30px 0px 30px;
   }
   .contact-form {
     margin-top: 30px;
@@ -67,6 +67,21 @@
       i.fa {
         color: $main-color;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .vi-contact {
+    margin-bottom: 15px;
+    margin-top: 55px;
+    .contact-form {
+      margin-left: 15px;
+      padding-right: 15px;
+      margin-top: 15px;
+    }
+    .contact-box {
+      padding: 80px 15px 0px 15px;
     }
   }
 }
