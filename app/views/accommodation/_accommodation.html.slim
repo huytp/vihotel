@@ -13,7 +13,7 @@
                 h2.collection-name = premier_collection.parent_room_type.name
                 h3 = premier_collection.room_type_name
                 h4 = premier_collection.description
-                - if (cookies[:locale] == "vi")
+                - if (I18n.locale == :vi)
                   h3.text-right.price.text-center = t(".cost", cost: number_with_delimiter(premier_collection.cost*@currency))
                 - else
                   h3.text-right.price.text-center = t(".cost", cost: number_with_delimiter(premier_collection.cost))
@@ -26,7 +26,7 @@
                 h2.collection-name-small = smart_collection.parent_room_type.name
                 h3.room-type-name-small = smart_collection.room_type_name
                 h4.description-small = smart_collection.description
-                - if (cookies[:locale] == "vi")
+                - if (I18n.locale == :vi)
                   h3.text-right.room-type-name-small.price-small.text-center = t(".cost", cost: number_with_delimiter(smart_collection.cost*@currency))
                 - else
                   h3.text-right.room-type-name-small.price-small.text-center = t(".cost", cost: number_with_delimiter(smart_collection.cost))
@@ -39,7 +39,7 @@
                 h2.collection-name = deluxe_collection.parent_room_type.name
                 h3 = deluxe_collection.room_type_name
                 h4 = deluxe_collection.description
-                - if (cookies[:locale] == "vi")
+                - if (I18n.locale == :vi)
                   h3.text-right.price.text-center = t(".cost", cost: number_with_delimiter(deluxe_collection.cost*@currency))
                 - else
                   h3.text-right.price.text-center = t(".cost", cost: number_with_delimiter(deluxe_collection.cost))
