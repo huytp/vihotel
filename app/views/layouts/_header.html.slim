@@ -3,7 +3,7 @@
   nav.navbar
     .logo-mobile
       = link_to root_path
-        = image_tag 'logo.png', class: "logo"
+        = image_tag 'vihotel-menu.png', class: "logo"
     .navbar-header
       button.navbar-toggle.collapsed aria-expanded="false" data-target="#vi-navbar" data-toggle="collapse" type="button"
         span.sr-only Toggle navigation
@@ -26,7 +26,7 @@
             = I18n.t("service_text")
         li.dropdown
           a.dropdown-toggle data-toggle="dropdown" href="#"
-            = image_tag 'logo.png', class: "logo"
+            = image_tag 'vihotel-menu.png', class: "logo"
           ul.dropdown-menu
             - if user_signed_in?
               li
