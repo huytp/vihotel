@@ -1,15 +1,16 @@
+p = image_tag @offer.image.url(:small)
 p
   strong = t(".title")
   |&nbsp;
-  = @offer.title
+  = eval(@offer.title)[I18n.locale]
 p
   strong = t(".summary")
   |&nbsp;
-  = @offer.summary
+  = eval(@offer.summary)[I18n.locale]
 p
   strong = t(".content")
   |&nbsp;
-  = raw @offer.content
+  = raw eval(@offer.content)[I18n.locale]
 = link_to t(".edit"), edit_offer_path(@offer)
 |&nbsp;|&nbsp;
 = link_to t(".back"), offers_path

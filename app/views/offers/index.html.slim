@@ -10,8 +10,8 @@ table.table.table-striped
     - @offers.each do |offer|
       tr
         td= image_tag offer.image.url(:small)
-        td= offer.title
-        td= offer.summary
+        td= eval(offer.title)[I18n.locale]
+        td= eval(offer.summary)[I18n.locale]
         td= link_to t(".show"), offer
         td= link_to t(".edit"), edit_offer_path(offer)
         td= link_to t(".destroy"), offer, method: :delete, data: {confirm: 'Are you sure?'}

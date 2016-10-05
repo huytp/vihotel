@@ -13,5 +13,5 @@
           .offer-text-block
             .offer-text.text-center
               h3.uk-panel-title
-                a href="/#{params[:controller]}/#{offer.friendly}" = truncate(offer.title, length: 50)
-              h4.summary-text = truncate(offer.summary, length: 100)
+                a href="/#{params[:controller]}/#{offer.friendly}" = truncate(eval(offer.title)[I18n.locale], length: 50)
+              h4.summary-text = truncate(eval(offer.summary)[I18n.locale], length: 100)

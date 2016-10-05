@@ -11,18 +11,35 @@
     = label_tag :image, t(".photo"), class: "control-label col-sm-2"
     .col-sm-9
       = f.file_field :image, class: "form-control"
+      = hidden_field_tag 'offer[hidden]', "hidden"
+
   .field.form-group
-    = label_tag :title, t(".title"), class: "control-label col-sm-2"
+    = label_tag :title_vi, t(".title_vi"), class: "control-label col-sm-2"
     .col-sm-9
-      = f.text_field :title, class: "form-control"
+      = text_field_tag :title_vi, @offer.title.present? ? eval(@offer.title)[:vi] : @offer.title, class: "form-control"
   .field.form-group
-    = label_tag :summary, t(".summary"), class: "control-label col-sm-2"
+    = label_tag :title_en, t(".title_en"), class: "control-label col-sm-2"
     .col-sm-9
-      = f.text_field :summary, class: "form-control"
+      = text_field_tag :title_en, @offer.title.present? ? eval(@offer.title)[:en] : @offer.title, class: "form-control"
+
   .field.form-group
-    = label_tag :content, t(".content"), class: "control-label col-sm-2"
+    = label_tag :summary_vi, t(".summary_vi"), class: "control-label col-sm-2"
     .col-sm-9
-      = f.cktext_area :content, class: "form-control"
+      = text_field_tag :summary_vi, @offer.summary? ? eval(@offer.summary)[:vi] : @offer.summary, class: "form-control"
+  .field.form-group
+    = label_tag :summary_en, t(".summary_en"), class: "control-label col-sm-2"
+    .col-sm-9
+      = text_field_tag :summary_en, @offer.summary.present? ? eval(@offer.summary)[:en] : @offer.summary, class: "form-control"
+
+  .field.form-group
+    = label_tag :content_vi, t(".content_vi"), class: "control-label col-sm-2"
+    .col-sm-9
+      = cktext_area_tag :content_vi, @offer.content.present? ? eval(@offer.content)[:vi] : @offer.content, class: "form-control"
+  .field.form-group
+    = label_tag :content_en, t(".content_en"), class: "control-label col-sm-2"
+    .col-sm-9
+      = cktext_area_tag :content_en, @offer.content.present? ? eval(@offer.content)[:en] : @offer.content, class: "form-control"
+
   .actions.form-group
     .col-sm-offset-10.col-sm-1
       = f.submit "Submit", class: "btn btn-success"

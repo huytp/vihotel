@@ -1,4 +1,7 @@
 class SloganController < ApplicationController
+  before_action :authenticate_user!
+  load_resource
+  authorize_resource
   def index
     @slogan = Slogan.last
   end

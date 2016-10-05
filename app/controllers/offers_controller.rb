@@ -1,9 +1,7 @@
 class OffersController < ApplicationController
   before_action :set_offer, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
-  load_resource
-  authorize_resource
-
+  before_action :check_authorization
   # GET /offers
   # GET /offers.json
   def index
@@ -27,8 +25,11 @@ class OffersController < ApplicationController
   # POST /offers
   # POST /offers.json
   def create
-    @offer = Offer.new(offer_params)
-    @offer.friendly = @offer.title.parameterize
+    @offer = Offer.new(params_image)
+    @offer.title = params_title
+    @offer.summary = params_summary
+    @offer.content = params_content
+    @offer.friendly = eval(@offer.title)[:vi].parameterize
     respond_to do |format|
       if @offer.save
         format.html { redirect_to @offer, notice: 'Offer was successfully created.' }
@@ -44,8 +45,12 @@ class OffersController < ApplicationController
   # PATCH/PUT /offers/1.json
   def update
     respond_to do |format|
-      if @offer.update(offer_params)
-        @offer.friendly = @offer.title.parameterize
+      if @offer.update(params_image)
+        @offer.title = params_title
+        @offer.summary = params_summary
+        @offer.content = params_content
+        @offer.friendly = eval(@offer.title)[:vi].parameterize
+
         @offer.save
         format.html { redirect_to @offer, notice: 'Offer was successfully updated.' }
         format.json { render :show, status: :ok, location: @offer }
@@ -67,13 +72,29 @@ class OffersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+    def check_authorization
+      unless current_user.staff? || current_user.admin?
+        redirect_to error_errors_path
+      end
+    end
+
     def set_offer
       @offer = Offer.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def offer_params
-      params.require(:offer).permit(:title, :summary, :content, :image)
+    def params_image
+      params.require(:offer).permit(:image)
+    end
+
+    def params_title
+      "{vi: '#{params[:title_vi]}', en: '#{params[:title_en]}'}"
+    end
+
+    def params_summary
+      "{vi: '#{params[:summary_vi]}', en: '#{params[:summary_en]}'}"
+    end
+
+    def params_content
+      "{vi: '#{params[:content_vi]}', en: '#{params[:content_en]}'}"
     end
 end

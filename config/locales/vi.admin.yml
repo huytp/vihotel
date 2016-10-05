@@ -91,9 +91,12 @@ vi:
 
     form:
       photo: "Ảnh"
-      title: "Tiêu đề"
-      summary: "Tóm tắt"
-      content: "Nội dung"
+      title_vi: "Tiêu đề (Tiếng Việt)"
+      title_en: "Tiêu đề (Tiếng Anh)"
+      content_vi: "Nội dung (Tiếng Việt)"
+      content_en: "Nội dung (Tiếng Anh)"
+      summary_vi: "Tóm tắt (Tiếng Việt)"
+      summary_en: "Tóm tắt (Tiếng Anh)"
   posts:
     index:
       text_header: "Danh sách sự kiện và lữ hành"

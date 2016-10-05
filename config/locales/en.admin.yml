@@ -37,8 +37,10 @@ en:
       show: "Show"
       back: "Back"
     form:
-      title: "Title"
-      content: "Content"
+      title_vi: "Title (Vietnamese)"
+      title_en: "Title (English)"
+      content_vi: "Content (Vietnamese)"
+      content_en: "Content (English)"
       type: "Type"
       save: "Save"
     show:
@@ -89,9 +91,12 @@ en:
 
     form:
       photo: "Photo"
-      title: "Title"
-      summary: "Summary"
-      content: "Content"
+      title_vi: "Title (Vietnamese)"
+      title_en: "Title (English)"
+      content_vi: "Content (Vietnamese)"
+      content_en: "Content (English)"
+      summary_vi: "Summary (Vietnamese)"
+      summary_en: "Summary (English)"
   posts:
     index:
       text_header: "Listing events and excursions"
