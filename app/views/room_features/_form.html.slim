@@ -10,11 +10,11 @@
   .field.form-group
     = label_tag :name_vi, t(".name_vi"), class: "col-sm-2 label-control"
     .col-sm-4
-      = text_field_tag :name_vi, @room_feature.name.present? ? eval(@room_feature.name)[:vi] : "", class: "form-control"
+      = text_field_tag :name_vi,  "", class: "form-control"
   .field.form-group
     = label_tag :name_en, t(".name_en"), class: "col-sm-2 label-control"
     .col-sm-4
-      = text_field_tag :name_en, @room_feature.name? ? eval(@room_feature.name)[:en] : "", class: "form-control"
+      = text_field_tag :name_en,  "", class: "form-control"
   .actions.form-group
     .col-sm-1.col-sm-offset-2
       = f.submit "Submit", class: "btn btn-success"

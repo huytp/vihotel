@@ -6,7 +6,7 @@
         = t(".space")
         = number_to_currency(@room.cost, unit: "US$", separator: ",", delimiter: "", format: "%n %u")
       h4
-        = @room.description
+        = eval(@room.description)[I18n.locale]
   .row
     .col-sm-6
       .vi-slide-overview-content
