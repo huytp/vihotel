@@ -1,10 +1,10 @@
 p
   strong = t(".title")
   |&nbsp;
-  = @hotel_overview.title
+  = eval(@hotel_overview.title)[I18n.locale]
 p
   strong = t(".content")
-  = raw @hotel_overview.content
+  = raw eval(@hotel_overview.content)[I18n.locale]
 p
   = link_to t(".show_photo"), hotel_overview_photo_overviews_path(@hotel_overview)
 = link_to t("edit"), edit_hotel_overview_path(@hotel_overview)

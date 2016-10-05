@@ -37,8 +37,10 @@ vi:
       show: "Xem"
       back: "Quay lại"
     form:
-      title: "Tiêu đề"
-      content: "Nội dung"
+      title_vi: "Tiêu đề (Tiếng Việt)"
+      title_en: "Tiêu đề (Tiếng Anh)"
+      content_vi: "Nội dung (Tiếng Việt)"
+      content_en: "Nội dung (Tiếng Anh)"
       type: "Loại"
       save: "Lưu lại"
     show:
