@@ -15,11 +15,11 @@
   .field.form-group
     = label_tag :description_vi, t(".description_vi"), class: "col-sm-1 label-control"
     .col-sm-4
-      = text_area_tag :description_vi, class: "form-control"
+      = text_area_tag :description_vi, eval(@room_type.description)[:vi], class: "form-control"
   .field.form-group
     = label_tag :description_en, t(".description_en"), class: "col-sm-1 label-control"
     .col-sm-4
-      = text_area_tag :description_en, class: "form-control"
+      = text_area_tag :description_en, eval(@room_type.description)[:en], class: "form-control"
 
   .field.form-group
     = label_tag :room_size, t(".room_size"), class: "col-sm-1 label-control"
