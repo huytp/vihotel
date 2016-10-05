@@ -117,8 +117,10 @@ en:
       back: "Back"
     form:
       post_type: "Type"
-      title: "Title"
-      content: "Content"
+      title_vi: "Title (Vietnamese)"
+      title_en: "Title (English)"
+      content_vi: "Content (Vietnamese)"
+      content_en: "Content (English)"
       image: "Photo"
     show:
       title: "Title"

@@ -7,8 +7,8 @@
           .post-text
             .post-text-block
               h1.vi-article-title
-                a href="/#{params[:controller]}/#{post.friendly}" = truncate(post.title, length: 70)
-              p.custom-font-size = raw post.content.truncate(700)
+                a href="/#{params[:controller]}/#{post.friendly}" = truncate(eval(post.title)[I18n.locale], length: 70)
+              p.custom-font-size = raw eval(post.content)[I18n.locale].truncate(700)
               h4
                 a.continue-reading-text href="#{params[:controller]}/#{post.friendly}" = t(".continue")
               p

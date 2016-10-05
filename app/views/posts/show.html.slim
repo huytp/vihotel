@@ -1,11 +1,11 @@
 p
   strong = t(".title")
   |&nbsp;
-  = @post.title
+  = eval(@post.title)[I18n.locale]
 p
   strong = t(".content")
   |&nbsp;
-  = raw @post.content
+  = raw eval(@post.content)[I18n.locale]
 p
   = image_tag @post.image.url(:small)
 = link_to t(".edit"), edit_post_path(@post)

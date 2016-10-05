@@ -9,13 +9,13 @@ table.table.table-striped
   tbody
     - @posts.each do |post|
       tr
-        td= post.post_type
-        td= post.title
-        td= image_tag post.image.url(:small)
-        td= link_to t(".show"), post
-        td= link_to t(".edit"), edit_post_path(post)
-        td= link_to t(".destroy"), post, method: :delete, data: {confirm: 'Are you sure?'}
-br/
+        td = post.post_type
+        td = eval(post.title)[I18n.locale]
+        td = image_tag post.image.url(:small)
+        td = link_to t(".show"), post
+        td = link_to t(".edit"), edit_post_path(post)
+        td = link_to t(".destroy"), post, method: :delete, data: {confirm: 'Are you sure?'}
+br
 = link_to t(".new"), new_post_path
 |&nbsp;|&nbsp;
 = link_to t(".back"), admin_index_path

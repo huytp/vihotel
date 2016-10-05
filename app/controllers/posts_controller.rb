@@ -3,31 +3,25 @@ class PostsController < ApplicationController
   before_action :authenticate_user!
   load_resource
   authorize_resource
-  # GET /posts
-  # GET /posts.json
   def index
     @posts = Post.all
   end
 
-  # GET /posts/1
-  # GET /posts/1.json
   def show
   end
 
-  # GET /posts/new
   def new
     @post = Post.new
   end
 
-  # GET /posts/1/edit
   def edit
   end
 
-  # POST /posts
-  # POST /posts.json
   def create
     @post = Post.new(post_params)
-    @post.friendly = @post.title.parameterize
+    @post.title = title_params
+    @post.content = content_params
+    @post.friendly = eval(@post.title)[:vi].parameterize
     respond_to do |format|
       if @post.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
@@ -39,12 +33,12 @@ class PostsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /posts/1
-  # PATCH/PUT /posts/1.json
   def update
     respond_to do |format|
       if @post.update(post_params)
-        @post.friendly = @post.title.parameterize
+        @post.title = title_params
+        @post.content = content_params
+        @post.friendly = eval(@post.title)[:vi].parameterize
         @post.save
         format.html { redirect_to @post, notice: 'Post was successfully updated.' }
         format.json { render :show, status: :ok, location: @post }
@@ -55,8 +49,6 @@ class PostsController < ApplicationController
     end
   end
 
-  # DELETE /posts/1
-  # DELETE /posts/1.json
   def destroy
     @post.destroy
     respond_to do |format|
@@ -66,13 +58,19 @@ class PostsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_post
       @post = Post.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+    def title_params
+      "{vi: '#{params[:title_vi]}', en: '#{params[:title_en]}'}"
+    end
+
+    def content_params
+      "{vi: '#{params[:content_vi]}', en: '#{params[:content_en]}'}"
+    end
+
     def post_params
-      params.require(:post).permit(:title, :content, :image, :post_type)
+      params.require(:post).permit(:image, :post_type)
     end
 end
