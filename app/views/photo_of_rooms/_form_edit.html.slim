@@ -1,4 +1,4 @@
-= form_tag room_type_photo_of_rooms_new_path(@room_type), class: "form-horizontal", multipart: true, method: :post do
+= form_tag room_type_edit_path(@room_type, @photo_of_room), class: "form-horizontal", multipart: true, method: :patch do
   - if @photo_of_room.errors.any?
     #error_explanation
       h2

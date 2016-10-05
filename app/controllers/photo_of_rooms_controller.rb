@@ -2,8 +2,8 @@ class PhotoOfRoomsController < ApplicationController
   before_action :set_photo_of_room, only: [:show, :edit, :update, :destroy]
   before_action :set_room_type, only: [:new, :create, :index, :show, :edit, :update, :destroy]
   before_action :authenticate_user!
-  load_resource
-  authorize_resource
+  # load_resource
+  # authorize_resource
   # GET /photo_of_rooms
   # GET /photo_of_rooms.json
   def index
@@ -70,7 +70,7 @@ class PhotoOfRoomsController < ApplicationController
     end
 
     def photo_of_room_params_new
-      params.require("/room_types/#{params[:room_type_id]}/photo_of_rooms/new").permit(:image)
+      params.require(:photo_of_room).permit(:image)
     end
 
     def set_room_type

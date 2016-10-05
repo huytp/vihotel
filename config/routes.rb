@@ -45,7 +45,7 @@ Rails.application.routes.draw do
   resources :room_types do
     resources :photo_of_rooms, except: [:create, :update]
     post "photo_of_rooms/new", to: "photo_of_rooms#create"
-    post "photo_of_rooms/:id/edit", to: "photo_of_rooms#update"
+    patch "photo_of_rooms/:id/edit", to: "photo_of_rooms#update", as: "edit"
   end
 
   scope '/admin' do
