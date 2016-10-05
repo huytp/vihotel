@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161005050619) do
+ActiveRecord::Schema.define(version: 20161005062247) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -152,6 +152,12 @@ ActiveRecord::Schema.define(version: 20161005050619) do
   end
 
   add_index "room_types", ["parent_room_type_id"], name: "index_room_types_on_parent_room_type_id", using: :btree
+
+  create_table "slogans", force: :cascade do |t|
+    t.string   "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

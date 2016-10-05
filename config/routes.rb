@@ -49,6 +49,7 @@ Rails.application.routes.draw do
   end
 
   scope '/admin' do
+    resources :slogan, only: [:index, :update]
     resources :currency, only: [:index, :update]
     resources :errors, only: [] do
       collection do

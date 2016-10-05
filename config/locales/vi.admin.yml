@@ -23,6 +23,7 @@ vi:
       contacted: "Đã liên lạc"
       not_contacted: "Chưa liên lạc"
       status: "Trạng thái"
+      edit_slogan: "Thay đổi slogan"
   hotel_overviews:
     index:
       title: "Tiêu đề"
@@ -217,3 +218,8 @@ vi:
       back: "Quay lại"
     form:
       image: "Ảnh"
+  slogan:
+    index:
+      change_slogan: "Thay đổi slogan"
+      slogan_vi: "Slogan (tiếng Việt):"
+      slogan_en: "Slogan (tiếng Anh):"

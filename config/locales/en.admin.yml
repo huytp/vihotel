@@ -23,6 +23,7 @@ en:
       contacted: "Contacted"
       not_contacted: "Not contacted yet"
       status: "Status"
+      edit_slogan: "Edit slogan"
   hotel_overviews:
     index:
       title: "Title"
@@ -217,3 +218,9 @@ en:
       back: "Back"
     form:
       image: "Photo"
+  slogan:
+    index:
+      change_slogan: "Change slogan"
+      slogan_vi: "Slogan (vietnamese):"
+      slogan_en: "Slogan (english):"
+      back: "Back"
