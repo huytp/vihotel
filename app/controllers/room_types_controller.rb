@@ -5,8 +5,8 @@ class RoomTypesController < ApplicationController
   before_action :set_parent_room_type_edit_update, only: [:edit, :update]
 
   before_action :authenticate_user!
-  load_resource
-  authorize_resource
+  # load_resource
+  # authorize_resource
 
   def index
     @room_types = @parent_room_type.room_types.all
