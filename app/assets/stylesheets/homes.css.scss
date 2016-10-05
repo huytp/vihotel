@@ -243,10 +243,6 @@
 @media screen and (max-width: 767px) {
   #vi-main-content {
     #main-slider {
-      .slogan {
-        top: 48%;
-        line-height: 10px;
-      }
       .item-slide-1, .item-slide-2 {
         background: image-url('slider/vertical-1.jpg') no-repeat center center;
         background-size: 140%;
@@ -352,21 +348,32 @@
       .item-slide-1, .item-slide-2  {
         background-size: 100%;
       }
+      .slogan {
+        width: 420px;
+        line-height: 25px;
+        top: 47%;
+      }
     }
   }
 }
 
-@media (min-width: 376px) and (max-width: 480px) {
+@media (min-width: 375px) and (max-width: 480px) {
   #vi-main-content #main-slider {
     .slogan {
       font-size: 18px;
+      width: 270px;
+      top: 47%;
+      line-height: 18px;
     }
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 374px) {
   #vi-main-content #main-slider {
     .slogan {
       font-size: 15px;
+      top: 47%;
+      line-height: 18px;
+      width: 265px;
     }
     .next {
       right: -5px;

@@ -4,6 +4,7 @@ class AccommodationController < ApplicationController
     @smart_collections = ParentRoomType.where(name: "Smart Superior Collection").last.room_types
     @deluxe_collections = ParentRoomType.where(name: "Deluxe Collection").last.room_types
     @currency = Currency.last.currency
+    @slogan = eval(Slogan.last.content)[I18n.locale]
   end
 
   def show
