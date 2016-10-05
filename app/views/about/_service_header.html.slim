@@ -56,5 +56,5 @@
     .row
       .col-sm-12
         .overview-content
-          h1.uk-article-title = @service.title
-          p = raw @service.content
+          h1.uk-article-title = eval(@service.title)[I18n.locale]
+          p = raw eval(@service.content)[I18n.locale]

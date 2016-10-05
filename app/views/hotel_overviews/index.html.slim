@@ -9,7 +9,7 @@ table.table.table-striped
   tbody
     - @hotel_overviews.each do |hotel_overview|
       tr
-        td = (hotel_overview.title)
+        td = eval(hotel_overview.title)[I18n.locale]
         td = hotel_overview.post_type
         td = link_to t(".show"), hotel_overview
         td = link_to t(".edit"), edit_hotel_overview_path(hotel_overview)

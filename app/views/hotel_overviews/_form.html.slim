@@ -10,20 +10,20 @@
   .field.form-group
     = label_tag :title, t(".title_vi"), class: "control-label col-sm-2"
     .col-sm-9
-      = text_field_tag "title_vi", "", class: "form-control"
+      = text_field_tag "title_vi", eval(@hotel_overview.title)[:vi], class: "form-control"
   .field.form-group
     = label_tag :title, t(".title_en"), class: "control-label col-sm-2"
     .col-sm-9
-      = text_field_tag "title_en", "", class: "form-control"
+      = text_field_tag "title_en", eval(@hotel_overview.title)[:en], class: "form-control"
 
   .field.form-group
     = label_tag :content, t(".content_vi"), class: "control-label col-sm-2"
     .col-sm-9
-      = cktext_area_tag "content_vi", "", class: "form-control"
+      = cktext_area_tag "content_vi", eval(@hotel_overview.content)[:vi], class: "form-control"
   .field.form-group
     = label_tag :content, t(".content_en"), class: "control-label col-sm-2"
     .col-sm-9
-      = cktext_area_tag "content_en", "", class: "form-control"
+      = cktext_area_tag "content_en", eval(@hotel_overview.content)[:en], class: "form-control"
 
   .field.form-group
     = f.label_tag :type, t(".type"), class: "control-label col-sm-2"

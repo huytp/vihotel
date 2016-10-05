@@ -10,4 +10,4 @@
             li.each-other-service-image.wrapper-small
               = image_tag photos_of_service(vi_service), class: "other-service-image-image"
               a.service-title href="#{show_service_service_index_path(vi_service.post_type)}"
-                h3 = vi_service.title
+                h3 = eval(vi_service.title)[I18n.locale]
