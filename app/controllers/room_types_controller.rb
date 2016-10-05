@@ -32,6 +32,7 @@ class RoomTypesController < ApplicationController
     @room_type = @parent_room_type.room_types.new(room_type_params)
     @room_type.friendly = @room_type.room_type_name.parameterize
     @room_type.room_features = params.require(:room_type).require(:room_features)
+    @room_type.description = params_description
     respond_to do |format|
       if @room_type.save
         format.html { redirect_to parent_room_type_room_type_path(@parent_room_type, @room_type), notice: 'Room type was successfully created.' }
@@ -48,6 +49,7 @@ class RoomTypesController < ApplicationController
   def update
     respond_to do |format|
       if @room_type.update(room_type_params)
+        @room_type.description = params_description
         @room_type.room_features = params.require(:room_type).require(:room_features)
 
         @room_type.friendly = @room_type.room_type_name.parameterize
@@ -72,14 +74,15 @@ class RoomTypesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+    def params_description
+      "{vi: '#{params[:description_vi]}', en: '#{params[:description_en]}'}"
+    end
     def set_room_type
       @room_type = RoomType.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def room_type_params
-      params.require(:room_type).permit(:room_type_name, :description, :room_size, :room_bed, :room_view, :cost)
+      params.require(:room_type).permit(:room_type_name, :room_size, :room_bed, :room_view, :cost)
     end
 
     def set_parent_room_type

@@ -7,7 +7,7 @@ table.table.table-striped
   tbody
     - @room_features.each do |room_feature|
       tr
-        td = room_feature.name
+        td = eval(room_feature.name)[I18n.locale]
         td = link_to t(".show"), room_feature
         td = link_to t(".edit"), edit_room_feature_path(room_feature)
         td = link_to t(".destroy"), room_feature, method: :delete, data: {confirm: t(".sure")}

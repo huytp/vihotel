@@ -51,7 +51,7 @@
           = form_for(@room, html: {class: "accomodation-feature-form"}) do |f|
             strong
               span = t(".feature")
-            = f.collection_check_boxes(:room_features, RoomFeature.all, :id, :name, checked: eval(@room.room_features), disable: true)
+            = f.collection_check_boxes(:room_features, RoomFeature.all, :id, :name_with_initial, checked: eval(@room.room_features), disable: true)
         .reservation-box
           .reservation-content
             h3.lined-heading-book

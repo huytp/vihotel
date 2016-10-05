@@ -149,7 +149,8 @@ vi:
       show: "Xem"
       back: "Quay lại"
     form:
-      name: "Tên"
+      name_vi: "Tên (Tiếng Việt)"
+      name_en: "Tên (Tiếng Anh)"
   parent_room_types:
     index:
       text_header: "Danh sách 3 gói"
@@ -200,7 +201,8 @@ vi:
     form:
       room_type_name: "Tên loại phòng"
       parent_room_type: "Thuộc gói"
-      description: "Mô tả sơ bộ"
+      description_vi: "Mô tả sơ bộ (Tiếng Việt)"
+      description_en: "Mô tả sơ bộ (Tiếng Anh)"
       room_size: "Kích thước phòng"
       room_bed: "Kích thước giường"
       room_view: "Hướng nhìn"

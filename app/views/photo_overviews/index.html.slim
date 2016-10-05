@@ -1,7 +1,7 @@
 h3
   = t(".text_header")
   |&nbsp;
-  = @hotel_overview.title
+  = eval(@hotel_overview.title)[I18n.locale]
 table.table.table-striped
   thead
     tr

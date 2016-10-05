@@ -149,7 +149,8 @@ en:
       show: "Show"
       back: "Back"
     form:
-      name: "Name"
+      name_vi: "Name (Vietnamese)"
+      name_en: "Name (English)"
   parent_room_types:
     index:
       text_header: "Listing parent room types"
@@ -200,7 +201,8 @@ en:
     form:
       room_type_name: "Room type name"
       parent_room_type: "Parent room type"
-      description: "Description"
+      description_vi: "Description (Vietnamese)"
+      description_en: "Description (English)"
       room_size: "Room size"
       room_bed: "Bed size"
       room_view: "View"

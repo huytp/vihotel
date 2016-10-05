@@ -12,10 +12,16 @@
     = label_tag :room_type_name, t(".room_type_name"), class: "col-sm-1 label-control"
     .col-sm-4
       = f.text_field :room_type_name, class: "form-control"
+
   .field.form-group
-    = label_tag :description, t(".description"), class: "col-sm-1 label-control"
+    = label_tag :description_vi, t(".description_vi"), class: "col-sm-1 label-control"
     .col-sm-4
-      = f.text_area :description, class: "form-control"
+      = text_area_tag :description_vi, class: "form-control"
+  .field.form-group
+    = label_tag :description_en, t(".description_en"), class: "col-sm-1 label-control"
+    .col-sm-4
+      = text_area_tag :description_en, class: "form-control"
+
   .field.form-group
     = label_tag :room_size, t(".room_size"), class: "col-sm-1 label-control"
     .col-sm-4
@@ -35,7 +41,7 @@
   .field.form-group
     = label_tag :room_features, t(".room_features"), class: "col-sm-1 label-control"
     .col-sm-4
-      = f.collection_check_boxes(:room_features, RoomFeature.all, :id, :name,  checked: eval(@room_type.room_features))
+      = f.collection_check_boxes(:room_features, RoomFeature.all, :id, :name_with_initial, checked: eval(@room_type.room_features))
   .actions.form-group
     .col-sm-1.col-sm-offset-1
       = f.submit "Submit", class: "btn btn-success"
