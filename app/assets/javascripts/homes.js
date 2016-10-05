@@ -20,7 +20,15 @@
       overviewSliderPool();
     }
     DatePicker();
+    rollTop();
   };
+
+  var rollTop = function() {
+    $(".backtop").click(function() {
+      $("html, body").animate({ scrollTop: 0 }, "slow");
+      return false;
+    });
+  }
 
   var slideHome = function() {
     carousel();
