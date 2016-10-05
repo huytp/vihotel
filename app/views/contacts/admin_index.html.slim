@@ -2,22 +2,28 @@
   h2 = t(".contact")
   .row
     .col-sm-12
-      table.table.table-striped
-          thead
-            tr
-              th = t(".full_name")
-              th = t(".email")
-              th = t(".phone")
-              th = t(".title")
-              th = t(".content")
-              th = t(".created_at")
-          tbody
-            - @contacts.each do |contact|
+      .table-responsive
+        table.table.table-striped
+            thead
               tr
-                td = contact.full_name
-                td = contact.email
-                td = contact.phone
-                td = contact.title
-                td = contact.content
-                td = contact.created_at
+                th = t(".full_name")
+                th = t(".email")
+                th = t(".phone")
+                th = t(".title")
+                th = t(".content")
+                th = t(".created_at")
+                th = t(".status")
+                th = t(".show")
+            tbody
+              - @contacts.each do |contact|
+                tr
+                  td = contact.full_name
+                  td = contact.email
+                  td = contact.phone
+                  td = contact.title
+                  td = contact.content
+                  td = contact.created_at
+                  td = contact.check ? t(".contacted") : t(".not_contacted")
+                  td = link_to t(".show"), contact_path(contact)
+      = paginate @contacts
       = link_to t("back"), admin_index_path

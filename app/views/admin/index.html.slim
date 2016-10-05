@@ -31,39 +31,45 @@
       .row
         .col-sm-12
           h3 = t(".reservation")
-          table.table.table-striped
-            thead
-              tr
-                th = t(".full_name")
-                th = t(".phone")
-                th = t(".created_at")
-                th = t(".show_detail")
-            tbody
-              - @reservations.each do |reservation|
+          .table-responsive
+            table.table.table-striped
+              thead
                 tr
-                  td = reservation.full_name
-                  td = reservation.phone
-                  td = reservation.created_at.strftime("%m/%d/%Y")
-                  td = link_to t(".show"), reservation_path(reservation)
+                  th = t(".full_name")
+                  th = t(".phone")
+                  th = t(".created_at")
+                  th = t(".status")
+                  th = t(".show_detail")
+              tbody
+                - @reservations.each do |reservation|
+                  tr
+                    td = reservation.full_name
+                    td = reservation.phone
+                    td = reservation.created_at.strftime("%m/%d/%Y")
+                    td = reservation.check ? t(".contacted") : t(".not_contacted")
+                    td = link_to t(".show"), reservation_path(reservation)
           h4 = link_to t(".more"), reservations_admin_index_path
 
       .row
         .col-sm-12
           h3 = t(".contact")
-          table.table.table-striped
-            thead
-              tr
-                th = t(".full_name")
-                th = t(".email")
-                th = t(".title")
-                th = t(".contact_at")
-                th = t(".show_detail")
-            tbody
-              - @contacts.each do |contact|
+          .table-responsive
+            table.table.table-striped.table-responsive
+              thead
                 tr
-                  td = contact.full_name
-                  td = contact.email
-                  td = contact.title
-                  td = contact.created_at.strftime("%m/%d/%Y")
-                  td = link_to t(".show"), contact_path(contact)
+                  th = t(".full_name")
+                  th = t(".email")
+                  th = t(".title")
+                  th = t(".contact_at")
+                  th = t(".status")
+                  th = t(".show_detail")
+              tbody
+                - @contacts.each do |contact|
+                  tr
+                    td = contact.full_name
+                    td = contact.email
+                    td = contact.title
+                    td = contact.created_at.strftime("%m/%d/%Y")
+                    td = contact.check ? t(".contacted") : t(".not_contacted")
+                    td = link_to t(".show"), contact_path(contact)
           h4 = link_to t(".more"), admin_index_contacts_path

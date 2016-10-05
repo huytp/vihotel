@@ -20,6 +20,9 @@ vi:
       change_passwd: "Đổi mật khẩu"
       user_manager: "Quản lý nhân viên"
       change_currency: "Thay đổi tỉ giá"
+      contacted: "Đã liên lạc"
+      not_contacted: "Chưa liên lạc"
+      status: "Trạng thái"
   hotel_overviews:
     index:
       title: "Tiêu đề"

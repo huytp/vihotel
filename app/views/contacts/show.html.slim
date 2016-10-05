@@ -2,22 +2,25 @@
   h2 = t(".contact")
   .row
     .col-sm-12
-      table.table.table-striped
-          thead
-            tr
-              th = t(".full_name")
-              th = t(".email")
-              th = t(".phone")
-              th = t(".title")
-              th = t(".content")
-              th = t(".created_at")
-          tbody
-            tr
-              td = @contact.full_name
-              td = @contact.email
-              td = @contact.phone
-              td = @contact.title
-              td = @contact.content
-              td = @contact.created_at
+      .table-responsive
+        table.table.table-striped
+            thead
+              tr
+                th = t(".full_name")
+                th = t(".email")
+                th = t(".phone")
+                th = t(".title")
+                th = t(".content")
+                th = t(".created_at")
+                th = t(".contact_already")
+            tbody
+              tr
+                td = @contact.full_name
+                td = @contact.email
+                td = @contact.phone
+                td = @contact.title
+                td = @contact.content
+                td = @contact.created_at
+                td = link_to @contact.check ? t(".mark_un_checked") : t(".mark_checked"), @contact, method: "patch", class: "btn btn-success"
       h4
         = link_to t("back"), admin_index_path

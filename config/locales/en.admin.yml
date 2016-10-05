@@ -20,6 +20,9 @@ en:
       change_passwd: "Change my password"
       user_manager: "User manager"
       change_currency: "Change currency"
+      contacted: "Contacted"
+      not_contacted: "Not contacted yet"
+      status: "Status"
   hotel_overviews:
     index:
       title: "Title"

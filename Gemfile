@@ -51,7 +51,7 @@ gem 'slim', '~> 3.0', '>= 3.0.7'
 gem 'devise'
 gem 'bootstrap-select-rails', '~> 1.6.3'
 gem 'paperclip', '~> 4.3', '>= 4.3.6'
-gem 'kaminari'
+gem 'kaminari', '~> 0.16.3'
 gem 'bootstrap-datepicker-rails', '~> 1.6', '>= 1.6.1.1'
 gem 'delayed_job_active_record', '~> 4.1', '>= 4.1.1'
 gem "cancancan"

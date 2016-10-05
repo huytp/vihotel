@@ -25,3 +25,5 @@ en:
   admin_text: "Admin"
   author: "Author"
   sub: "Sub"
+  update: "Updated"
+  error: "Error!"

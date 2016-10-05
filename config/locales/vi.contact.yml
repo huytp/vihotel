@@ -16,6 +16,9 @@ vi:
       content: "Nội dung: "
       created_at: "Liên lạc lúc: "
       back: "Quay lại"
+      contacted: "Đã liên lạc"
+      not_contacted: "Chưa liên lạc"
+      status: "Trạng thái"
     show:
       contact: "Thông tin liên hệ"
       full_name: "Họ & tên: "
@@ -25,3 +28,6 @@ vi:
       content: "Nội dung: "
       created_at: "Liên lạc lúc: "
       back: "Quay lại"
+      mark_un_checked: "Đánh dấu chưa liên lạc"
+      mark_checked: "Đánh dấu đã liên lạc"
+      contact_already: "Đã liên lạc/ chưa liên lạc"

@@ -35,7 +35,11 @@ Rails.application.routes.draw do
 
   resources :about, only: :index
   root "homes#index"
-  resources :reservations
+  resources :reservations, only: [:index, :show] do
+    collection do
+      patch "/:id", to: "reservations#check"
+    end
+  end
 
 
   resources :room_types do
@@ -68,6 +72,7 @@ Rails.application.routes.draw do
     resources :contacts, only: [:show] do
       collection do
         get "", to: "contacts#admin_index", as: "admin_index"
+        patch "/:id", to: "contacts#check"
       end
     end
   end

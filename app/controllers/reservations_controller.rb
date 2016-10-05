@@ -1,5 +1,5 @@
 class ReservationsController < ApplicationController
-  before_action :set_reservation, only: :show
+  before_action :set_reservation, only: [:show, :check]
   before_action :authenticate_user!, only: [:show, :admin_index]
   before_action :check_authorization, only: [:show, :admin_index]
   def index
@@ -7,7 +7,7 @@ class ReservationsController < ApplicationController
   end
 
   def admin_index
-    @reservations = Reservation.all
+    @reservations = Reservation.order(created_at: :DESC).page(params[:page])
   end
 
   def create
@@ -27,6 +27,20 @@ class ReservationsController < ApplicationController
   end
 
   def show
+  end
+
+  def check
+    if @reservation.check
+      @reservation.check = false
+    else
+      @reservation.check = true
+    end
+    if @reservation.save
+      flash[:notice] = I18n.t("update")
+    else
+      flash[:notice] = I18n.t("error")
+    end
+    redirect_to @reservation
   end
 
   private
