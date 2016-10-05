@@ -49,7 +49,7 @@ class RoomTypesController < ApplicationController
     respond_to do |format|
       if @room_type.update(room_type_params)
         @room_type.room_features = params.require(:room_type).require(:room_features)
-
+        @room_type.description = description_params
         @room_type.friendly = @room_type.room_type_name.parameterize
         @room_type.save
         format.html { redirect_to parent_room_type_room_type_path(@parent_room_type, @room_type), notice: 'Room type was successfully updated.' }
@@ -72,6 +72,9 @@ class RoomTypesController < ApplicationController
   end
 
   private
+    def description_params
+      "{vi: '#{params[:description_vi]}', en: '#{params[:description_en]}'}"
+    end
     # Use callbacks to share common setup or constraints between actions.
     def set_room_type
       @room_type = RoomType.find(params[:id])
