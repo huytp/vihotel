@@ -37,7 +37,7 @@ Rails.application.routes.draw do
   root "homes#index"
   resources :reservations, only: [:index, :show] do
     collection do
-      patch "/:id", to: "reservations#check"
+      post "/:id", to: "reservations#check"
     end
   end
 
@@ -72,7 +72,7 @@ Rails.application.routes.draw do
     resources :contacts, only: [:show] do
       collection do
         get "", to: "contacts#admin_index", as: "admin_index"
-        patch "/:id", to: "contacts#check"
+        post "/:id", to: "contacts#check"
       end
     end
   end

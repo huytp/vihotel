@@ -30,6 +30,6 @@ h2 = t(".reservation")
         td = @reservation.number_adult
         td = @reservation.number_children
         td = @reservation.requirement
-        td = link_to @reservation.check ? t(".mark_un_checked") : t(".mark_checked"), @reservation, method: "patch", class: "btn btn-success"
+        td = link_to @reservation.check ? t(".mark_un_checked") : t(".mark_checked"), @reservation, method: "post", class: "btn btn-success"
 h4
   = link_to t("back"), admin_index_path
