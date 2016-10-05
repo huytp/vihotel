@@ -35,6 +35,7 @@
       right: 0;
       left: 0;
       text-transform: uppercase;
+      text-shadow: 1px 1px 2px #000;
     }
     .item-slide-1 {
       background:  image-url('hash.svg') 0 0 repeat, image-url('slider/horizontal-1.jpg') no-repeat center center;
@@ -68,7 +69,7 @@
         text-transform: uppercase;
         color: white;
         font-size: 14px;
-        font-weight: 700;font-family: Montserrat;
+        font-weight: 700;
         text-shadow: 1px 1px 2px #000;
       }
       a:hover {
@@ -162,7 +163,7 @@
           text-decoration: none;
           text-align: center;
           border: 2px solid #444444;
-          font-family: 'Montserrat';
+          font-family: Arial;
           font-weight: 400;
           text-transform: uppercase;
           letter-spacing: 2px;
@@ -222,7 +223,7 @@
       text-decoration: none;
       text-align: center;
       border: 1px solid white;
-      font-family: 'Montserrat';
+      font-family: Arial;
       font-weight: 400;
       text-transform: uppercase;
       letter-spacing: 2px;
