@@ -11,7 +11,7 @@
     .col-sm-6.box-left
       .content-box
         h3.vi-title
-          = link_to eval(@restaurant.title)[I18n.locale], show_service_service_index_path(@restaurant.title.downcase)
+          = link_to eval(@restaurant.title)[I18n.locale], show_service_service_index_path(@restaurant.post_type)
           .short-content-block
             h4.short-content = raw eval(@restaurant.content)[I18n.locale].truncate(385)
         = link_to t(".continue"), show_service_service_index_path(@restaurant.post_type), class: "vi-button vi-button-large"
