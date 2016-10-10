@@ -35,7 +35,7 @@ Rails.application.routes.draw do
 
   resources :about, only: :index
   root "homes#index"
-  resources :reservations, only: [:index, :show] do
+  resources :reservations, only: [:index, :show, :create] do
     collection do
       post "/:id", to: "reservations#check"
     end
