@@ -15,6 +15,46 @@ section#main-slider.no-margin
               = image_tag "vn.png"
 
   .carousel.slide
+    .carousel-menu
+      nav.navbar
+        .navbar-header
+          button.navbar-toggle.collapsed aria-expanded="false" data-target=".vi-navbar-collapse" data-toggle="collapse" type="button"
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+        .vi-navbar-collapse.collapse.navbar-collapse
+          ul.nav.navbar-nav.menu-center
+            li.active
+              = link_to about_index_path
+                = t(".overview")
+                span.sr-only (current)
+            li.parent-li
+              = link_to I18n.t("accommodation_text"), accommodation_index_path
+              ul.vi-submenu.hidden-xs
+                - roomtypes = RoomType.all
+                - roomtypes.each do |roomtype|
+                  li
+                    = link_to roomtype.room_type_name, show_accomodation_accommodation_index_path(roomtype.friendly)
+            li.parent-li
+              = link_to I18n.t("service_text"), service_index_path
+              ul.vi-submenu.hidden-xs
+                - services = HotelOverview.where.not(post_type: 'hotel-overview')
+                - services.each do |srv|
+                  li
+                    = link_to eval(srv.title)[I18n.locale], show_service_service_index_path(srv.post_type)
+            li
+              = link_to events_path
+                = t(".meeting")
+            li
+              = link_to offer_index_path
+                = t(".offers")
+            li
+              = link_to excursions_path
+                = t(".excursions")
+            li
+              = link_to contact_index_path
+                = t(".contact")
     .carousel-inner
       .item.active.item-slide-1
         .container
@@ -25,37 +65,7 @@ section#main-slider.no-margin
                 = link_to root_path
                   = image_tag 'logo-white-header.png', class: "logo"
             .col-sm-12.menu-z-index
-              nav.navbar
-                .navbar-header
-                  button.navbar-toggle.collapsed aria-expanded="false" data-target=".vi-navbar-collapse" data-toggle="collapse" type="button"
-                    span.sr-only Toggle navigation
-                    span.icon-bar
-                    span.icon-bar
-                    span.icon-bar
-                .vi-navbar-collapse.collapse.navbar-collapse
-                  ul.nav.navbar-nav.menu-center
-                    li.active
-                      = link_to about_index_path
-                        = t(".overview")
-                        span.sr-only (current)
-                    li
-                      = link_to accommodation_index_path
-                        = t(".accommodation_text")
-                    li
-                      = link_to service_index_path
-                        = t(".service")
-                    li
-                      = link_to events_path
-                        = t(".meeting")
-                    li
-                      = link_to offer_index_path
-                        = t(".offers")
-                    li
-                      = link_to excursions_path
-                        = t(".excursions")
-                    li
-                      = link_to contact_index_path
-                        = t(".contact")
+
 
             .col-sm-12
               .vi-photo
@@ -69,37 +79,45 @@ section#main-slider.no-margin
                 = link_to root_path
                   = image_tag 'logo-white-header.png', class: "logo"
             .col-sm-12.menu-z-index
-              nav.navbar
-                .navbar-header
-                  button.navbar-toggle.collapsed aria-expanded="false" data-target=".vi-navbar-collapse" data-toggle="collapse" type="button"
-                    span.sr-only Toggle navigation
-                    span.icon-bar
-                    span.icon-bar
-                    span.icon-bar
-                .vi-navbar-collapse.collapse.navbar-collapse
-                  ul.nav.navbar-nav.menu-center
-                    li.active
-                      = link_to about_index_path
-                        = t(".overview")
-                        span.sr-only (current)
-                    li
-                      = link_to accommodation_index_path
-                        = t(".accommodation_text")
-                    li
-                      = link_to service_index_path
-                        = t(".service")
-                    li
-                      = link_to events_path
-                        = t(".meeting")
-                    li
-                      = link_to offer_index_path
-                        = t(".offers")
-                    li
-                      = link_to excursions_path
-                        = t(".excursions")
-                    li
-                      = link_to contact_index_path
-                        = t(".contact")
+              / nav.navbar
+              /   .navbar-header
+              /     button.navbar-toggle.collapsed aria-expanded="false" data-target=".vi-navbar-collapse" data-toggle="collapse" type="button"
+              /       span.sr-only Toggle navigation
+              /       span.icon-bar
+              /       span.icon-bar
+              /       span.icon-bar
+              /   .vi-navbar-collapse.collapse.navbar-collapse
+              /     ul.nav.navbar-nav.menu-center
+              /       li.active
+              /         = link_to about_index_path
+              /           = t(".overview")
+              /           span.sr-only (current)
+              /       li.parent-li
+              /         = link_to I18n.t("accommodation_text"), accommodation_index_path
+              /         ul.vi-submenu.accommodation-submenu.hidden-xs
+              /           - roomtypes = RoomType.all
+              /           - roomtypes.each do |roomtype|
+              /             li
+              /               = link_to roomtype.room_type_name, show_accomodation_accommodation_index_path(roomtype.friendly)
+              /       li.parent-li
+              /         = link_to I18n.t("service_text"), service_index_path
+              /         ul.vi-submenu.hidden-xs
+              /           - services = HotelOverview.where.not(post_type: 'hotel-overview')
+              /           - services.each do |srv|
+              /             li
+              /               = link_to eval(srv.title)[I18n.locale], show_service_service_index_path(srv.post_type)
+              /       li
+              /         = link_to events_path
+              /           = t(".meeting")
+              /       li
+              /         = link_to offer_index_path
+              /           = t(".offers")
+              /       li
+              /         = link_to excursions_path
+              /           = t(".excursions")
+              /       li
+              /         = link_to contact_index_path
+              /           = t(".contact")
             .col-sm-12
               .vi-photo-1
 

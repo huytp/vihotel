@@ -59,6 +59,14 @@
     .menu-z-index {
       z-index: 1000;
     }
+    .carousel-menu {
+      position: absolute;
+      top: 160px;
+      z-index: 10000;
+      margin: auto;
+      left: 0px;
+      right: 0px;
+    }
     .menu-center {
       z-index: 100;
       float: none;
@@ -74,6 +82,36 @@
       a:hover {
         background: none;
         color: $main-color;
+      }
+      .parent-li:hover {
+        .vi-submenu {
+          display: block;
+        }
+      }
+      .vi-submenu {
+        list-style: none;
+        padding-left: 0px;
+        text-align: center;
+        display: none;
+        background-color: white;
+        width: 160px !important;
+        padding-top: 14px;
+        li {
+          height: 35px;
+        }
+        a:hover {
+          text-decoration: none;
+          color: $main-color;
+        }
+        position: absolute;
+        width: 150px;
+        margin-top: -1px;
+        a {
+          text-transform: capitalize !important;
+          text-shadow: none;
+          color: rgba(68, 68, 68, 0.6);
+          font-weight: 100;
+        }
       }
     }
     .vi-photo {
@@ -265,10 +303,10 @@
         }
       }
       .navbar-header {
-        margin-top: -76px;
+        margin-top: -90px;
       }
       .navbar-collapse {
-        margin-top: 46px;
+        margin-top: 65px;
       }
       ul.menu-center {
         li {

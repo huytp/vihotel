@@ -70,6 +70,33 @@
       background: none;
       color: $main-color;
     }
+    .parent-li:hover {
+      .vi-submenu {
+        display: block;
+      }
+    }
+    .accommodation-submenu {
+      width: 220px !important;
+      li {
+        height: 50px;
+      }
+    }
+    .vi-submenu {
+      list-style: none;
+      padding-left: 0px;
+      text-align: center;
+      display: none;
+      background-color: white;
+      a:hover {
+        text-decoration: none;
+      }
+      position: absolute;
+      width: 150px;
+      margin-top: -1px;
+      a {
+        text-transform: capitalize !important;
+      }
+    }
   }
 }
 #vi-main-content {
