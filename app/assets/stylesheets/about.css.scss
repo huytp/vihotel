@@ -4,6 +4,29 @@
     background-color: white;
     margin-top: 70px;
     margin-bottom: 2px;
+    .vi-button {
+      float: right;
+      height: 40px;
+      width: 100%;
+      -webkit-appearance: none;
+      margin: 0;
+      border: none;
+      overflow: visible;
+      font: inherit;
+      color: white;
+      text-transform: none;
+      display: inline-block;
+      box-sizing: border-box;
+      background: #F4980D;
+      text-decoration: none;
+      line-height: 40px;
+      text-align: center;
+      border: 1px solid white;
+      font-family: Arial;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
     .vi-slide-overview-content {
       width: 570px;
       .overview-photo {

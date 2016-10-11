@@ -3,5 +3,7 @@ vi:
     index:
       last: "Sự kiện gần đây"
       hotel_name: "VIHOTEL - Khách sạn Vĩnh Hoàng"
+      quotation: "Liên hệ báo giá"
     show:
       last: "Sự kiện gần đây"
+      quotation: "Liên hệ báo giá"
