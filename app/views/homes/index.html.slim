@@ -110,6 +110,8 @@ section#main-slider.no-margin
 
 #main-content
   .service-archive
+    .hidden-sm.hidden-md.hidden-lg
+      = render 'book'
     .container
       .service-content
         - if @hotel_overview.present?
@@ -131,4 +133,5 @@ section#main-slider.no-margin
         = render 'service/service'
   = render 'accommodation/accommodation'
 
-= render 'book'
+.hidden-xs.booking-desktop
+  = render 'book'

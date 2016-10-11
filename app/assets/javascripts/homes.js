@@ -56,10 +56,10 @@
   }
   var sliderBook = function() {
     $(window).scroll(function(){
-        if ($(this).scrollTop() > $("#main-content").height() + $('#book-block').height() +60) {
-          $('#book-block').css("position", "relative");
+        if ($(this).scrollTop() > $("#main-content").height() + $('.booking-desktop #book-block').height() +60) {
+          $('.booking-desktop #book-block').css("position", "relative");
         } else {
-          $('#book-block').css("position", "fixed");
+          $('.booking-desktop #book-block').css("position", "fixed");
         }
     });
   }

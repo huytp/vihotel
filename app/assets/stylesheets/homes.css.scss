@@ -242,6 +242,15 @@
 @media screen and (max-width: 767px) {
   #vi-main-content {
     #main-slider {
+      .menu-center {
+        width: 175px;
+        background-color: rgba(0, 0, 0, 0.64);
+        a {
+          color: $main-color;
+          text-shadow: none;
+        }
+      }
+
       .item-slide-1, .item-slide-2 {
         background: image-url('slider/vertical-1.jpg') no-repeat center center;
         background-size: 140%;
@@ -296,17 +305,12 @@
         margin-left: 15px;
       }
     }
-    #main-slider {
-      .menu-center {
-        width: 175px;
-        background-color: rgba(0, 0, 0, 0.64);
-        a {
-          color: $main-color;
-          text-shadow: none;
-        }
-      }
-    }
+
     #main-content {
+      .service-content {
+        margin-top: 23px !important;
+        margin-bottom: 20px !important;
+      }
       .service-archive {
         .vi-slide-overview-content {
           width: 100%;
