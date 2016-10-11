@@ -128,7 +128,7 @@ section#main-slider.no-margin
                 h3.vi-title
                   = link_to eval(@hotel_overview.title)[I18n.locale], about_index_path
                 .short-content-block
-                  h4.short-content = raw eval(@hotel_overview.content)[I18n.locale].truncate(385)
+                  h4.short-content = raw eval(@hotel_overview.content)[I18n.locale].truncate(383)
                 = link_to t(".continue"), about_index_path, class: "vi-button vi-button-large"
         = render 'service/service'
   = render 'accommodation/accommodation'

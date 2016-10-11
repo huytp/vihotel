@@ -29,7 +29,7 @@
         h3.vi-title
           = link_to eval(@coffee.title)[I18n.locale], show_service_service_index_path(@coffee.post_type)
           .short-content-block
-            h4.short-content = raw eval(@coffee.content)[I18n.locale].truncate(385)
+            h4.short-content = raw eval(@coffee.content)[I18n.locale].truncate(382)
         = link_to t(".continue"), show_service_service_index_path(@coffee.post_type), class: "vi-button vi-button-large"
 - if @spa.present?
   .row
