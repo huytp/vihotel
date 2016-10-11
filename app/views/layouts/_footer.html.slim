@@ -25,6 +25,10 @@ section#bottom
               i.flaticon-world91
               span = I18n.t("web")
               a href="#{VI_WEB_ADDRESS}" = VI_WEB_ADDRESS
+            li
+              i.flaticon-world91
+              span = I18n.t("youtube")
+              a href="#{YOUTUBE_ADDRESS}" target="_blank" = truncate(YOUTUBE_ADDRESS, length: LENGTH_OF_YOUTUBE)
           i.flaticon-home78
         .wow.zoomIn.col-xs-12.col-sm-3.col-md-3
           p.footer-heading = I18n.t("hotel")
