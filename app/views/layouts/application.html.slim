@@ -2,13 +2,18 @@ doctype html
 html
   head
     meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
-    title = I18n.t(".title")
+
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
     meta content="width=device-width, initial-scale=1" name="viewport" /
     = favicon_link_tag 'logo_official_ApZ_icon.ico'
-
+    - if ((params[:controller] == "offer") || (params[:controller] == "events") || (params[:controller] == "excursions")) && params[:action] == "show"
+      title = yield(:vi_title)
+      meta name="description" content="#{raw yield(:vi_description)}"
+      meta property="og:image" content="#{yield(:vi_image)}"
+    - else
+      title = I18n.t(".title")
   body
     #vi-header
       = render 'layouts/header'
