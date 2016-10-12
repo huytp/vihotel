@@ -11,6 +11,3 @@
               p.custom-font-size = raw eval(post.content)[I18n.locale].truncate(700)
               h4
                 a.continue-reading-text href="#{params[:controller]}/#{post.friendly}" = t(".continue")
-              p
-                span.fa.fa-clock-o.vi-article-meta
-                  time = post.created_at.to_s(:long)
