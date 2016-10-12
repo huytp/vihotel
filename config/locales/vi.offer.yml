@@ -3,3 +3,5 @@ vi:
     index:
       accommodation_text: "Ưu đãi của chúng tôi"
       intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut convallis tortor elit, a semper enim efficitur sit amet"
+    show:
+      last: "Ưu đãi mới nhất"
