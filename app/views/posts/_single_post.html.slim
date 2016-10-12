@@ -6,7 +6,7 @@
     h1.vi-article-title = eval(post.title)[I18n.locale]
     p.custom-font-size = raw eval(post.content)[I18n.locale]
     .social-plugin
-      .fb-like data-action="like" data-href="#{request.original_url}" data-layout="standard" data-share="true" data-show-faces="true" data-size="small"
+      .fb-like data-action="like" data-href="#{request.original_url}" data-layout="button_count" data-share="false" data-show-faces="true" data-size="small"
       .fb-comments data-href="#{request.original_url}" data-numposts="5" data-width="100%"
 
 
