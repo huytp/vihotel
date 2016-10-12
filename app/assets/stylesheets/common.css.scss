@@ -75,6 +75,21 @@
         display: block;
       }
     }
+    .sub-li:hover {
+      .vi-sub-submenu {
+        display: block;
+      }
+    }
+    .vi-sub-submenu {
+      list-style: none;
+      padding-left: 0px;
+      background-color: white;
+      display: none;
+      position: absolute;
+      margin-left: 220px;
+      width: 200px;
+      margin-top: -60px;
+    }
     .accommodation-submenu {
       width: 220px !important;
       li {

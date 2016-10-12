@@ -21,10 +21,14 @@
         li.parent-li
           = link_to I18n.t("accommodation_text"), accommodation_index_path
           ul.vi-submenu.accommodation-submenu.hidden-xs
-            - roomtypes = RoomType.all
-            - roomtypes.each do |roomtype|
-              li
-                = link_to roomtype.room_type_name, show_accomodation_accommodation_index_path(roomtype.friendly)
+            - parentroomtypes = ParentRoomType.all
+            - parentroomtypes.each do |parentroomtype|
+              li.sub-li
+                = link_to parentroomtype.name, "javascript:void(0)"
+                ul.vi-sub-submenu
+                  - parentroomtype.room_types.each do |roomtype|
+                    li
+                      = link_to roomtype.room_type_name, show_accomodation_accommodation_index_path(roomtype.friendly)
         li.parent-li
           = link_to I18n.t("service_text"), service_index_path
           ul.vi-submenu.hidden-xs

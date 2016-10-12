@@ -88,13 +88,29 @@
           display: block;
         }
       }
+      .sub-li:hover {
+        .vi-sub-submenu {
+          display: block;
+        }
+      }
+      .vi-sub-submenu {
+        list-style: none;
+        padding-left: 0px;
+        background-color: white;
+        display: none;
+        position: absolute;
+        margin-left: 180px;
+        padding-top: 14px;
+        width: 160px;
+        margin-top: -34px;
+      }
       .vi-submenu {
         list-style: none;
         padding-left: 0px;
         text-align: center;
         display: none;
         background-color: white;
-        width: 160px !important;
+        width: 180px !important;
         padding-top: 14px;
         li {
           height: 35px;
