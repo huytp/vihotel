@@ -8,9 +8,8 @@ html
     = csrf_meta_tags
     meta content="width=device-width, initial-scale=1" name="viewport" /
     = favicon_link_tag 'logo_official_ApZ_icon.ico'
-    - if ((params[:controller] == "offer") || (params[:controller] == "events") || (params[:controller] == "excursions")) && params[:action] == "show"
+    - if ((params[:controller] == "offer") || (params[:controller] == "events") || (params[:controller] == "excursions") || (params[:controller] == "service")) && params[:action] == "show"
       title = yield(:vi_title)
-      meta name="description" content="#{raw yield(:vi_description)}"
       meta property="og:image" content="#{yield(:vi_image)}"
     - else
       title = I18n.t(".title")

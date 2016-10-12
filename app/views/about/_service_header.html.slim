@@ -17,6 +17,7 @@
               - if index == 0
                 .item.active
                   = image_tag photo_overview.image.url(:large), class: "overview-photo"
+                  - content_for(:vi_image, photo_overview.image.url(:large))
               - else
                 .item
                   = image_tag photo_overview.image.url(:large), class: "overview-photo"
@@ -58,5 +59,6 @@
     .row
       .col-sm-12
         .overview-content
+          - content_for(:vi_title, eval(@service.title)[I18n.locale])
           h1.uk-article-title = eval(@service.title)[I18n.locale]
           p = raw eval(@service.content)[I18n.locale]
