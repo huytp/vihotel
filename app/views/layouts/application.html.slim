@@ -8,6 +8,8 @@ html
     = csrf_meta_tags
     meta content="width=device-width, initial-scale=1" name="viewport" /
     = favicon_link_tag 'logo_official_ApZ_icon.ico'
+    meta content="992014527588145" property="fb:app_id"
+    meta content="100002446189499" property="fb:admins"
     - if ((params[:controller] == "offer") || (params[:controller] == "events") || (params[:controller] == "excursions") || (params[:controller] == "service")) && params[:action] == "show"
       title = yield(:vi_title)
       meta property="og:image" content="#{yield(:vi_image)}"
