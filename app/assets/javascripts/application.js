@@ -5,4 +5,5 @@
 //= require bootstrap-select
 //= require bootstrap-datepicker
 //= require ckeditor/init
+//= require jquery.validate
 //= require_tree .
