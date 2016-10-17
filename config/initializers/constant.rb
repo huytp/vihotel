@@ -9,3 +9,4 @@ HOT_LINE = "0989 808 345"
 FANPAGE_ADDRESS = "facebook.com/Vihotelquangbinh"
 YOUTUBE_ADDRESS = "https://www.youtube.com/channel/UCKLZcGIzFVbjr4beDbPiVlQ"
 LENGTH_OF_YOUTUBE = 25
+EMAIL_FORMAT = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i

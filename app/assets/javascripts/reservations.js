@@ -46,8 +46,19 @@
           number: true,
           max: 100,
           min: 0,
-        }
-
+        },
+        "reservation[requirement]": {
+          required: false,
+          maxlength: 1000,
+        },
+        "reservation[company]": {
+          required: false,
+          maxlength: 100,
+        },
+        "reservation[address]": {
+          required: false,
+          maxlength: 200,
+        },
       }
     });
   }
