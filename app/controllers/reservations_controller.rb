@@ -17,11 +17,7 @@ class ReservationsController < ApplicationController
       if @reservation.save
         UserMailer.delay.reservation(@reservation)
         UserMailer.delay.reservation_rep(@reservation, I18n.locale)
-        format.html { redirect_to accommodation_index_path, notice: 'Reservation was successfully created.' }
-        format.json { render :show, status: :created, location: @reservation }
-      else
-        format.html { render :new }
-        format.json { render json: @reservation.errors, status: :unprocessable_entity }
+        format.html { redirect_to accommodation_index_path, notice: I18n.t("reservation_successfully") }
       end
     end
   end

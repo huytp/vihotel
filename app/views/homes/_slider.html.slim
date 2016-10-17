@@ -1,0 +1,87 @@
+section#main-slider.no-margin
+  .vi-language
+    .btn-group
+        button.btn.dropdown-toggle.vi-button aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button"
+          - if cookies[:locale] == "en"
+            = image_tag "en.png"
+          - else
+            = image_tag "vn.png"
+        ul.dropdown-menu
+          li
+            a href="?locale=en"
+              = image_tag "en.png"
+          li
+            a href="?locale=vi"
+              = image_tag "vn.png"
+
+  .carousel.slide
+    .carousel-menu
+      nav.navbar
+        .navbar-header
+          button.navbar-toggle.collapsed aria-expanded="false" data-target=".vi-navbar-collapse" data-toggle="collapse" type="button"
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+        .vi-navbar-collapse.collapse.navbar-collapse
+          ul.nav.navbar-nav.menu-center
+            li.active
+              = link_to about_index_path
+                = t(".overview")
+                span.sr-only (current)
+            li.parent-li
+              = link_to I18n.t("accommodation_text"), accommodation_index_path
+              ul.vi-submenu.hidden-xs
+                - parentroomtypes = ParentRoomType.all
+                - parentroomtypes.each do |parentroomtype|
+                  li.sub-li
+                    = link_to parentroomtype.name, "javascript:void(0)"
+                    ul.vi-sub-submenu
+                      - parentroomtype.room_types.each do |roomtype|
+                        li
+                          = link_to roomtype.room_type_name, show_accomodation_accommodation_index_path(roomtype.friendly)
+            li.parent-li
+              = link_to I18n.t("service_text"), service_index_path
+              ul.vi-submenu.hidden-xs
+                - services = HotelOverview.where.not(post_type: 'hotel-overview')
+                - services.each do |srv|
+                  li
+                    = link_to eval(srv.title)[I18n.locale], show_service_service_index_path(srv.post_type)
+            li
+              = link_to events_path
+                = t(".meeting")
+            li
+              = link_to offer_index_path
+                = t(".offers")
+            li
+              = link_to excursions_path
+                = t(".excursions")
+            li
+              = link_to contact_index_path
+                = t(".contact")
+    .vi-logo
+      = link_to root_path
+        = image_tag 'logo-white-header.png', class: "logo"
+    .carousel-inner
+      .item.active.item-slide-1
+        .background-video
+        .banner-content.hidden-xs
+          = video_tag ["http://s3.amazonaws.com/vihotel_dev/vihotel/video.mp4"], controls: false, autoplay: true, loop: true, poster: asset_path("slider/horizontal-1.jpg"), muted: true
+
+        .container
+          p.text-center.slogan = @slogan
+          .row.slide-margin
+            .col-sm-12
+              .vi-photo
+
+      .item.item-slide-2
+        .container
+          p.text-center.slogan = @slogan
+          .row.slide-margin
+            .col-sm-12
+              .vi-photo-1
+
+  a.prev data-slide="prev" href="#main-slider"
+    i.fa.fa-chevron-left
+  a.next data-slide="next" href="#main-slider"
+    i.fa.fa-chevron-right

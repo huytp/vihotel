@@ -2,7 +2,7 @@
   .vi-contact
     .row
       .col-sm-6
-        = form_for @contact, html: {class: "contact-form"} do |f|
+        = form_for @contact, html: {class: "contact-form form-horizontal"} do |f|
           .form-group
             label = t(".full_name")
             = f.text_field :full_name, class: "form-control"
@@ -18,7 +18,8 @@
           .form-group
             label = t(".content")
             = f.text_area :content, class: "form-control"
-          button.btn.btn-default.vi-button type="submit"  Submit
+          .form-group
+            = f.submit "Submit", class: "btn btn-default vi-button"
 
 
       .col-sm-6

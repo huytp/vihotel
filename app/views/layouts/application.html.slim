@@ -19,16 +19,18 @@ html
   body
     #fb-root
     #vi-header
-      = render 'layouts/header'
-
+      = render "layouts/header"
     - if params[:controller] == 'homes'
       #vi-main-content.home-page
+        = render "homes/slider"
+        = render "layouts/alert"
         = yield
     - elsif (params[:controller] == 'about' || params[:controller] == 'service' || params[:controller] == 'offer' || params[:controller] == 'events' || params[:controller] == 'excursions' || params[:controller] == 'contacts')
       #vi-main-content.about
         = yield
     - else
       #vi-main-content
+        = render "layouts/alert"
         .container
           = yield
     #vi-footer
