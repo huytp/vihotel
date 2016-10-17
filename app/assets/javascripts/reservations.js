@@ -33,6 +33,7 @@
           required: true,
           number: true,
           max: 10,
+          min: 1,
         },
         "reservation[number_adult]": {
           required: true,
