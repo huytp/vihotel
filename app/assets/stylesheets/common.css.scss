@@ -121,6 +121,9 @@
 #vi-main-content {
   margin-top: 90px;
   margin-bottom: 50px;
+  .main-content-margin-top {
+    padding-top: 15px;
+  }
 }
 #vi-main-content.home-page {
   margin-top: 0px;
