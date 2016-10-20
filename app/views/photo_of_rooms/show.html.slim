@@ -1,0 +1,7 @@
+p
+  strong = t(".photo")
+  |&nbsp;
+  = image_tag @photo_of_room.image.url(:small)
+= link_to t(".edit"), edit_room_type_photo_of_room_path(@room_type, @photo_of_room)
+|&nbsp;|&nbsp;
+= link_to t(".back"), room_type_photo_of_rooms_path(@room_type)

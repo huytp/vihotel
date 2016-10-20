@@ -1,0 +1,5 @@
+.last-post-index
+  ul
+    - posts.each do |post|
+      li
+        a.custom-font-size href="/#{params[:controller]}/#{post.friendly}" = eval(post.title)[I18n.locale]

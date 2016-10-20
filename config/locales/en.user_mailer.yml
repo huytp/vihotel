@@ -1,0 +1,23 @@
+en:
+  user_mailer:
+    reservation_rep:
+      dear: "Dear"
+      thanks: "Thanks for your interest and support ViHotel."
+      rep: "Our staff will contact you as soon as possible."
+      below: "Below is the information of your reservation."
+      reservation_infor: "Reservation information"
+      full_name: "Full name:"
+      email: "Email:"
+      phone: "Phone:"
+      company: "Company:"
+      address: "Address:"
+      check_in: "Check In:"
+      check_out: "Check out:"
+      room_type: "Room type:"
+      number_of_room: "Number of rooms:"
+      number_adult: "Adults per room"
+      number_children: "Children:"
+      requirement: "Requirement:"
+      regard: "Best regard,"
+      vihotel: "Vinh Hoang Hotel."
+      confirm: "Confirm booking"

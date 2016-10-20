@@ -1,0 +1,20 @@
+vi:
+  homes:
+    index:
+      home: "Trang chủ"
+      overview: "Giới thiệu"
+      accommodation_text: "Loại phòng"
+      service: "Dịch vụ"
+      meeting: "Hội nghị - Sự kiện"
+      offers: "Ưu đãi"
+      excursions: "Lữ hành"
+      contact: "Liên hệ"
+      continue: "Đọc thêm"
+      slogan: "For your sleep, for your soul"
+    book:
+      check_in: "Ngày đến:"
+      check_out: "Ngày đi:"
+      adults: "Người lớn:"
+      kids: "Trẻ em:"
+      rooms: "Số phòng:"
+      book: "Đặt ngay"

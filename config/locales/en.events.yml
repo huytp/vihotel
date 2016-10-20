@@ -1,0 +1,9 @@
+en:
+  events:
+    index:
+      last: "Latest meeting & events"
+      hotel_name: "VIHOTEL - Vinh Hoang Hotel"
+      quotation: "Request a quotation"
+    show:
+      last: "Latest meeting & events"
+      quotation: "Request a quotation"

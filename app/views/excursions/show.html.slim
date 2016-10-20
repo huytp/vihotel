@@ -1,0 +1,13 @@
+.vi-excursion
+  .container
+    .row
+      .col-sm-9
+        = render 'posts/single_post', post: @excursion
+      .col-sm-3
+        .side-bar
+          .side-bar-content
+            h3.vi-panel-title = t(".last")
+            = render 'posts/last_post_index', posts: @excursions.order(created_at: :DESC).first(5)
+          .fanpage
+            .fb-page data-adapt-container-width="true" data-height="300" data-hide-cover="false" data-href="https://www.facebook.com/#{FANPAGE}/" data-show-facepile="true" data-small-header="false" data-width="263"
+              blockquote.fb-xfbml-parse-ignore cite="https://www.facebook.com/#{FANPAGE}/"

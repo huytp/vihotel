@@ -1,0 +1,17 @@
+.container.offer-page
+  .offer
+    .offer-content
+      h3.tm-panel-title-large.text-center
+        = t(".accommodation_text")
+      p.vi-article-lead.vi-margin-large-bottom.text-center
+        = @slogan
+  .offer-main-content
+    ul.offer-block
+      - @offers.each do |offer|
+        li.each-offer-block
+          = image_tag offer.image.url(:small), class: "offer-image"
+          .offer-text-block
+            .offer-text.text-center
+              h3.uk-panel-title
+                a href="/#{params[:controller]}/#{offer.friendly}" = truncate(eval(offer.title)[I18n.locale], length: 50)
+              h4.summary-text = truncate(eval(offer.summary)[I18n.locale], length: 100)

@@ -1,0 +1,235 @@
+en:
+  admin:
+    index:
+      reservation: "Reservation Information"
+      full_name: "Full Name"
+      phone: "Phone"
+      created_at: "Reservation Time"
+      contact_at: "Contact Time"
+      show_detail: "Show Detail"
+      show: "Show"
+      more: "Show More..."
+      contact: "Contact"
+      email: "Email"
+      title: "Title"
+      edit_overview_services: "Edit hotel overview & services"
+      edit_offer: "Edit offers"
+      edit_meeting_excursions: "Edit meeting & events and excursions"
+      edit_room_features: "Edit room features"
+      edit_room_type: "Edit room type"
+      change_passwd: "Change my password"
+      user_manager: "User manager"
+      change_currency: "Change currency"
+      contacted: "Contacted"
+      not_contacted: "Not contacted yet"
+      status: "Status"
+      edit_slogan: "Edit slogan"
+  hotel_overviews:
+    index:
+      title: "Title"
+      type: "Type"
+      text_header: "Listing hotel overview and services"
+      show: "Show"
+      edit: "Edit"
+      back: "Back"
+    edit:
+      text_header: "Editing"
+      show: "Show"
+      back: "Back"
+    form:
+      title_vi: "Title (Vietnamese)"
+      title_en: "Title (English)"
+      content_vi: "Content (Vietnamese)"
+      content_en: "Content (English)"
+      type: "Type"
+      save: "Save"
+    show:
+      title: "Title"
+      content: "Content"
+      show_photo: "Show photos"
+      edit: "Edit"
+      back: "Back"
+  photo_overviews:
+    index:
+      text_header: "Listing photos of"
+      photo: "Photo"
+      show: "Show"
+      edit: "edit"
+      destroy: "Delete"
+      sure: "Are you sure?"
+      new_photo: "New photo"
+      back: "Back"
+  currency:
+    index:
+      change_currency: "Change currency"
+      currency: "Currency"
+      back: "Back"
+  offers:
+    index:
+      photo: "Photo"
+      text_header: "Listing offers"
+      title: "Title"
+      summary: "Summary"
+      show: "Show"
+      edit: "Edit"
+      destroy: "Delete"
+      new_offer: "New offer"
+      back: "Back"
+    new:
+      text_header: "New offers"
+      back: "Back"
+    show:
+      title: "Title"
+      summary: "Summary"
+      content: "Content"
+      back: "Back"
+      edit: "Edit"
+    edit:
+      text_header: "Edit offer"
+      back: "Back"
+      show: "Show"
+
+    form:
+      photo: "Photo"
+      title_vi: "Title (Vietnamese)"
+      title_en: "Title (English)"
+      content_vi: "Content (Vietnamese)"
+      content_en: "Content (English)"
+      summary_vi: "Summary (Vietnamese)"
+      summary_en: "Summary (English)"
+  posts:
+    index:
+      text_header: "Listing events and excursions"
+      post_type: "Type"
+      title: "Title"
+      photo: "Photo"
+      show: "Show"
+      edit: "Edit"
+      destroy: "Delete"
+      new: "New event/excursion"
+      back: "Back"
+    new:
+      text_header: "New Event or Excursion"
+      back: "Back"
+    edit:
+      text_header: "Editing Event or Excursion"
+      show: "Show"
+      back: "Back"
+    form:
+      post_type: "Type"
+      title_vi: "Title (Vietnamese)"
+      title_en: "Title (English)"
+      content_vi: "Content (Vietnamese)"
+      content_en: "Content (English)"
+      image: "Photo"
+    show:
+      title: "Title"
+      content: "Content"
+      edit: "Edit"
+      back: "Back"
+  room_features:
+    index:
+      text_header: "Listing Features for rooms"
+      name: "Feature name"
+      show: "Show"
+      edit: "Edit"
+      destroy: "Delete"
+      new_feature: "New Feature"
+      back: "Back"
+      sure: "Are you sure?"
+    new:
+      text_header: "New feature"
+      back: "Back"
+    show:
+      name: "Name"
+      edit: "Edit"
+      back: "Back"
+    edit:
+      text_header: "Edit feature"
+      show: "Show"
+      back: "Back"
+    form:
+      name_vi: "Name (Vietnamese)"
+      name_en: "Name (English)"
+  parent_room_types:
+    index:
+      text_header: "Listing parent room types"
+      name: "Name"
+      show: "Show"
+      edit: "Edit"
+      back: "Back"
+    show:
+      name: "Name"
+      show: "Show"
+      show_room_type: "Show Room types"
+      edit: "Edit"
+      back: "Back"
+    form:
+      name: "Name"
+    edit:
+      text_header: "Editing"
+      show: "Show"
+      back: "Back"
+  room_types:
+    show:
+      room_type_name: "Room type name"
+      parent_room_type: "Parent room type"
+      description: "Description"
+      room_size: "Room size"
+      room_bed: "Bed size"
+      room_view: "View"
+      room_features: "Features"
+      show_photo: "Listing photos of this room"
+      edit: "Edit"
+      back: "Back"
+    index:
+      text_header: "Listing room type"
+      room_type_name: "Room type name"
+      parent_room_type: "Parent room type"
+      description: "Description"
+      room_size: "Room size"
+      room_bed: "Bed size"
+      room_view: "View"
+      room_features: "Features"
+      show: "Show"
+      edit: "Edit"
+      back: "Back"
+    edit:
+      text_header: "Editing"
+      show: "Show"
+      back: "Back"
+    form:
+      room_type_name: "Room type name"
+      parent_room_type: "Parent room type"
+      description_vi: "Description (Vietnamese)"
+      description_en: "Description (English)"
+      room_size: "Room size"
+      room_bed: "Bed size"
+      room_view: "View"
+      room_features: "Features"
+  photo_of_rooms:
+    index:
+      text_header: "Listing photos of "
+      photo: "Photo"
+      show: "Show"
+      edit: "Edit"
+      destroy: "Delete"
+      new_photo: "New photo"
+      back: "Back"
+      sure: "Are yoi sure?"
+    show:
+      photo: "Photo"
+      edit: "Edit"
+      back: "Back"
+    edit:
+      text_header: "Editing"
+      show: "Show"
+      back: "Back"
+    form:
+      image: "Photo"
+  slogan:
+    index:
+      change_slogan: "Change slogan"
+      slogan_vi: "Slogan (vietnamese):"
+      slogan_en: "Slogan (english):"
+      back: "Back"

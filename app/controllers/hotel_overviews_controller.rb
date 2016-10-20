@@ -1,6 +1,8 @@
 class HotelOverviewsController < ApplicationController
   before_action :set_hotel_overview, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
+  load_resource
+  authorize_resource
   # GET /hotel_overviews
   # GET /hotel_overviews.json
   def index
@@ -25,7 +27,7 @@ class HotelOverviewsController < ApplicationController
   # POST /hotel_overviews.json
   def create
     @hotel_overview = HotelOverview.new(hotel_overview_params)
-
+    @hotel_overview.post_type = params[:type]
     respond_to do |format|
       if @hotel_overview.save
         format.html { redirect_to @hotel_overview, notice: 'Hotel overview was successfully created.' }
@@ -40,8 +42,12 @@ class HotelOverviewsController < ApplicationController
   # PATCH/PUT /hotel_overviews/1
   # PATCH/PUT /hotel_overviews/1.json
   def update
+    @hotel_overview.post_type = params[:type]
+    @hotel_overview.title = params_title
+    @hotel_overview.content = params_content
     respond_to do |format|
-      if @hotel_overview.update(hotel_overview_params)
+      if @hotel_overview.save
+
         format.html { redirect_to @hotel_overview, notice: 'Hotel overview was successfully updated.' }
         format.json { render :show, status: :ok, location: @hotel_overview }
       else
@@ -68,7 +74,10 @@ class HotelOverviewsController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def hotel_overview_params
-      params.require(:hotel_overview).permit(:title, :content)
+    def params_title
+      "{vi: '#{params[:title_vi]}', en: '#{params[:title_en]}'}"
+    end
+    def params_content
+      "{vi: '#{params[:content_vi]}', en: '#{params[:content_en]}'}"
     end
 end

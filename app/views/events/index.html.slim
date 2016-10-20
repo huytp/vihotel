@@ -1,0 +1,16 @@
+.vi-event
+  .container
+    .row
+      .col-sm-9
+        = render 'posts/post_index', posts: @events
+      .col-sm-3
+        .side-bar
+          .quotation
+            = link_to t(".quotation"), contact_index_path, class: "vi-button"
+          .side-bar-content
+            h3.vi-panel-title = t(".last")
+            = render 'posts/last_post_index', posts: @events.order(created_at: :DESC).first(5)
+          .fanpage
+            .fb-page data-adapt-container-width="true" data-height="300" data-hide-cover="false" data-href="https://www.facebook.com/#{FANPAGE}/" data-show-facepile="true" data-small-header="false" data-width="263"
+              blockquote.fb-xfbml-parse-ignore cite="https://www.facebook.com/#{FANPAGE}/"
+

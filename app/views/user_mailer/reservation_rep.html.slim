@@ -1,0 +1,88 @@
+p
+  = t(".dear")
+  |&nbsp;
+  = @reservation.full_name
+p
+  = t(".thanks")
+p
+  = t(".rep")
+p
+  = t(".below")
+
+h3
+  = t(".reservation_infor")
+strong
+  = t(".full_name")
+  |&nbsp;
+= @reservation.full_name
+br
+br
+strong
+  = t(".email")
+  |&nbsp;
+= @reservation.email
+br
+br
+strong
+  = t(".phone")
+  |&nbsp;
+= @reservation.phone
+br
+br
+strong
+  = t(".company")
+  |&nbsp;
+= @reservation.company
+br
+br
+strong
+  = t(".address")
+  |:&nbsp;
+= @reservation.address
+br
+br
+strong
+  = t(".check_in")
+  |&nbsp;
+= @reservation.check_in.strftime("%d-%m-%Y")
+br
+br
+strong
+  = t(".check_out")
+  |&nbsp;
+= @reservation.check_out.strftime("%d-%m-%Y")
+br
+br
+strong
+  = t(".room_type")
+  |&nbsp;
+= @reservation.room_type
+br
+br
+strong
+  = t(".number_of_room")
+  |&nbsp;
+= @reservation.number_of_room
+br
+br
+strong
+  = t(".number_adult")
+  |&nbsp;
+= @reservation.number_adult
+br
+br
+strong
+  = t(".number_children")
+  |&nbsp;
+= @reservation.number_children
+br
+br
+strong
+  = t(".requirement")
+  |&nbsp;
+= @reservation.requirement
+br
+br
+= t(".regard")
+br
+= t(".vihotel")

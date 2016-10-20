@@ -1,0 +1,185 @@
+@import 'constant';
+#vi-main-content {
+  .hotel-overview {
+    background-color: white;
+    margin-top: 70px;
+    margin-bottom: 2px;
+    .vi-button {
+      float: right;
+      height: 40px;
+      width: 100%;
+      -webkit-appearance: none;
+      margin: 0;
+      border: none;
+      overflow: visible;
+      font: inherit;
+      color: white;
+      text-transform: none;
+      display: inline-block;
+      box-sizing: border-box;
+      background: #F4980D;
+      text-decoration: none;
+      line-height: 40px;
+      text-align: center;
+      border: 1px solid white;
+      font-family: Arial;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    .vi-slide-overview-content {
+      width: 570px;
+      .overview-photo {
+        width: 570px;
+        height: 400px;
+      }
+      .chevron-btn {
+        margin-top: 195px;
+      }
+      a:hover {
+        background-color: transparent;
+      }
+      a:focus {
+        color: #666;
+      }
+    }
+    .contact-box {
+      padding-right: 70px;
+      padding-left: 70px;
+      padding-top: 35px;
+    }
+    .contact-block {
+      margin-top: 5px;
+      ul {
+        padding-left: 0px;
+      }
+      li {
+        padding-top: 10px;
+        font-size: 16px;
+        list-style: none;
+        .vi-contact-text {
+          margin-left: 14px;
+        }
+        .vi-contact-text-1 {
+          margin-left: 8px;
+        }
+        i.fa {
+          color: $main-color;
+        }
+      }
+    }
+  }
+
+  .hotel-overview-bottom {
+    background-color: white;
+    margin-top: 0px;
+    margin-bottom: 70px;
+    .overview-content {
+      padding: 35px;
+      .uk-article-title {
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: 700;
+        font-family: Arial;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .service {
+    background-color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .tm-panel-title-large {
+      font-size: 24px;
+      line-height: 30px;
+      margin: 0 0 15px 0;
+      font-family: Arial;
+      font-weight: 700;
+      color: #333333;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding-bottom: 30px;
+    }
+    .service-content-block {
+      margin-top: 10px;
+      .service-image {
+        .service-image-image {
+          width: 270px;
+          height: 200px;
+        }
+        ul.service-image-block {
+          padding-left: 0px;
+          padding-right: 0px;
+          height: 155px;
+        }
+        li.each-service-image {
+          list-style: none;
+          float: left;
+        }
+        li.each-service-image:nth-child(2) {
+          margin-left: 20px;
+        }
+        li.each-service-image:nth-child(3) {
+          margin-left: 20px;
+        }
+
+        li.each-service-image:nth-child(4) {
+          margin-left: 20px;
+        }
+        a.service-title:hover {
+          color: $main-color;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #vi-main-content {
+    .hotel-overview {
+      .vi-slide-overview-content {
+        width: 100%;
+        .overview-photo {
+          height: 250px;
+        }
+      }
+      .contact-box {
+        padding: 15px;
+        padding-top: 30px;
+      }
+    }
+    .service .service-content-block .service-image {
+      li.each-service-image {
+        width: 100%;
+      }
+      .service-image-image {
+        width: 100%;
+      }
+      li.each-service-image:nth-child(2), li.each-service-image:nth-child(3), li.each-service-image:nth-child(4) {
+        margin-left: 0px;
+      }
+    }
+    .hotel-overview-bottom .overview-content {
+      padding: 15px;
+    }
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  #vi-main-content .service .service-content-block .service-image {
+    li.each-service-image {
+      width: 47%;
+    }
+    li.each-service-image:nth-child(2), li.each-service-image:nth-child(4) {
+      float: right;
+    }
+    li.each-service-image:nth-child(3) {
+      margin-left: 0px;
+    }
+
+    .service-image-image {
+      width: 100%;
+    }
+  }
+}

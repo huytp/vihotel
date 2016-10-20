@@ -1,0 +1,34 @@
+p
+  strong = t(".room_type_name")
+  |&nbsp;
+  = @room_type.room_type_name
+p
+  strong = t(".parent_room_type")
+  |&nbsp;
+  = @room_type.parent_room_type.name
+p
+  strong = t(".description")
+  |&nbsp;
+  = eval(@room_type.description)[I18n.locale]
+p
+  strong = t(".room_size")
+  |&nbsp;
+  = @room_type.room_size
+p
+  strong = t(".room_bed")
+  |&nbsp;
+  = @room_type.room_bed
+p
+  strong = t(".room_view")
+  |&nbsp;
+  = @room_type.room_view
+p
+  strong = t(".room_features")
+  |&nbsp;
+  = @room_type.room_features
+
+= link_to t(".show_photo"), room_type_photo_of_rooms_path(@room_type)
+|&nbsp;|&nbsp;
+= link_to t(".edit"), edit_room_type_path(@room_type)
+|&nbsp;|&nbsp;
+= link_to t(".back"), parent_room_type_room_types_path(@parent_room_type)

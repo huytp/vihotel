@@ -1,0 +1,12 @@
+VI_WEB_ADDRESS = "http://vihotelquangbinh.com"
+EMAIL_ADDRESS = "vihotelquangbinh@gmail.com"
+HOTEL_OVERVIEW = "hotel-overview"
+FANPAGE = "Vihotelquangbinh"
+DEFAULT_PHOTO = "default-thumbnail.jpg"
+TABLE_PHONE = "050012345678"
+MOBILE_PHONE = "0989 808 345"
+HOT_LINE = "0989 808 345"
+FANPAGE_ADDRESS = "facebook.com/Vihotelquangbinh"
+YOUTUBE_ADDRESS = "https://www.youtube.com/channel/UCKLZcGIzFVbjr4beDbPiVlQ"
+LENGTH_OF_YOUTUBE = 25
+EMAIL_FORMAT = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i

@@ -1,82 +1,27 @@
-section#main-slider.no-margin
-  .carousel.slide
-    .carousel-inner
-      .item.active style=("background-image: url(assets/slider/3.jpg)")
-        .container
-          .row.slide-margin
-            .col-sm-12
-              .vi-logo
-                = image_tag 'logo.png', class: "logo"
-            .col-sm-12
-              nav.navbar
-                .navbar-header
-                  button.navbar-toggle.collapsed aria-expanded="false" data-target="#vi-navbar-collapse-2" data-toggle="collapse" type="button"
-                    span.sr-only Toggle navigation
-                    span.icon-bar
-                    span.icon-bar
-                    span.icon-bar
-                #vi-navbar-collapse-2.collapse.navbar-collapse
-                  ul.nav.navbar-nav.menu-center
-                    li.active
-                      a href="#"
-                        = t(".overview")
-                        span.sr-only (current)
-                    li
-                      a href="#"
-                        = t(".accommodation")
-                    li
-                      a href="#"
-                        = t(".service")
-                    li
-                      a href="#"
-                        = t(".meeting")
-                    li
-                      a href="#"
-                        = t(".offers")
-                    li
-                      a href="#"
-                        = t(".excursions")
-                    li
-                      a href="#"
-                        = t(".contact")
-            .col-sm-12
-              .vi-photo
-
-
-
-      .item style=("background-image: url(assets/slider/2.jpg)")
-        .container
-          .row.slide-margin
-            .col-sm-6
-              .carousel-content
-                h1.animation.animated-item-1 Lorem ipsum dolor sit amet consectetur adipisicing elit
-                h2.animation.animated-item-2 Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...
-                a.btn-slide.animation.animated-item-3 href="#"  Read More
-
-      .item style=("background-image: url(assets/slider/3.jpg)")
-        .container
-          .row.slide-margin
-            .col-sm-6
-              .carousel-content
-                h1.animation.animated-item-1 Lorem ipsum dolor sit amet consectetur adipisicing elit
-                h2.animation.animated-item-2 Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...
-                a.btn-slide.animation.animated-item-3 href="#"  Read More
-
-  a.prev.hidden-xs data-slide="prev" href="#main-slider"
-    i.fa.fa-chevron-left
-  a.next.hidden-xs data-slide="next" href="#main-slider"
-    i.fa.fa-chevron-right
-
 #main-content
-  .service
+  .service-archive
+    .hidden-sm.hidden-md.hidden-lg
+      = render 'book'
     .container
       .service-content
-        .row
-          .col-sm-6
-          .col-sm-6
-            .content-box
-              h3.vi-title
-                a href="#" = @hotel_overview.title
-              h4.short-content = truncate(@hotel_overview.content, length: 321)
+        - if @hotel_overview.present?
+          .row
+            .col-sm-6
+              .vi-slide-overview-content
+                - if @photo_overviews.present?
+                  - @photo_overviews.each do |photo_overview|
+                    = image_tag photo_overview.image.url(:large), class: "vi-slides vi-slides-overview"
+                - else
+                  = image_tag DEFAULT_PHOTO, class: "vi-slides vi-slides-overview"
+            .col-sm-6
+              .content-box
+                h3.vi-title
+                  = link_to eval(@hotel_overview.title)[I18n.locale], about_index_path
+                .short-content-block
+                  h4.short-content = raw eval(@hotel_overview.content)[I18n.locale].truncate(378)
+                = link_to t(".continue"), about_index_path, class: "vi-button vi-button-large"
+        = render 'service/service'
+  = render 'accommodation/accommodation'
 
-
+.hidden-xs.booking-desktop
+  = render 'book'

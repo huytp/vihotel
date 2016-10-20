@@ -1,30 +1,77 @@
-nav.navbar.parent-navbar
-  #vi-navbar.collapse.navbar-collapse
-    ul.nav.navbar-nav.menu-center
-      li
-        a href="#"
-          = t(".home")
-      li
-        a href="#"
-          = t(".overview")
-      li
-        a href="#"
-          = t(".accommodation")
-      li
-        a href="#"
-          = t(".service")
-      li
-        a href="#"
-          = image_tag 'logo.png', class: "logo"
-      li
-        a href="#"
-          = t(".meeting")
-      li
-        a href="#"
-          = t(".offers")
-      li
-        a href="#"
-          = t(".excursions")
-      li
-        a href="#"
-          = t(".contact")
+
+.parent-navbar
+  nav.navbar
+    .logo-mobile
+      = link_to root_path
+        = image_tag 'vihotel-menu.png', class: "logo"
+    .navbar-header
+      button.navbar-toggle.collapsed aria-expanded="false" data-target="#vi-navbar" data-toggle="collapse" type="button"
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+    #vi-navbar.collapse.navbar-collapse
+      ul.nav.navbar-nav.menu-center
+        li
+          = link_to root_path
+            = I18n.t("home")
+        li
+          = link_to about_index_path
+            = I18n.t("overview")
+        li.parent-li
+          = link_to I18n.t("accommodation_text"), accommodation_index_path
+          ul.vi-submenu.accommodation-submenu.hidden-xs
+            - parentroomtypes = ParentRoomType.all
+            - parentroomtypes.each do |parentroomtype|
+              li.sub-li
+                = link_to parentroomtype.name, "javascript:void(0)"
+                ul.vi-sub-submenu
+                  - parentroomtype.room_types.each do |roomtype|
+                    li
+                      = link_to roomtype.room_type_name, show_accomodation_accommodation_index_path(roomtype.friendly)
+        li.parent-li
+          = link_to I18n.t("service_text"), service_index_path
+          ul.vi-submenu.hidden-xs
+            - services = HotelOverview.where.not(post_type: 'hotel-overview')
+            - services.each do |srv|
+              li
+                = link_to eval(srv.title)[I18n.locale], show_service_service_index_path(srv.post_type)
+        li.dropdown
+          a.dropdown-toggle data-toggle="dropdown" href="#"
+            = image_tag 'vihotel-menu.png', class: "logo"
+          ul.dropdown-menu
+            - if user_signed_in?
+              li
+                = link_to I18n.t("admin_text"), admin_index_path
+              li
+                = link_to I18n.t("signout"), destroy_user_session_path, method: :delete
+            - else
+              li
+                = link_to I18n.t("signin"), new_user_session_path
+
+        li
+          = link_to events_path
+            = I18n.t("meeting")
+        li
+          = link_to offer_index_path
+            = I18n.t("offers_text")
+        li
+          = link_to excursions_path
+            = I18n.t("excursions_text")
+        li
+          = link_to contact_index_path
+            = I18n.t("contact_text")
+    .vi-language
+      .btn-group
+          button.btn.dropdown-toggle.vi-button aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button"
+            - if cookies[:locale] == "en"
+              = image_tag "en.png", class: "english-lang"
+            - else
+              = image_tag "vn.png", class: "vietnamese-lang"
+          ul.dropdown-menu
+            li
+              a href="?locale=en"
+                = image_tag "en.png"
+            li
+              a href="?locale=vi"
+                = image_tag "vn.png"

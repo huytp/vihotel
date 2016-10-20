@@ -1,0 +1,33 @@
+en:
+  contacts:
+    index:
+      full_name: "Full Name: "
+      email: "Email: "
+      phone: "Phone: "
+      title: "Title: "
+      content: "Content"
+      address: "125 Truong Phap, Dong Hoi, Quang Binh"
+    admin_index:
+      contact: "Contact Information"
+      full_name: "Full Name: "
+      email: "Email: "
+      phone: "Phone: "
+      title: "Title: "
+      content: "Content: "
+      created_at: "Contact At: "
+      back: "Back"
+      contacted: "Contacted"
+      not_contacted: "Not contacted yet"
+      status: "Status"
+    show:
+      contact: "Contact Information"
+      full_name: "Full Name: "
+      email: "Email: "
+      phone: "Phone: "
+      title: "Title: "
+      content: "Content: "
+      created_at: "Contact At: "
+      back: "Back"
+      mark_un_checked: "Mark not contacted yet"
+      mark_checked: "Mark contacted"
+      contact_already: "Contacted/not contacted"

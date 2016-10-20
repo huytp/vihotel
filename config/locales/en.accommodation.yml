@@ -1,0 +1,19 @@
+en:
+  accommodation:
+    accommodation:
+      intro: "For your sleep, for your soul"
+      accommodation_text: "Accommodation"
+      cost: "%{cost}$/day"
+    show:
+      space: " - "
+      room_size: "Room Size: "
+      view: "View: "
+      check_in: "Check In Date: "
+      check_out: "Check Out Date"
+      room_type: "Room Type: "
+      number_of_room: "Number Of Rooms: "
+      number_adult: "Adults per room: "
+      number_children: "Children:"
+      feature: "Features: "
+      quick_book: "Book Now"
+      reservation: "Reservation"

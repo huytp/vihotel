@@ -1,0 +1,6 @@
+h1.text-center = t(".text_header")
+= render 'form'
+.col-sm-2.col-sm-offset-10.pull-right
+  = link_to t(".show"), @offer
+  | &nbsp;|&nbsp;
+  = link_to t(".back"), offers_path

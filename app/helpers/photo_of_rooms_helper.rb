@@ -1,0 +1,2 @@
+module PhotoOfRoomsHelper
+end

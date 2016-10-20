@@ -1,0 +1,7 @@
+en:
+  offer:
+    index:
+      accommodation_text: "Our offers"
+      intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut convallis tortor elit, a semper enim efficitur sit amet"
+    show:
+      last: "Latest offers"

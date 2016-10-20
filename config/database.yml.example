@@ -1,0 +1,17 @@
+
+default: &default
+  adapter: postgresql
+  username: postgres
+  password:
+  host: localhost
+development:
+  <<: *default
+  database: vinhhoang_development
+
+test:
+  <<: *default
+  database: vinhhoang_test
+
+production:
+  <<: *default
+  database: vinhhoang_prod

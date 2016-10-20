@@ -1,0 +1,6 @@
+vi:
+  service:
+    show:
+      other_service: "Dịch vụ khác"
+    service:
+      continue: "Đọc thêm"

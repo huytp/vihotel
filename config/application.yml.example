@@ -1,0 +1,10 @@
+user_mail_server: "vihotel.quangbinh@gmail.com"
+password_mail_server: ""
+default_form_mailer: "vihotel.quangbinh@gmail.com"
+default_url_option: "http://vihotelquangbinh.com"
+
+AWS_ACCESS_KEY_ID: ""
+AWS_SECRET_ACCESS_KEY: ""
+AWS_S3_BUCKET: "vihotel_dev"
+
+s3_photo_root: 'vihotel'

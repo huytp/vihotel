@@ -1,0 +1,39 @@
+= form_for(@post, html: {class: "form-horizontal"}) do |f|
+  - if @post.errors.any?
+    #error_explanation
+      h2
+        = pluralize(@post.errors.count, "error")
+        | prohibited this post from being saved:
+      ul
+        - @post.errors.full_messages.each do |message|
+          li= message
+  .field.form-group
+    = label_tag :post_type, t(".post_type"), class: "control-label col-sm-2"
+    .col-sm-9
+      = select_tag "post[post_type]", options_for_select(type_of_post, selected: @post.post_type), class: "selectpicker form-control"
+
+  .field.form-group
+    = label_tag :title_vi, t(".title_vi"),  class: "control-label col-sm-2"
+    .col-sm-9
+      = text_field_tag :title_vi, @post.title.present? ? eval(@post.title)[:vi] : "", class: "form-control"
+  .field.form-group
+    = label_tag :title_en, t(".title_en"), class: "control-label col-sm-2"
+    .col-sm-9
+      = text_field_tag :title_en, @post.title.present? ? eval(@post.title)[:en] : "", class: "form-control"
+
+  .field.form-group
+    = label_tag :content_vi, t(".content_vi"), class: "control-label col-sm-2"
+    .col-sm-9
+      = cktext_area_tag :content_vi, @post.content.present? ? eval(@post.content)[:vi] : "", class: "form-control"
+  .field.form-group
+    = label_tag :content_en, t(".content_en"), class: "control-label col-sm-2"
+    .col-sm-9
+      = cktext_area_tag :content_en, @post.content.present? ? eval(@post.content)[:en] : "", class: "form-control"
+
+  .field.form-group
+    = label_tag :image, t(".image"), class: "control-label col-sm-2"
+    .col-sm-9
+      = f.file_field :image, class: "form-control"
+  .actions.form-group
+    .col-sm-offset-10.col-sm-1
+      = f.submit "Submit", class: "btn btn-success"

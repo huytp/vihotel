@@ -1,0 +1,17 @@
+= form_tag room_type_photo_of_rooms_new_path(@room_type), class: "form-horizontal", multipart: true, method: :post do
+  - if @photo_of_room.errors.any?
+    #error_explanation
+      h2
+        = pluralize(@photo_of_room.errors.count, "error")
+        | prohibited this photo_of_room from being saved:
+      ul
+        - @photo_of_room.errors.full_messages.each do |message|
+          li= message
+  .field.form-group.row
+    = label_tag :image, t(".image"), class: "col-sm-1 label-control"
+    .col-sm-4
+      = file_field_tag "photo_of_room[image]", class: "form-control"
+
+  .actions.form-group.row
+    .col-sm-1.col-sm-offset-1
+      = submit_tag "Submit", class: "btn btn-success"

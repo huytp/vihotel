@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @photo_overview.image.url(:large) %>
+</p>
+
+<%= link_to 'Edit', edit_hotel_overview_photo_overview_path(@hotel_overview, @photo_overview) %> |
+<%= link_to 'Back', hotel_overview_photo_overviews_path(@hotel_overview) %>

@@ -1,0 +1,19 @@
+vi:
+  accommodation:
+    accommodation:
+      intro: "For your sleep, for your soul"
+      accommodation_text: "Loại phòng"
+      cost: "%{cost} đồng/ngày"
+    show:
+      space: " - "
+      room_size: "Kích thước phòng: "
+      view: "Hướng nhìn: "
+      check_in: "Ngày đến: "
+      check_out: "Ngày đi: "
+      room_type: "Loại phòng: "
+      number_of_room: "Số lượng phòng: "
+      number_adult: "Số người lớn: "
+      number_children: "Trẻ em:"
+      feature: "Tiện nghi: "
+      quick_book: "Đặt phòng"
+      reservation: "Thông tin đặt phòng"

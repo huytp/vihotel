@@ -1,0 +1,88 @@
+.accommodation-detail
+  .row
+    .col-sm-12
+      h2
+        = @room.room_type_name
+        = t(".space")
+        = number_to_currency(@room.cost, unit: "US$", separator: ",", delimiter: "", format: "%n %u")
+      h4
+        = eval(@room.description)[I18n.locale]
+  .row
+    .col-sm-6
+      .vi-slide-overview-content
+        #myCarousel.carousel.slide data-ride="carousel"
+          ol.carousel-indicators
+            - index = 0
+            - @room_photos.each do |photo_overview|
+              - if index == 0
+                li.active data-slide-to="#{index}" data-target="#myCarousel"
+              - else
+                li data-slide-to="#{index}" data-target="#myCarousel"
+              - index += 1
+          .carousel-inner role="listbox"
+            - index = 0
+            - @room_photos.each do |photo_overview|
+              - if index == 0
+                .item.active
+                  = image_tag photo_overview.image.url(:large), class: "overview-photo"
+              - else
+                .item
+                  = image_tag photo_overview.image.url(:large), class: "overview-photo"
+              - index += 1
+
+          a.left.carousel-control data-slide="prev" href="#myCarousel" role="button"
+            span.fa.fa-chevron-left.chevron-btn aria-hidden="true"
+            span.sr-only
+          a.right.carousel-control data-slide="next" href="#myCarousel" role="button"
+            span.fa.fa-chevron-right.chevron-btn aria-hidden="true"
+            span.sr-only
+
+    .col-sm-6
+      .contact-box.row
+        .room-infor
+          p
+            strong
+              span = t(".room_size")
+            = @room.room_size
+          p
+            strong
+              span = t(".view")
+            = @room.room_view
+          = form_for(@room, html: {class: "accomodation-feature-form"}) do |f|
+            strong
+              span = t(".feature")
+            = f.collection_check_boxes(:room_features, RoomFeature.all, :id, :name_with_initial, checked: eval(@room.room_features), disable: true)
+        .reservation-box
+          .reservation-content
+            h3.lined-heading-book
+            h3.text-center.reservation = t(".reservation")
+            form action="/reservations" accept-charset="UTF-8" method="get"
+              = hidden_field_tag "reservation[room_type]", @room.room_type_name
+              .row
+                .col-sm-6
+                  .field.form-group
+                    label = t(".check_in")
+                    = text_field_tag "reservation[check_in]", "", class: "form-control"
+                .col-sm-6
+                  .field.form-group
+                    label = t(".check_out")
+                    = text_field_tag "reservation[check_out]", "", class: "form-control"
+              .row
+                .col-sm-6
+                  .field.form-group
+                    label = t(".number_of_room")
+                    = number_field_tag "reservation[rooms]", "", class: "form-control", min: 1
+                .col-sm-6
+                  .field.form-group
+                    label = t(".number_adult")
+                    = number_field_tag "reservation[adults]", "", class: "form-control", min: 0
+              .row
+                .col-sm-6
+                  .field.form-group
+                    label = t(".number_children")
+                    = number_field_tag "reservation[kids]", "", class: "form-control", min: 0
+                .col-sm-6.booking-button
+                  .actions.form-group
+                    = label_tag
+                    button.form-control.book-btn type="submit"
+                      = t(".quick_book")
