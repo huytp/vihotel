@@ -9,7 +9,7 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(get_params)
     if @contact.save
-      UserMailer.delay.welcome_email(@contact)
+      UserMailer.welcome_email(@contact).deliver_now
       flash[:notice] = I18n.t("contact_successfully")
       redirect_to root_path
     end
