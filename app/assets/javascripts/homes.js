@@ -4,7 +4,6 @@
   });
   var init = function() {
     slider();
-    // slideHome();
     if ($(window).width() > 767) {
       sliderBook();
     }
@@ -49,14 +48,6 @@
       $("html, body").animate({ scrollTop: 0 }, "slow");
       return false;
     });
-  }
-
-  var slideHome = function() {
-    carousel();
-    function carousel() {
-      $(".next").click()
-      setTimeout(carousel, 5000);
-    }
   }
 
   var dropDown = function() {
