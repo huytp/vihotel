@@ -1,14 +1,15 @@
 en:
   homes:
-    index:
-      home: "Home"
+    slider:
       overview: "Hotel overview"
       accommodation_text: "Accommodation"
-      service: "Service"
+      service_text: "Service"
       meeting: "Meeting & Events"
       offers: "Offers"
       excursions: "Excursions"
       contact: "Contact"
+    index:
+      home: "Home"
       continue: "Continue Reading"
       slogan: "For your sleep, for your soul"
     book:
