@@ -1,14 +1,15 @@
 vi:
   homes:
-    index:
-      home: "Trang chủ"
+    slider:
       overview: "Giới thiệu"
       accommodation_text: "Loại phòng"
-      service: "Dịch vụ"
+      service_text: "Dịch vụ"
       meeting: "Hội nghị - Sự kiện"
       offers: "Ưu đãi"
       excursions: "Lữ hành"
       contact: "Liên hệ"
+    index:
+      home: "Trang chủ"
       continue: "Đọc thêm"
       slogan: "For your sleep, for your soul"
     book:

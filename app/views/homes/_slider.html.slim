@@ -30,7 +30,7 @@ section#main-slider.no-margin
                 = t(".overview")
                 span.sr-only (current)
             li.parent-li
-              = link_to I18n.t("accommodation_text"), accommodation_index_path
+              = link_to t(".accommodation_text"), accommodation_index_path
               ul.vi-submenu.hidden-xs
                 - parentroomtypes = ParentRoomType.all
                 - parentroomtypes.each do |parentroomtype|
@@ -41,7 +41,7 @@ section#main-slider.no-margin
                         li
                           = link_to roomtype.room_type_name, show_accomodation_accommodation_index_path(roomtype.friendly)
             li.parent-li
-              = link_to I18n.t("service_text"), service_index_path
+              = link_to t(".service_text"), service_index_path
               ul.vi-submenu.hidden-xs
                 - services = HotelOverview.where.not(post_type: 'hotel-overview')
                 - services.each do |srv|
