@@ -8,6 +8,15 @@
   }
 
   var validateReservation = function() {
+    $.validator.addMethod("greaterThan",
+    function(value, element, params) {
+        if (!/Invalid|NaN/.test(new Date(value))) {
+            return new Date(value) >= new Date($(params).val());
+        }
+        return isNaN(value) && isNaN($(params).val())
+            || (Number(value) > Number($(params).val()));
+    }, ($(".vietnamese-lang").length > 0) ? "Không được nhỏ hơn ngày đến" : "Should not be less than check in date");
+
     $("#new_reservation").validate({
       rules: {
         "reservation[full_name]": {
@@ -28,6 +37,7 @@
         },
         "reservation[check_out]": {
           required: true,
+          greaterThan: "#reservation_check_in"
         },
         "reservation[number_of_room]": {
           required: true,

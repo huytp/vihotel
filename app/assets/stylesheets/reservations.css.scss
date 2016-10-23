@@ -1,6 +1,9 @@
 @import 'constant';
 #vi-main-content {
   .reservation-main {
+    .error {
+      color: red;
+    }
     .form-control {
       border-radius: 0px;
       box-shadow: none;

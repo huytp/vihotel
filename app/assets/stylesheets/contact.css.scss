@@ -10,6 +10,9 @@
   .contact-form {
     margin-top: 30px;
     margin-left: 30px;
+    .error {
+      color: red;
+    }
     .form-control {
       border-radius: 0px;
       box-shadow: none;

@@ -9,6 +9,7 @@
       changeLanguage();
     }
   }
+
   var changeLanguage = function() {
     $.extend( $.validator.messages, {
       required: "Hãy nhập.",
@@ -28,7 +29,7 @@
       range: $.validator.format( "Hãy nhập từ {0} đến {1}." ),
       max: $.validator.format( "Hãy nhập từ {0} trở xuống." ),
       min: $.validator.format( "Hãy nhập từ {1} trở lên." )
-    } );
+    });
   }
 
   var validateContact = function() {
