@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-
+  match '/google18458d758ae2ad27.html',
+      :to redirect('/google18458d758ae2ad27.html')
   mount Ckeditor::Engine => '/ckeditor'
   devise_for :users
   get "contact", to: "contacts#index", as: "contact_index"
