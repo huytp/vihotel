@@ -13,7 +13,9 @@ class SloganController < ApplicationController
     end
   end
 
+  protected
+
   def get_params
-    content = "{vi: '#{params[:content_vi]}', en: '#{params[:content_en]}'}"
+    content = {vi: params[:content_vi], en: params[:content_en]}
   end
 end
