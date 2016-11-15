@@ -4,7 +4,7 @@
       h2
         = @room.room_type_name
         = t(".space")
-        = number_to_currency(@room.cost, unit: "US$", separator: ",", delimiter: "", format: "%n %u")
+        = t(".cost", cost: number_with_delimiter((I18n.locale == :vi) ? @room.cost*@currency : @room.cost))
       h4
         = eval(@room.description)[I18n.locale]
   .row

@@ -10,5 +10,6 @@ class AccommodationController < ApplicationController
   def show
     @room = RoomType.where(friendly: params["friendly"]).last
     @room_photos = @room.photo_of_rooms
+    @currency = Currency.last.currency
   end
 end

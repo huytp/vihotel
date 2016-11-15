@@ -13,10 +13,7 @@
                 h2.collection-name = premier_collection.parent_room_type.name
                 h3 = premier_collection.room_type_name
                 h4 = eval(premier_collection.description)[I18n.locale]
-                - if (I18n.locale == :vi)
-                  h3.text-right.price.text-center = t(".cost", cost: number_with_delimiter(premier_collection.cost*@currency))
-                - else
-                  h3.text-right.price.text-center = t(".cost", cost: number_with_delimiter(premier_collection.cost))
+                h3.text-right.price.text-center = t(".cost", cost: number_with_delimiter((I18n.locale == :vi) ? premier_collection.cost*@currency : premier_collection.cost))
               = image_tag photos_of_collection(premier_collection), class: "premier-collection-image"
       .smart-collection
         ul.smart-collection-block

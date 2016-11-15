@@ -17,3 +17,4 @@ en:
       feature: "Features: "
       quick_book: "Book Now"
       reservation: "Reservation"
+      cost: "%{cost}$/day"
