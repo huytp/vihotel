@@ -7,7 +7,7 @@
         - if @hotel_overview.present?
           .row
             .col-sm-6
-              .vi-slide-overview-content
+              .vi-slide-overview-content.image-left
                 - if @photo_overviews.present?
                   - @photo_overviews.each do |photo_overview|
                     = image_tag photo_overview.image.url(:large), class: "vi-slides vi-slides-overview"

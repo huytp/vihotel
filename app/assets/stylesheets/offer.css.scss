@@ -100,6 +100,44 @@
 
   }
 }
+@media (min-width: 991px) and (max-width: 1199px) {
+  .offer-page {
+    .offer-main-content {
+      li.each-offer-block {
+        width: 32%;
+      }
+      li.each-offer-block:nth-child(3n+2) {
+        margin-left: 10px;
+      }
+      li.each-offer-block:nth-child(3n+3) {
+        margin-left: 10px;
+      }
+      .offer-image {
+        width: 100%;
+        height: 220px;
+      }
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 990px) {
+  .offer-page {
+    .offer-main-content {
+      li.each-offer-block {
+        width: 48%;
+      }
+      li.each-offer-block:nth-child(2n+1) {
+        margin-left: 0px;
+      }
+      li.each-offer-block:nth-child(2n+2) {
+        float: right;
+      }
+      .offer-image {
+        width: 100%;
+        height: 250px;
+      }
+    }
+  }
+}
 
 @media screen and (max-width: 767px) {
   .vi-offer {

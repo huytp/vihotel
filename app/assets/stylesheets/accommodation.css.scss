@@ -64,25 +64,6 @@
       height: 155px;
       display:block;
     }
-    .text-small {
-      position: absolute;
-      color: white;
-      text-decoration: none;
-      background-color: $main-color;
-      width: 100%;
-      height: 100%;
-      text-align: center;
-      z-index: 10;
-      opacity: 0;
-      margin-top: 0px;
-      -webkit-transition: all 0.5s ease;
-      -moz-transition: all 0.5s ease;
-      -o-transition: all 0.5s ease;
-      transition: all 0.5s ease;
-    }
-    .text-small:hover {
-      opacity:1;
-    }
 
     .tm-panel-title-large {
       font-size: 24px;
@@ -263,7 +244,145 @@
     background-color: $main-color;
   }
 }
+@media (min-width: 768px) and (max-width: 890px) {
+  .accommodation-detail {
+    .col-sm-6 {
+      width: 100%;
+    }
 
+    .contact-box {
+      padding-left: 0px;
+      padding-top: 30px;
+    }
+    .vi-slide-overview-content {
+      width: 100%;
+      .overview-photo {
+        width: 100%;
+        height: 350px;
+      }
+    }
+  }
+}
+@media (min-width: 891px) and (max-width: 1199px) {
+  .accommodation-detail {
+    .contact-box {
+      padding-left: 0px;
+      padding-top: 0px;
+    }
+    .accommodation-left {
+      width: 60%;
+    }
+    .accommodation-right {
+      width: 40%;
+    }
+    .vi-slide-overview-content {
+      width: 100%;
+      .overview-photo {
+        width: 100%;
+        height: 400px;
+      }
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .accommodation {
+    margin-bottom: 50px;
+    .accommodation-content {
+      .collection-name-small {
+        font-size: 26px;
+      }
+      .description-small {
+        font-size: 18px;
+      }
+      .room-type-name-small {
+        font-size: 24px;
+        list-style: 24px;
+        margin-top: 65px;
+      }
+      .wrapper-small {
+        height: 250px;
+      }
+      .wrapper {
+        height: 250px;
+      }
+      .premier-collection {
+        margin-bottom: 46px;
+        .premier-collection-image {
+          width: 100%;
+          height: 250px
+        }
+
+        li.each-premier-collection {
+          width: 47%;
+          list-style: none;
+          float: left;
+        }
+        li.each-premier-collection:nth-child(2) {
+          margin-left: 40px;
+        }
+        li.each-premier-collection:nth-child(3) {
+          margin-left: 0px;
+          margin-top: 30px;
+        }
+      }
+      .smart-collection {
+        .smart-collection-image {
+          width: 100%;
+          height: 250px;
+        }
+        ul.smart-collection-block {
+          padding-left: 0px;
+          padding-right: 0px;
+          height: 250px;
+        }
+        li.each-smart-collection {
+          list-style: none;
+          float: left;
+          width: 47%;
+          margin-left: 40px;
+        }
+        li.each-smart-collection:nth-child(2) {
+          margin-left: 0px;
+          margin-top: 30px;
+        }
+        li.each-smart-collection:nth-child(3) {
+          margin-left: 40px;
+          margin-top: 30px;
+        }
+
+        li.each-smart-collection:nth-child(4) {
+          margin-left: 0px;
+          margin-top: 30px;
+        }
+      }
+
+      .deluxe-collection {
+        .deluxe-collection-image {
+          width: 100%;
+          height: 250px
+        }
+        ul.deluxe-collection-block {
+          padding-left: 0px;
+          padding-right: 0px;
+          height: 250px;
+        }
+        li.each-deluxe-collection {
+          list-style: none;
+          float: left;
+          width: 47%;
+          margin-left: 40px;
+          margin-top: 30px;
+        }
+        li.each-deluxe-collection:nth-child(2) {
+          margin-left: 0px;
+        }
+        li.each-deluxe-collection:nth-child(3) {
+          margin-left: 40px;
+        }
+      }
+    }
+  }
+}
 @media screen and (max-width: 767px) {
   .accommodation-detail {
     .vi-slide-overview-content {

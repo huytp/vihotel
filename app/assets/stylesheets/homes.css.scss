@@ -265,7 +265,7 @@
     bottom: 0px;
     width: 100%;
     height: 90px;
-    z-index: 10000;
+    z-index: 9500;
     background: image-url('slider-book-now.png') repeat center center;
     .book-content {
       margin-top: 8px;
@@ -314,6 +314,99 @@
     }
     .book-button-block {
       margin-top: 17px;
+    }
+  }
+}
+
+@media (min-width: 891px) and (max-width: 1199px) {
+  #vi-main-content {
+    #book-block {
+      input {
+        width: 135px;
+      }
+    }
+    .container {
+      width: 94%;
+    }
+    #main-content {
+
+      .service-content {
+        .col-sm-6 {
+          padding-right: 0px;
+          padding-left: 0px;
+        }
+      }
+      .service-archive {
+        .slide-right {
+        }
+        .vi-slide-overview-content {
+          width: 100%;
+          height: 310px;
+        }
+        .image-left {
+          margin-left: 15px;
+        }
+
+        .vi-slides {
+          width: 97%;
+          height: 310px;
+          display: none;
+        }
+        .content-box {
+          padding-right: 15px;
+          padding-top: 0px;
+          padding-left: 30px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 890px) {
+  #vi-main-content {
+    .container {
+      width: 100%;
+    }
+    #main-slider {
+      .menu-center {
+        a {
+          font-size: 13px;
+        }
+      }
+    }
+    #book-block {
+      input {
+        width: 120px;
+      }
+    }
+    #main-content {
+
+      .service-content {
+        margin-top: 23px !important;
+        margin-bottom: 17px !important;
+        .col-sm-6 {
+          width: 100%;
+        }
+      }
+      .service-archive {
+          .vi-slide-overview-content {
+          width: 100%;
+          height: 100%;
+        }
+        .vi-slides {
+          width: 100%;
+          height: 400px;
+          display: none;
+        }
+        .content-box {
+          padding-right: 25px;
+          padding-left: 25px;
+          padding-top: 10px;
+          padding-bottom: 25px;
+        }
+        .slide-right {
+          padding-left: 15px;
+        }
+      }
     }
   }
 }
@@ -421,7 +514,6 @@
           height: 330px;
         }
       }
-
     }
     #book-block {
       height: 300px;

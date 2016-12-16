@@ -4,6 +4,7 @@
   });
   var init = function() {
     slider();
+
     if ($(window).width() > 767) {
       sliderBook();
     }
