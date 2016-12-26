@@ -39,6 +39,7 @@
     li.each-post-block {
       list-style: none;
       width: 408px;
+      height: 733px;
       float: left;
       padding-bottom: 30px;
     }
@@ -162,6 +163,7 @@
       li.each-post-block {
         width: 45%;
         margin-left: 0px;
+        height: 900px;
       }
       li.each-post-block:nth-child(2n+1) {
         margin-left: 15px;
