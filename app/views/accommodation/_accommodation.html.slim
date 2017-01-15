@@ -1,0 +1,43 @@
+.accommodation
+  .container
+    .accommodation-content
+      h3.tm-panel-title-large.text-center
+        = t(".accommodation_text")
+      p.vi-article-lead.vi-margin-large-bottom.text-center
+        = @slogan
+      .premier-collection
+        ul.premier-collection-block
+          - @premier_collections.each do |premier_collection|
+            li.each-premier-collection.wrapper
+              = link_to show_accomodation_accommodation_index_path(premier_collection.friendly), class: "text"
+                h2.collection-name = premier_collection.parent_room_type.name
+                h3 = premier_collection.room_type_name
+                h4 = eval(premier_collection.description)[I18n.locale]
+                h3.text-right.price.text-center = t(".cost", cost: number_with_delimiter((I18n.locale == :vi) ? premier_collection.cost*@currency : premier_collection.cost))
+              = image_tag photos_of_collection(premier_collection), class: "premier-collection-image"
+      .smart-collection
+        ul.smart-collection-block
+          - @smart_collections.each do |smart_collection|
+            li.each-smart-collection.wrapper-small
+              = link_to show_accomodation_accommodation_index_path(smart_collection.friendly), class: "text"
+                h2.collection-name-small = smart_collection.parent_room_type.name
+                h3.room-type-name-small = smart_collection.room_type_name
+                h4.description-small = eval(smart_collection.description)[I18n.locale]
+                - if (I18n.locale == :vi)
+                  h3.text-right.room-type-name-small.price-small.text-center = t(".cost", cost: number_with_delimiter(smart_collection.cost*@currency))
+                - else
+                  h3.text-right.room-type-name-small.price-small.text-center = t(".cost", cost: number_with_delimiter(smart_collection.cost))
+              = image_tag photos_of_collection(smart_collection), class: "smart-collection-image"
+      .deluxe-collection
+        ul.deluxe-collection-block
+          - @deluxe_collections.each do |deluxe_collection|
+            li.each-deluxe-collection.wrapper
+              = link_to show_accomodation_accommodation_index_path(deluxe_collection.friendly), class: "text"
+                h2.collection-name = deluxe_collection.parent_room_type.name
+                h3 = deluxe_collection.room_type_name
+                h4 = eval(deluxe_collection.description)[I18n.locale]
+                - if (I18n.locale == :vi)
+                  h3.text-right.price.text-center = t(".cost", cost: number_with_delimiter(deluxe_collection.cost*@currency))
+                - else
+                  h3.text-right.price.text-center = t(".cost", cost: number_with_delimiter(deluxe_collection.cost))
+              = image_tag photos_of_collection(deluxe_collection), class: "deluxe-collection-image"
