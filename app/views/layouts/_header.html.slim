@@ -28,7 +28,7 @@
                 ul.vi-sub-submenu
                   - parentroomtype.room_types.each do |roomtype|
                     li
-                      = link_to roomtype.room_type_name, show_accomodation_accommodation_index_path(roomtype.friendly)
+                      = link_to roomtype.room_type_name, ""
         li.parent-li
           = link_to I18n.t("service_text"), service_index_path
           ul.vi-submenu.hidden-xs
