@@ -1,0 +1,27 @@
+#main-content
+  .service-archive
+    .hidden-sm.hidden-md.hidden-lg
+      = render 'book'
+    .container
+      .service-content
+        - if @hotel_overview.present?
+          .row
+            .col-sm-6
+              .vi-slide-overview-content.image-left
+                - if @photo_overviews.present?
+                  - @photo_overviews.each do |photo_overview|
+                    = image_tag photo_overview.image.url(:large), class: "vi-slides vi-slides-overview"
+                - else
+                  = image_tag DEFAULT_PHOTO, class: "vi-slides vi-slides-overview"
+            .col-sm-6
+              .content-box
+                h3.vi-title
+                  = link_to eval(@hotel_overview.title)[I18n.locale], about_index_path
+                .short-content-block
+                  h4.short-content = raw eval(@hotel_overview.content)[I18n.locale].truncate(378)
+                = link_to t(".continue"), about_index_path, class: "vi-button vi-button-large"
+        = render 'service/service'
+  = render 'accommodation/accommodation'
+
+.hidden-xs.booking-desktop
+  = render 'book'
