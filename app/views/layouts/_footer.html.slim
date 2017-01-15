@@ -1,0 +1,86 @@
+section#bottom
+  .footer-wrapper.section-margin
+    .container
+      .row
+        .wow.zoomIn.col-xs-12.col-sm-6.col-md-3.col-logo
+          a href="javascript:void(0)"
+            = image_tag asset_path("logo-bottom.png"), class: "logo-img"
+
+        .wow.zoomIn.col-xs-12.col-sm-6.col-md-3
+          p.footer-heading = I18n.t("find_us")
+          ul.footercontact
+            li
+              i.flaticon-mainpage
+              span = I18n.t("address")
+              = I18n.t("address_text")
+            li
+              i.flaticon-phone16
+              span = I18n.t("phone")
+              a href=("tel: #{TABLE_PHONE}") = TABLE_PHONE
+            li
+              i.flaticon-email21
+              span  = I18n.t("email")
+              a href="mailto:#{EMAIL_ADDRESS}" = EMAIL_ADDRESS
+            li
+              i.flaticon-world91
+              span = I18n.t("web")
+              a href="#{VI_WEB_ADDRESS}" = VI_WEB_ADDRESS
+            li
+              i.flaticon-world91
+              span = I18n.t("youtube")
+              a href="#{YOUTUBE_ADDRESS}" target="_blank" = truncate(YOUTUBE_ADDRESS, length: LENGTH_OF_YOUTUBE)
+          i.flaticon-home78
+        .wow.zoomIn.col-xs-12.col-sm-3.col-md-3
+          p.footer-heading = I18n.t("hotel")
+          ul.footermenu
+            li
+              = link_to root_path
+                = I18n.t("home")
+            li
+              = link_to about_index_path
+                = I18n.t("overview")
+            li
+              = link_to accommodation_index_path
+                = I18n.t("accommodation_text")
+            li
+              = link_to service_index_path
+                = I18n.t("service_text")
+            li
+              = link_to events_path
+                = I18n.t("meeting")
+            li
+              = link_to offer_index_path
+                = I18n.t("offers_text")
+            li
+              = link_to excursions_path
+                = I18n.t("excursions_text")
+            li
+              = link_to contact_index_path
+                = I18n.t("contact_text")
+
+        .wow.zoomIn.col-xs-12.col-sm-6.col-md-3
+          p.footer-heading = I18n.t("accommodation_text")
+          ul.footermenu
+            - RoomType.all.each do |room_type|
+              li
+                = link_to show_accomodation_accommodation_index_path(room_type.friendly)
+                  = room_type.room_type_name
+
+
+
+
+
+footer#footer.midnight-blue
+  .container
+    .row
+      .col-sm-6.copy-right.col-xs-10
+        .backtop.pull-left
+            i.fa.fa-angle-up.back-to-top
+        .text-block
+          |&copy;
+          = Time.now.year
+          |&nbsp;
+          a target="_blank" href="#{VI_WEB_ADDRESS}" title="#{I18n.t('vi_title')}" = I18n.t("vihotel")
+          = I18n.t("rights")
+      .col-sm-6.col-xs-2
+
