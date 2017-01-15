@@ -21,6 +21,11 @@
         li.parent-li
           = link_to I18n.t("accommodation_text"), accommodation_index_path
           ul.vi-submenu.accommodation-submenu.hidden-xs
+            - parentroomtypes = ParentRoomType.all
+            - parentroomtypes.each do |parentroomtype|
+              li.sub-li
+                = link_to parentroomtype.name, "javascript:void(0)"
+                ul.vi-sub-submenu
 
         li.parent-li
           = link_to I18n.t("service_text"), service_index_path
