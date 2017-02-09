@@ -23,8 +23,6 @@ class RoomTypesController < ApplicationController
   def edit
   end
 
-  # POST /room_types
-  # POST /room_types.json
   def create
     @room_type = RoomType.new(room_type_params)
     @room_type.description = description_params
