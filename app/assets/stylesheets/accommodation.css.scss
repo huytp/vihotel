@@ -100,12 +100,16 @@
       li.each-premier-collection {
         list-style: none;
         float: left;
+        margin-bottom: 30px;
       }
-      li.each-premier-collection:nth-child(2) {
-        margin-left: 45px;
+      li.each-premier-collection:nth-child(3n+1) {
+        margin-left: 0px;
       }
-      li.each-premier-collection:nth-child(3) {
-        margin-left: 45px;
+      li.each-premier-collection:nth-child(3n+2) {
+        margin-left: 40px;
+      }
+      li.each-premier-collection:nth-child(3n+3) {
+        margin-left: 40px;
       }
     }
 
@@ -317,13 +321,13 @@
           list-style: none;
           float: left;
         }
-        li.each-premier-collection:nth-child(2) {
+        li.each-premier-collection:nth-child(2n+2) {
           margin-left: 40px;
         }
-        li.each-premier-collection:nth-child(3) {
+        li.each-premier-collection:nth-child(2n+1) {
           margin-left: 0px;
-          margin-top: 30px;
         }
+
       }
       .smart-collection {
         .smart-collection-image {
@@ -444,13 +448,15 @@
         margin-top: -30px;
         .premier-collection-image {
           width: 100%;
+
         }
-        li.each-premier-collection:nth-child(2),  li.each-premier-collection:nth-child(3) {
+        li.each-premier-collection:nth-child(n){
           margin-left: 0px;
+
         }
         li.each-premier-collection {
           border-bottom: 1px solid $main-color;
-          margin-top: 20px;
+          margin: auto;
         }
       }
       .smart-collection {

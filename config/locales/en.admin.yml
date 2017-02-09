@@ -151,49 +151,33 @@ en:
     form:
       name_vi: "Name (Vietnamese)"
       name_en: "Name (English)"
-  parent_room_types:
-    index:
-      text_header: "Listing parent room types"
-      name: "Name"
-      show: "Show"
-      edit: "Edit"
-      back: "Back"
-    show:
-      name: "Name"
-      show: "Show"
-      show_room_type: "Show Room types"
-      edit: "Edit"
-      back: "Back"
-    form:
-      name: "Name"
-    edit:
-      text_header: "Editing"
-      show: "Show"
-      back: "Back"
   room_types:
     show:
       room_type_name: "Room type name"
       parent_room_type: "Parent room type"
       description: "Description"
       room_size: "Room size"
-      room_bed: "Bed size"
+      room_count: "Number of room"
       room_view: "View"
       room_features: "Features"
       show_photo: "Listing photos of this room"
+      cost1: "%{cost} $/day"
       edit: "Edit"
       back: "Back"
+      cost: "Cost ($)"
     index:
       text_header: "Listing room type"
       room_type_name: "Room type name"
       parent_room_type: "Parent room type"
       description: "Description"
       room_size: "Room size"
-      room_bed: "Bed size"
+      room_count: "Number of room"
       room_view: "View"
       room_features: "Features"
       show: "Show"
       edit: "Edit"
       back: "Back"
+      create: "Create"
     edit:
       text_header: "Editing"
       show: "Show"
@@ -204,9 +188,10 @@ en:
       description_vi: "Description (Vietnamese)"
       description_en: "Description (English)"
       room_size: "Room size"
-      room_bed: "Bed size"
+      room_count: "Number of room"
       room_view: "View"
       room_features: "Features"
+      cost: "Cost (VNĐ)"
   photo_of_rooms:
     index:
       text_header: "Listing photos of "

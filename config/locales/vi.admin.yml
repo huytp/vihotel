@@ -151,49 +151,33 @@ vi:
     form:
       name_vi: "Tên (Tiếng Việt)"
       name_en: "Tên (Tiếng Anh)"
-  parent_room_types:
-    index:
-      text_header: "Danh sách 3 gói"
-      name: "Tên"
-      show: "Xem"
-      edit: "Sửa"
-      back: "Quay lại"
-    show:
-      name: "Tên"
-      show: "Xem"
-      show_room_type: "Xem danh sách các loại phòng thuộc gói này"
-      edit: "Chỉnh sửa"
-      back: "Quay lại"
-    form:
-      name: "Tên"
-    edit:
-      text_header: "Chỉnh sửa"
-      show: "Xem"
-      back: "Quay lại"
   room_types:
     show:
       room_type_name: "Tên loại phòng"
       parent_room_type: "Thuộc gói"
       description: "Mô tả sơ bộ"
-      room_size: "Kích thước phòng"
-      room_bed: "Kích thước giường"
-      room_view: "Hướng nhìn"
+      room_size: "Diện tích"
+      room_count: "Số lượng"
+      room_view: "Hướng phòng"
       room_features: "Tiện nghi"
       show_photo: "Danh sách ảnh của loại phòng này"
       edit: "Chỉnh sửa"
       back: "Quay lại"
+      cost1: "%{cost} VNĐ/ngày"
+      cost: "Đơn giá (VNĐ)"
     index:
       text_header: "Danh sách các loại phòng"
       room_type_name: "Tên loại phòng"
       parent_room_type: "Thuộc gói"
       description: "Mô tả sơ bộ"
-      room_size: "Kích thước phòng"
-      room_bed: "Kích thước giường"
-      room_view: "Hướng nhìn"
+      room_size: "Diện tích"
+      room_count: "Số lượng"
+      room_view: "Hướng phòng"
       room_features: "Tiện nghi"
       show: "Xem"
       edit: "Chỉnh sửa"
       back: "Quay lại"
+      create: "Tạo mới"
     edit:
       text_header: "Chỉnh sửa"
       show: "Xem"
@@ -201,12 +185,13 @@ vi:
     form:
       room_type_name: "Tên loại phòng"
       parent_room_type: "Thuộc gói"
-      description_vi: "Mô tả sơ bộ (Tiếng Việt)"
-      description_en: "Mô tả sơ bộ (Tiếng Anh)"
-      room_size: "Kích thước phòng"
-      room_bed: "Kích thước giường"
-      room_view: "Hướng nhìn"
+      description_vi: "Hạng phòng (Tiếng Việt)"
+      description_en: "Hạng phòng (Tiếng Anh)"
+      room_size: "Diện tích"
+      room_count: "Số lượng"
+      room_view: "Hướng phòng"
       room_features: "Tiện nghi"
+      cost: "Đơn giá (VNĐ)"
   photo_of_rooms:
     index:
       text_header: "Danh sách ảnh của "

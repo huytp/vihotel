@@ -48,6 +48,10 @@
             strong
               span = t(".view")
             = @room.room_view
+          p
+            strong
+              span = t(".room_count")
+            = @room.room_count
           = form_for(@room, html: {class: "accomodation-feature-form"}) do |f|
             strong
               span = t(".feature")

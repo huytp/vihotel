@@ -6,8 +6,9 @@ vi:
       cost: "%{cost} đồng/ngày"
     show:
       space: " - "
-      room_size: "Kích thước phòng: "
-      view: "Hướng nhìn: "
+      room_size: "Diện tích phòng: "
+      room_count: "Số lượng phòng: "
+      view: "Hướng phòng: "
       check_in: "Ngày đến: "
       check_out: "Ngày đi: "
       room_type: "Loại phòng: "

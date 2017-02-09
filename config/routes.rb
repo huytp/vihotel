@@ -43,11 +43,7 @@ Rails.application.routes.draw do
   end
 
 
-  resources :room_types do
-    resources :photo_of_rooms, except: [:create, :update]
-    post "photo_of_rooms/new", to: "photo_of_rooms#create"
-    post "photo_of_rooms/:id/edit", to: "photo_of_rooms#update", as: "edit"
-  end
+
 
   scope '/admin' do
     resources :slogan, only: [:index, :update]
@@ -59,8 +55,10 @@ Rails.application.routes.draw do
     end
     resources :users
     resources :posts
-    resources :parent_room_types do
-      resources :room_types
+    resources :room_types do
+      resources :photo_of_rooms, except: [:create, :update]
+      post "photo_of_rooms/new", to: "photo_of_rooms#create"
+      post "photo_of_rooms/:id/edit", to: "photo_of_rooms#update", as: "edit"
     end
     resources :offers
     resources :hotel_overviews do

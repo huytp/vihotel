@@ -32,14 +32,10 @@ section#main-slider.no-margin
             li.parent-li
               = link_to t(".accommodation_text"), accommodation_index_path
               ul.vi-submenu.hidden-xs
-                - parentroomtypes = ParentRoomType.all
-                - parentroomtypes.each do |parentroomtype|
+                - roomtypes = RoomType.all
+                - roomtypes.each do |roomtype|
                   li.sub-li
-                    = link_to parentroomtype.name, "javascript:void(0)"
-                    ul.vi-sub-submenu
-                      - parentroomtype.room_types.each do |roomtype|
-                        li
-                          = link_to roomtype.room_type_name, show_accomodation_accommodation_index_path(roomtype.friendly)
+                    = link_to roomtype.room_type_name, show_accomodation_accommodation_index_path(roomtype.friendly)
             li.parent-li
               = link_to t(".service_text"), service_index_path
               ul.vi-submenu.hidden-xs

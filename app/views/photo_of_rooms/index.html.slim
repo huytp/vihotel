@@ -15,4 +15,4 @@ table.table.table-striped
         td = link_to t(".destroy"), room_type_photo_of_room_path(@room_type, photo_of_room), method: :delete, data: {confirm: t(".sure")}
 = link_to t(".new_photo"), new_room_type_photo_of_room_path(@room_type)
 |&nbsp;|&nbsp;
-= link_to t(".back"), parent_room_type_room_type_path(@room_type.parent_room_type_id, @room_type)
+= link_to t(".back"), room_type_path(@room_type)

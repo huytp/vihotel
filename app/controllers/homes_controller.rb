@@ -19,9 +19,8 @@ class HomesController < ApplicationController
     if @pool.present?
       @photo_pools = @pool.photo_overviews
     end
-    @premier_collections = ParentRoomType.where(name: "Premier Collection").last.room_types
-    @smart_collections = ParentRoomType.where(name: "Smart Superior Collection").last.room_types
-    @deluxe_collections = ParentRoomType.where(name: "Deluxe Collection").last.room_types
+    @room_types = RoomType.all
+
     @currency = Currency.last.currency
     @slogan = Slogan.last.content_slogan
   end

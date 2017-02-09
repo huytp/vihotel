@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161005062247) do
+ActiveRecord::Schema.define(version: 20170209160114) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -68,12 +68,6 @@ ActiveRecord::Schema.define(version: 20161005062247) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.string   "friendly"
-  end
-
-  create_table "parent_room_types", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "photo_of_rooms", force: :cascade do |t|
@@ -141,17 +135,14 @@ ActiveRecord::Schema.define(version: 20161005062247) do
     t.string   "room_type_name"
     t.text     "description"
     t.string   "room_size"
-    t.string   "room_bed"
     t.string   "room_view"
     t.string   "room_features"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
-    t.integer  "parent_room_type_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.string   "friendly"
     t.integer  "cost"
+    t.integer  "room_count"
   end
-
-  add_index "room_types", ["parent_room_type_id"], name: "index_room_types_on_parent_room_type_id", using: :btree
 
   create_table "slogans", force: :cascade do |t|
     t.string   "content"
@@ -180,5 +171,4 @@ ActiveRecord::Schema.define(version: 20161005062247) do
 
   add_foreign_key "photo_of_rooms", "room_types"
   add_foreign_key "photo_overviews", "hotel_overviews"
-  add_foreign_key "room_types", "parent_room_types"
 end

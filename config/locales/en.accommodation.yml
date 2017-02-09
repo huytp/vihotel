@@ -7,6 +7,7 @@ en:
     show:
       space: " - "
       room_size: "Room Size: "
+      room_count: "Number Of Room: "
       view: "View: "
       check_in: "Check In Date: "
       check_out: "Check Out Date"
