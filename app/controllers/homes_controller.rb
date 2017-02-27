@@ -19,7 +19,7 @@ class HomesController < ApplicationController
     if @pool.present?
       @photo_pools = @pool.photo_overviews
     end
-    @room_types = RoomType.all
+    @room_types = RoomType.order(:id)
 
     @currency = Currency.last.currency
     @slogan = Slogan.last.content_slogan

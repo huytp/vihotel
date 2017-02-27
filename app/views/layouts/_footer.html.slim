@@ -61,7 +61,8 @@ section#bottom
         .wow.zoomIn.col-xs-12.col-sm-6.col-md-3
           p.footer-heading = I18n.t("accommodation_text")
           ul.footermenu
-            - RoomType.all.each do |room_type|
+            - roomtypes = RoomType.order(:id)
+            - roomtypes.all.each do |room_type|
               li
                 = link_to show_accomodation_accommodation_index_path(room_type.friendly)
                   = room_type.room_type_name

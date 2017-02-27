@@ -21,7 +21,7 @@
         li.parent-li
           = link_to I18n.t("accommodation_text"), accommodation_index_path
           ul.vi-submenu.accommodation-submenu.hidden-xs
-            - roomtypes = RoomType.all
+            - roomtypes = RoomType.order(:id)
             - roomtypes.each do |roomtype|
               li.sub-li
                 = link_to roomtype.room_type_name, show_accomodation_accommodation_index_path(roomtype.friendly)
