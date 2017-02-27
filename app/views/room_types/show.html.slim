@@ -26,7 +26,7 @@ p
 p
   strong = t(".cost")
   |&nbsp;
-  = number_to_currency(I18n.locale == :en ? @room_type.cost/@currency : @room_type.cost, unit: "")
+  = number_to_currency((I18n.locale == :en && @room_type.cost) ? @room_type.cost/@currency : @room_type.cost, unit: "")
 
 = link_to t(".show_photo"), room_type_photo_of_rooms_path(@room_type)
 |&nbsp;|&nbsp;
