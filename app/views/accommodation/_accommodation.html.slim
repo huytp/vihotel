@@ -12,5 +12,5 @@
               = link_to show_accomodation_accommodation_index_path(room_type.friendly), class: "text"
                 h3 = room_type.room_type_name
                 h4 = eval(room_type.description)[I18n.locale]
-                h3.text-right.price.text-center = t(".cost", cost: number_to_currency((I18n.locale == :en) ? room_type.cost/@currency : room_type.cost, unit: ""))
+                h3.text-right.price.text-center = t(".cost", cost: number_to_currency((I18n.locale == :en && room_type.cost) ? room_type.cost/@currency : room_type.cost, unit: ""))
               = image_tag photos_of_collection(room_type), class: "premier-collection-image"
