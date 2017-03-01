@@ -6,6 +6,7 @@ class AccommodationController < ApplicationController
   end
 
   def show
+    @rooms = RoomType.where.not(friendly: params["friendly"]).order(:id)
     @room = RoomType.where(friendly: params["friendly"]).last
     @room_photos = @room.photo_of_rooms
     @currency = Currency.last.currency

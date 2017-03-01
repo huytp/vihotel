@@ -19,3 +19,4 @@ en:
       quick_book: "Book Now"
       reservation: "Reservation"
       cost: "%{cost}$/day"
+      other_rooms: "Other rooms"

@@ -19,3 +19,4 @@ vi:
       quick_book: "Đặt phòng"
       reservation: "Thông tin đặt phòng"
       cost: "%{cost} đồng/ngày"
+      other_rooms: "Các loại phòng khác"

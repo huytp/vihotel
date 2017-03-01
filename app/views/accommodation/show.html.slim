@@ -90,3 +90,15 @@
                     = label_tag
                     button.form-control.book-btn type="submit"
                       = t(".quick_book")
+  .row
+    .service
+      .container
+        .service-content-block
+          h3.tm-panel-title-large.text-center = t(".other_rooms")
+          .service-image
+            ul.service-image-block
+              - @rooms.each do |room|
+                li.each-service-image.wrapper-small
+                  = image_tag photos_of_room(room), class: "service-image-image"
+                  a.service-title href="#{show_accomodation_accommodation_index_path(room.friendly)}"
+                    h4 = room.room_type_name
