@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   get '/google18458d758ae2ad27.html',
       to: redirect('/google18458d758ae2ad27.html')
   mount Ckeditor::Engine => '/ckeditor'
