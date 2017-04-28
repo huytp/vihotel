@@ -72,9 +72,18 @@ section#bottom
                 = link_to show_accomodation_accommodation_index_path(room_type.friendly)
                   = room_type.room_type_name
 
-
-
-
+          #TA_rated100.TA_rated
+            #CDSWIDFRR.widFRR
+              = image_tag "ratedonWhiteBackground.png"
+              .widFRRHeadline
+                span#RATED_TEXT.grayText RATED ON
+              .widFRRImages
+                a href="https://www.tripadvisor.com.vn" target="_blank"
+                  = image_tag "ollie-11424-2.gif"
+                a href="https://www.tripadvisor.com.vn" target="_blank"
+                  = image_tag "tripadvisorGreenText.png", class: "taText"
+              var.widFRRCopy
+                a href="https://www.tripadvisor.com.vn/Hotel_Review-g659924-d12275963-Reviews-Vinh_Hoang_Hotel-Dong_Hoi_Quang_Binh_Province.html" rel="nofollow" target="_blank"  Khách Sạn Vĩnh Hoàng
 
 footer#footer.midnight-blue
   .container

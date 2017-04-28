@@ -135,6 +135,69 @@
   margin-bottom: 0px;
 }
 #bottom {
+  #CDSWIDFRR {
+    font: normal 11px Verdana,"Bitstream Vera Sans",Arial,Helvetica,sans-serif;
+    color: #000;
+    background-color: #ffffff;
+    overflow: hidden;
+    width: 150px;
+    margin: 10px;
+    padding: 0 0 9px;
+    background: image-url("badgeBottom_150.gif") 0 100% no-repeat;
+    text-align: center;
+    position: relative;
+    .widFRRHeadline {
+      position: absolute;
+      top: 9px;
+      width: 150px;
+      font-weight: bold;
+      font-size: 13px;
+      font-family: Arial,Helvetica,sans-serif;
+      color: #000;
+    }
+    .widFRRImages {
+      position: absolute;
+      left: 8px;
+      top: 29px;
+    }
+    a {
+      font-style: normal;
+      font-family: Verdana,"Bitstream Vera Sans",Arial,Helvetica,sans-serif;
+      margin: 0;
+      padding: 0;
+      border: none;
+      font-weight: normal;
+      text-decoration: underline;
+      outline: none;
+      color: #000;
+      text-align: center;
+    }
+    a img.taText {
+      margin-left: -27px;
+      margin-top: 1px;
+    }
+    a img {
+      float: left;
+    }
+    var.widFRRCopy {
+      display: block;
+      padding: 0 8px;
+      border: solid #ccc;
+      border-width: 0 1px;
+      background-color: #fff;
+      font: normal bold 11px Verdana,"Bitstream Vera Sans",Arial,Helvetica,sans-serif;
+      a {
+        color: #000;
+        text-decoration: underline;
+        font-size: 11px;
+        font-weight: bold;
+        background-color: transparent;
+        border: none;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
   .section-margin {
     margin-top: 50px;
     padding-bottom: 30px;
@@ -322,6 +385,9 @@ a {
     }
   }
   #bottom {
+    #CDSWIDFRR {
+      margin: auto;
+    }
     .footer-heading {
       margin-top: 30px;
     }
