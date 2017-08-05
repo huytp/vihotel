@@ -3,11 +3,11 @@ h3 = t(".change_slogan")
   .form-group.row
     = label_tag :content_vi, t(".slogan_vi"), class: "label-control col-sm-2"
     .col-sm-3
-      = text_field_tag :content_vi, @slogan.content[:vi], class: "form-control"
+      = text_field_tag :content_vi, eval(@slogan.content)[:vi], class: "form-control"
   .form-group.row
     = label_tag :content_en, t(".slogan_en"), class: "label-control col-sm-2"
     .col-sm-3
-      = text_field_tag :content_en, @slogan.content[:en], class: "form-control"
+      = text_field_tag :content_en, eval(@slogan.content)[:en], class: "form-control"
   .form-group.action.row
     .col-sm-1.col-sm-offset-2
       = f.submit "Submit", class: "btn btn-success"
