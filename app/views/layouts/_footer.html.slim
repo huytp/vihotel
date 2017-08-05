@@ -1,3 +1,4 @@
+- infor = Information.first
 section#bottom
   .footer-wrapper.section-margin
     .container
@@ -12,28 +13,28 @@ section#bottom
             li
               i.flaticon-mainpage
               span = I18n.t("address")
-              = I18n.t("address_text")
+              = infor.address
             li
               i.flaticon-phone16
               span = I18n.t("phone")
-              a href=("tel: #{TABLE_PHONE}") = TABLE_PHONE
+              a href=("tel: #{infor.phone}") = infor.phone
             li
               i.flaticon-phone16
               span = I18n.t("cell_phone")
-              a href=("tel: #{CELL_PHONE}") = CELL_PHONE
+              a href=("tel: #{infor.mobile}") = infor.mobile
             li
               i.flaticon-world91
               span = I18n.t("fax")
-              a href="#{VI_FAX_ADDRESS}" =VI_FAX_ADDRESS
+              a href="#{infor.fax}" =infor.fax
             li
               i.flaticon-email21
               span  = I18n.t("email")
-              a href="mailto:#{EMAIL_ADDRESS}" = EMAIL_ADDRESS
+              a href="mailto:#{infor.email}" = infor.email
 
             li
               i.flaticon-world91
               span = I18n.t("youtube")
-              a href="#{YOUTUBE_ADDRESS}" target="_blank" = truncate(YOUTUBE_ADDRESS, length: LENGTH_OF_YOUTUBE)
+              a href="#{infor.youtube}" target="_blank" = truncate(infor.youtube, length: LENGTH_OF_YOUTUBE)
           i.flaticon-home78
         .wow.zoomIn.col-xs-12.col-sm-3.col-md-3
           p.footer-heading = I18n.t("hotel")

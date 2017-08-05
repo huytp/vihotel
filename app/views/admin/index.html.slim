@@ -26,6 +26,9 @@
         .col-sm-12
           button.btn.btn-info.admin-btn
             = link_to t(".change_passwd"), edit_user_registration_path
+        .col-sm-12
+          button.btn.btn-danger.admin-btn
+            = link_to "Thay đổi thông tin", information_path(1)
         - if current_user.admin?
           .col-sm-12
             button.btn.btn-success.admin-btn

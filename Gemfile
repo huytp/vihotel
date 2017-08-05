@@ -45,7 +45,7 @@ group :development do
 end
 # Use  for create variable ENV
 gem 'figaro', '~> 1.1.1'
-gem "therubyracer"
+gem 'therubyracer', git: 'https://github.com/cowboyd/therubyracer.git'
 gem "twitter-bootstrap-rails"
 gem 'slim', '~> 3.0', '>= 3.0.7'
 gem 'devise'

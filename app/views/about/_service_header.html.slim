@@ -1,3 +1,4 @@
+- infor = Information.first
 .hotel-overview
   .row
     .col-sm-6.col-slide-6
@@ -39,20 +40,20 @@
             li
               span
                 i.fa.fa-map-marker
-              span.vi-contact-text = t(".address")
+              span.vi-contact-text = infor.address
             li
               span
                 i.fa.fa-mobile
-              span.vi-contact-text = MOBILE_PHONE
+              span.vi-contact-text = infor.mobile
 
             li
               span
                 i.fa.fa-phone
-              span.vi-contact-text-1 = TABLE_PHONE
+              span.vi-contact-text-1 = infor.phone
             li
               span
                 i.fa.fa-envelope-o
-              span.vi-contact-text-1 = EMAIL_ADDRESS
+              span.vi-contact-text-1 = infor.email
         .quotation-block
           = link_to  t(".quotation"), params[:controller] == 'about' ? reservations_path : contact_index_path, class: "vi-button"
 .hotel-overview-bottom

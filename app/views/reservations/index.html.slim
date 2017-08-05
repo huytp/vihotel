@@ -1,3 +1,4 @@
+- infor = Information.first
 .reservation-main
   h3.vi-title
     = t(".reservation_infor")
@@ -74,8 +75,8 @@
           p.contact-infor = t(".contact_infor")
           label = t(".hotline")
           strong
-            h4 = HOT_LINE
+            h4 = infor.mobile
           label = t(".email")
           strong
-            h4 = EMAIL_ADDRESS
+            h4 = infor.email
           = image_tag 'logo-horizontal.png', class: "contact-logo"
