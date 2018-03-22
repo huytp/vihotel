@@ -1,16 +1,16 @@
 - if @restaurant.present?
   .row
 
-    .col-sm-6.slide-right
+    .col-sm-6.slide-right.col-xs-12
       .vi-slide-overview-content
         - if @photo_restaurants.present?
           - @photo_restaurants.each do |photo_restaurant|
             = image_tag photo_restaurant.image.url(:large), class: "vi-slides vi-slides-restaurant"
         - else
           = image_tag DEFAULT_PHOTO, class: "vi-slides vi-slides-restaurant"
-    .col-sm-6.box-left
+    .col-sm-6.box-left.col-xs-12
       .content-box
-        h3.vi-title
+        h3.vi-title.text-center
           = link_to eval(@restaurant.title)[I18n.locale], show_service_service_index_path(@restaurant.post_type)
           .short-content-block
             h4.short-content = raw eval(@restaurant.content)[I18n.locale].truncate(385)
@@ -26,23 +26,23 @@
           = image_tag DEFAULT_PHOTO, class: "vi-slides vi-slides-coffee"
     .col-sm-6
       .content-box
-        h3.vi-title
+        h3.vi-title.text-center
           = link_to eval(@coffee.title)[I18n.locale], show_service_service_index_path(@coffee.post_type)
           .short-content-block
             h4.short-content = raw eval(@coffee.content)[I18n.locale].truncate(382)
         = link_to t(".continue"), show_service_service_index_path(@coffee.post_type), class: "vi-button vi-button-large"
 - if @spa.present?
   .row
-    .col-sm-6.slide-right
+    .col-sm-6.slide-right.col-xs-12
       .vi-slide-overview-content
         - if @photo_spas.present?
           - @photo_spas.each do |photo_spa|
             = image_tag photo_spa.image.url(:large), class: "vi-slides vi-slides-spa"
         - else
           = image_tag DEFAULT_PHOTO, class: "vi-slides vi-slides-spa"
-    .col-sm-6.box-left
+    .col-sm-6.box-left.col-xs-12
       .content-box
-        h3.vi-title
+        h3.vi-title.text-center
           = link_to eval(@spa.title)[I18n.locale], show_service_service_index_path(@spa.post_type)
           .short-content-block
             h4.short-content = raw eval(@spa.content)[I18n.locale].truncate(385)
@@ -59,7 +59,7 @@
           = image_tag DEFAULT_PHOTO, class: "vi-slides vi-slides-pool"
     .col-sm-6
       .content-box
-        h3.vi-title
+        h3.vi-title.text-center
           = link_to eval(@pool.title)[I18n.locale], show_service_service_index_path(@pool.post_type)
           .short-content-block
            h4.short-content = raw eval(@pool.content)[I18n.locale].truncate(385)

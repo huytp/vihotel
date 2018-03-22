@@ -15,10 +15,10 @@
                   = image_tag DEFAULT_PHOTO, class: "vi-slides vi-slides-overview"
             .col-sm-6
               .content-box
-                h3.vi-title
+                h3.vi-title.text-center
                   = link_to eval(@hotel_overview.title)[I18n.locale], about_index_path
                 .short-content-block
-                  h4.short-content = raw eval(@hotel_overview.content)[I18n.locale].truncate(378)
+                  h4.short-content = raw eval(@hotel_overview.content)[I18n.locale].truncate(440)
                 = link_to t(".continue"), about_index_path, class: "vi-button vi-button-large"
         = render 'service/service'
   = render 'accommodation/accommodation'
