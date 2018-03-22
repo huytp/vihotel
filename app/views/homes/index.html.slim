@@ -18,7 +18,7 @@
                 h3.vi-title.text-center
                   = link_to eval(@hotel_overview.title)[I18n.locale], about_index_path
                 .short-content-block
-                  h4.short-content = raw eval(@hotel_overview.content)[I18n.locale].truncate(440, omission: "")
+                  h4.short-content = raw eval(@hotel_overview.content)[I18n.locale].truncate(438, omission: "")
                 = link_to t(".continue"), about_index_path, class: "vi-button vi-button-large"
         = render 'service/service'
   = render 'accommodation/accommodation'
