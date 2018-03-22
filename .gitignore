@@ -17,3 +17,5 @@
 /tmp
 config/application.yml
 config/database.yml
+/.DS_Store
+/public/.DS_Store
