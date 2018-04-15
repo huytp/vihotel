@@ -87,9 +87,9 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: ENV["default_url_option"]}
   config.action_mailer.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
-    address:              "smtp.mailer.inet.vn",
+    address:              "smtp.gmail.com",
     port:                 587,
-    domain:               'inet.vn',
+    domain:               'gmail.com',
     user_name:            ENV["user_mail_server"],
     password:             ENV["password_mail_server"],
     authentication:       "plain",
