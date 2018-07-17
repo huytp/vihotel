@@ -408,3 +408,13 @@ a {
   }
 }
 
+.carousel.slide > .carousel-inner {
+  overflow: visible;
+}
+
+@media screen and (max-width: 890px) {
+  .vihotel-video {
+    display: none;
+  }
+}
+

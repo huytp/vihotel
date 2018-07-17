@@ -414,6 +414,46 @@
     }
   }
 }
+@media screen and (max-width: 890px) {
+  #vi-main-content {
+    #main-slider {
+    
+
+      .item-slide-1, .item-slide-2 {
+        background: image-url('slider/horizontal-1.jpg') no-repeat center center;
+        background-size: 140%;
+      }
+      .vi-photo, .vi-photo-1 {
+        display: none;
+      }
+      .navbar-toggle {
+        background-color: rgba(23, 22, 22, 0.45);
+        .icon-bar {
+          background-color: white;
+        }
+      }
+      .navbar-header {
+        margin-top: -90px;
+      }
+      .navbar-collapse {
+        margin-top: 65px;
+      }
+      ul.menu-center {
+        li {
+          text-align: center;
+        }
+      }
+      .prev, .next {
+        background-color: transparent;
+        color: #808080;
+        .fa {
+          font-size: 30px;
+          text-shadow: -2px -1px 0px #FFF;
+        }
+      }
+    }
+  }
+}
 
 @media screen and (max-width: 767px) {
   #vi-main-content {

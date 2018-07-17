@@ -4,9 +4,11 @@
   });
   var init = function() {
     slider();
-
     if ($(window).width() > 767) {
       sliderBook();
+    }
+    if ($(window).width() > 890) {
+      resizeSlide();
     }
     if ($("#main-slider").length) {
       overviewSliderOverview();
@@ -23,6 +25,11 @@
     // chatBox();
     likeFacebook();
   };
+
+  var resizeSlide = function() {
+    var height = $(".vihotel-video video").height() + 60;
+    $(".carousel.slide").css("height", height);
+  }
   var likeFacebook = function() {
     (function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
