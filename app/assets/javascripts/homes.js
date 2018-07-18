@@ -27,8 +27,11 @@
   };
 
   var resizeSlide = function() {
-    var height = $(".vihotel-video video").height() + 60;
+    var height = $(".vihotel-video").height();
     $(".carousel.slide").css("height", height);
+    $(".background-video").css("height", height);
+    $(".vihotel-video img").css("height", height);
+    $(".vihotel-video video").css("height", height);
   }
   var likeFacebook = function() {
     (function(d, s, id) {

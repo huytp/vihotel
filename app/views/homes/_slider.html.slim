@@ -59,7 +59,7 @@ section#main-slider.no-margin
       = link_to root_path
         = image_tag 'logo-white-header.png', class: "logo"
     .carousel-inner
-      .item.active.item-slide-1
+      .item.active.item-slide-0
         .background-video
         .banner-content.hidden-xs.vihotel-video
           = video_tag ["https://s3.amazonaws.com/mskwhitelist-staging/Kha%CC%81ch+sa%CC%A3n+Vi%CC%83nh+Hoa%CC%80ng+Qua%CC%89ng+Bi%CC%80nh+-+Vinh+Hoang+Hotel.mp4"], controls: false, autoplay: true, loop: true, poster: asset_path("slider/horizontal-1.jpg"), muted: true
@@ -70,12 +70,17 @@ section#main-slider.no-margin
             .col-sm-12
               .vi-photo
 
-      .item.item-slide-2
-        .container
-          p.text-center.slogan = @slogan
-          .row.slide-margin
-            .col-sm-12
-              .vi-photo-1
+      - (1..12).each do |index|
+        .item class="item-slide-#{index}"
+          .background-video
+          .banner-content.hidden-xs.vihotel-video
+            = image_tag "slider/slide#{index}.jpg"
+
+          .container
+            p.text-center.slogan = @slogan
+            .row.slide-margin
+              .col-sm-12
+                .vi-photo
 
   a.prev data-slide="prev" href="#main-slider"
     i.fa.fa-chevron-left
