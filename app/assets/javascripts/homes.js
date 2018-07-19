@@ -4,16 +4,18 @@
   });
   var init = function() {
     slider();
+    if ($("#main-slider").length) {
+      getWidth();
+      overviewSliderOverview();
+      dropDown();
+    }
     if ($(window).width() > 767) {
       sliderBook();
     }
     if ($(window).width() > 890) {
       resizeSlide();
     }
-    if ($("#main-slider").length) {
-      overviewSliderOverview();
-      dropDown();
-    }
+    
     if ($(".service-archive").length) {
       overviewSliderRestaurant();
       overviewSliderCoffee();
@@ -24,8 +26,29 @@
     rollTop();
     // chatBox();
     likeFacebook();
-  };
 
+  };
+  var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+  };
+  var getWidth = function() {
+    w_param = getUrlParameter("w");
+    width = $(window).width();
+    if (w_param == undefined) {
+      window.location.href="?w="+width;
+    }
+  }
   var resizeSlide = function() {
     var height = $(".vihotel-video").height();
     $(".carousel.slide").css("height", height);

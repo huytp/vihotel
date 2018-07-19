@@ -39,7 +39,7 @@
     .background-video {
       background:  image-url('hash.svg') 0 0 repeat;
       width: 100%;
-      // height: 100%;
+      height: 100%;
       position: absolute;
       z-index: 1;
     }
@@ -154,7 +154,7 @@
     }
     .vi-photo {
       margin-top: 65px;
-      height: 600px;
+      // height: 600px;
       background: image-url('home_slide_01.svg') 50% 100% no-repeat;
       -moz-box-sizing: border-box;
     }

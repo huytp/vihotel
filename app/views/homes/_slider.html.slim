@@ -69,18 +69,19 @@ section#main-slider.no-margin
           .row.slide-margin
             .col-sm-12
               .vi-photo
+      - if params["w"].to_i > 890
+        - (1..12).each do |index|
+          - p index
+          .item class="item-slide-#{index}"
+            .background-video
+            .banner-content.hidden-xs.vihotel-video
+              = image_tag "slider/slide#{index}.jpg"
 
-      - (1..12).each do |index|
-        .item class="item-slide-#{index}"
-          .background-video
-          .banner-content.hidden-xs.vihotel-video
-            = image_tag "slider/slide#{index}.jpg"
-
-          .container
-            p.text-center.slogan = @slogan
-            .row.slide-margin
-              .col-sm-12
-                .vi-photo
+            .container
+              p.text-center.slogan = @slogan
+              .row.slide-margin
+                .col-sm-12
+                  .vi-photo
 
   a.prev data-slide="prev" href="#main-slider"
     i.fa.fa-chevron-left
