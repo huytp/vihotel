@@ -62,7 +62,8 @@ section#main-slider.no-margin
       .item.active.item-slide-0
         .background-video
         .banner-content.hidden-xs.vihotel-video
-          = video_tag ["https://s3.amazonaws.com/mskwhitelist-staging/Kha%CC%81ch+sa%CC%A3n+Vi%CC%83nh+Hoa%CC%80ng+Qua%CC%89ng+Bi%CC%80nh+-+Vinh+Hoang+Hotel.mp4"], controls: false, autoplay: true, loop: true, poster: asset_path("slider/horizontal-1.jpg"), muted: true
+          - if params["w"].to_i > 890
+            = video_tag ["https://s3.amazonaws.com/mskwhitelist-staging/Kha%CC%81ch+sa%CC%A3n+Vi%CC%83nh+Hoa%CC%80ng+Qua%CC%89ng+Bi%CC%80nh+-+Vinh+Hoang+Hotel.mp4"], controls: false, autoplay: true, loop: true, poster: asset_path("slider/horizontal-1.jpg"), muted: true
 
         .container
           p.text-center.slogan = @slogan
